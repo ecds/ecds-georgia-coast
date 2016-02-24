@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Georgia Coast Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="css/main.css" rel="stylesheet" media="screen">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]> <script src="../../assets/js/html5shiv.js"></script> <script src="../../assets/js/respond.min.js"></script> <![endif]-->
+    <!--Google maps API linl-->
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCsbzuJDUEOoq-jS1HO-LUXW4qo0gW9FNs"></script>
+    <!--Your map settings script-->
+    <script type="text/javascript" src="js/map.js"></script>
+    <!--jQuery-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+</head>
+
+<body onload="getLeaflet(31.6024451,-81.1595156,16)">
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+    <!--map-->
+    <div id="map_canvas" class="map">
+        <div id="map"></div>
+    </div>
+    <!--/map-->
+    <div class="row site">
+        <div class="col-md-1 general_menu" id="thisMenu">
+            <script type="text/javascript">
+            $('#thisMenu').load('includes/navigation.html');
+            </script>
+        </div>
+        <!-- Toggle Sidebar Button -->
+        <a id="hideMap" class="fa fa-caret-left"></a>
+        <!-- /Toggle Sidebar Button -->
+        <!--Content-->
+        <div class="col-md-11 general_content_styles index_content" id="cont">
+            <!--Header-->
+            <div class="row">
+                <div class="col-md-12 header">
+                    <div class="col-md-4 logo">
+                        <a href="index.html">
+                            <img src="images/logo.png" />
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <div id="tags">
+                            <a class="tag">Cabretta Beach</a>
+                            <a class="tag island sapelo" href="st_catherines.html">Sapelo Island</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/Header-->
+            <!--Long Form Content-->
+            <div class="row long-content">
+                <div class="col-md-12">
+                    <h1>Fossils in Progress</h1>
+                    <figure>
+                        <img class="img-responsive" src="http://www.georgialifetraces.com/wp-content/uploads/2011/11/Relict-Marsh-view.jpg">
+                        <figcaption>Overall view of relict marsh exposed on Cabretta Beach, Sapelo Island, Georgia. Me for scale, but photo taken 7 years ago, so the scale might now be slightly wider now. (Photograph taken by Ruth Schowalter.)</figcaption>
+                    </figure>
+                    <p>Despite whatever lamentations are made about the "incompleteness" of the fossil record, fossils are actually quite common. This truism is brought home even more so whenever trace fossils - tracks, burrows, and other evidence of organismal behavior - are included in a fossil checklist (as well they should be) when examining any given outcrop of sedimentary rocks formed in the past 550 million years or so.</p>
+                    <p>For example, many a time I have visited an outcrop described previously as "lacking fossils," and instead found it filled with trace fossils; hence what people meant was "lacking fossils" equals "no body fossils." Normally these trace fossils are invertebrate burrows, which might be glibly identified as "worm burrows," but tracks or other trace fossils may also reveal themselves to those who are looking for them. Indeed, this expectation of finding fossils is such that on occasions when geologists find a sedimentary rock layer devoid of either body or trace fossils, this is odd enough to cause geologists to scratch their heads and ask why.</p>
+                    <p>But how do the former bodily remains of plants or animals, or traces of their behaviors, become preserved as fossils in the first place? This question other related ones are answered by the science of taphonomy. Coined by Russian paleontologist Ivan Yefremov, the etymology of this term stems from Greek, in which taphos ( = burial) and nomos (= law). In such a term, he was thus alluding to an expectation that natural processes that result in fossils becoming preserved are orderly and predictable.</p>
+                    <p>An overview of taphonomy as a field of study would be far too lengthy to explore here, so instead I will use one example from the Georgia coast to show how it is supposed to work. This superb case in point is a relict marsh. It is what's left of a salt marsh from about 500 years ago, and it has been revealing its nature to paleontologists, geologists, and students for the past few decades.</p>
+                    <figure class="half-image pull-left">
+                        <img class="img-responsive" src="http://www.georgialifetraces.com/wp-content/uploads/2011/11/Relict-Marsh-Cabretta.jpg">
+                        <figcaption>Closer view of relict marsh on Sapelo Island, showing 500-year-old remains of smooth cordgrass (Spartina alterniflora), cross section of its muddy sediments, and quartz sand deposited on top by tides, waves, and wind. (Photograph by Anthony Martin.)</figcaption>
+                    </figure>
+                    <p>Just a little more than a week ago, my colleague Steve Henderson and I took a group of students from Emory University to Sapelo Island for a weekend field trip (detailed last week). One of our goals on this trip was to take them to a relict marsh on Cabretta Beach so that they could better appreciate how a sedimentary deposit makes a transition from living ecosystem to inert rock, yet filled with evidence of its formerly teeming life. Similar relict marshes are on St. Catherines Island and other Georgia-coast islands, but when it comes to teaching about taphonomy in the field, I prefer using the one on Sapelo.</p>
+                    <p>As mentioned in a previous entry, modern salt marsh on the Georgia coast have a few key components that make them among the most productive of all ecosystems: smooth cordgrass (Spartina alterniflora), marsh periwinkles (Littoraria irrorata), mud fiddler crabs (Uca pugnax), and ribbed mussels (Geukensia demissa). So if a Georgia salt marsh were to be buried quickly – say, by a storm that dumps a thick layer of sand on it – what would be preserved? The Cabretta relict marsh partially answers that question, showing us incipient trace and body fossils of these biota. They are not quite fossils, but on their way there, giving us a glimpse of the fossilization process well before it is completed.</p>
+                    <p>For example, the tall, green or golden stalks of smooth cordgrass that we see today, adorned my millions of marsh periwinkles (Littoraria irrorata), are absent from the relict marsh. Only the lowermost ochre-colored stubs and extensive root systems remain, and traces made by the roots below what was the marsh surface.</p>
+                    <p>As mentioned in a previous entry, modern salt marsh on the Georgia coast have a few key components that make them among the most productive of all ecosystems: smooth cordgrass (Spartina alterniflora), marsh periwinkles (Littoraria irrorata), mud fiddler crabs (Uca pugnax), and ribbed mussels (Geukensia demissa). So if a Georgia salt marsh were to be buried quickly – say, by a storm that dumps a thick layer of sand on it – what would be preserved? The Cabretta relict marsh partially answers that question, showing us incipient trace and body fossils of these biota. They are not quite fossils, but on their way there, giving us a glimpse of the fossilization process well before it is completed.</p>
+                    <figure class="half-image pull-left">
+                        <img class="img-responsive" src="http://www.georgialifetraces.com/wp-content/uploads/2011/11/Periwinkles-Cordgrass-SI.jpg">
+                        <figcaption>Modern smooth cordgrass (Spartina alterniflora) and its constant companions, marsh periwinkles (Littoraria irrorata) on Sapelo Island, Georgia.</figcaption>
+                    </figure>
+                    <p>For example, the tall, green or golden stalks of smooth cordgrass that we see today, adorned my millions of marsh periwinkles (Littoraria irrorata), are absent from the relict marsh. Only the lowermost ochre-colored stubs and extensive root systems remain, and traces made by the roots below what was the marsh surface.</p>
+                    <p>Once in a while, I also find old marsh periwinkle shells scattered on the surface of the relict marsh. These are made of calcium carbonate and will dissolve in slightly acidic waters, so these might not last for long once exposed. The real reason for why these tend to disappear quickly, though, is modern hermit crabs. Hermit crabs encounter these periwinkle shells on the relict marsh surface, say "Hey, free shells!", then happily trot away with these, not caring that their "new" homes are actually 500 years old.</p>
+                    <p>
+                        No mud-fiddler crab remains were apparent on the surface, nor have I seen them in 20-30 visits to this relict marsh. This is not surprising, as their exoskeletons are made of chitin and dissolve more quickly than molluscan shells. Nonetheless, their burrows are always abundantly evident on the surface as perfectly round holes, which are sometimes accompanied by new burrows made by modern fiddler crabs, as well as bivalves that will bore into this firmground.</p>
+                </div>
+            </div>
+            <!--/Long Form Content -->
+            <!--Features-->
+            <h3>Related Content</h3>
+            <div class="row related-articles">
+                <div class="col-md-4">
+                    <div class="related">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="http://www.georgialifetraces.com/wp-content/uploads/2015/12/Otter-Tracks-Lope-Pattern-Sapelo.jpg" />
+                        </div>
+                        <i class="fa fa-camera"></i>
+                        <h4>Tracking That Is Otterly Delightful</h4>
+                        <p>Writing about a place, its environments, and the plants and animals of those environments is challenging enough in itself. Yet to write about that place and what lives there, but without actually being there, seems almost like a type of...</p>
+                        <div id="tags">
+                            <a class="tag">Cabretta Beach</a>
+                            <a class="tag sapelo">Sapelo Island</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="related">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="http://img.youtube.com/vi/Nu2gjl7UBJc/maxresdefault.jpg" />
+                        </div>
+                        <i class="fa fa-video-camera"></i>
+                        <h4>Rooted in Time</h4>
+                        <p>As a paleontologist and geologist, time is always on my mind. Nonetheless, such musings do not always connect with millions or billions of years, the so-called "deep time" that earth scientists love to use whenever shocking people who normally ponder shorter time intervals used when, say, measuring the life of a fruit fly, or the length of a cat-themed video.</p>
+                        <div id="tags">
+                            <a class="tag">Relict Marsh</a>
+                            <a class="tag sapelo">Sapelo Island</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="related">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="http://www.georgialifetraces.com/wp-content/uploads/2015/07/Drone-Vulture.jpg" />
+                        </div>
+                        <i class="fa fa-file-text"></i>
+                        <h4>A Birds-Eye View of a Georgia Barrier Island</h4>
+                        <p>All scientists use tools when investigating how the natural world works. Yet as a traditionally trained field scientist – and an ichnologist – I’ve always been wary of adopting anything more complicated than field notebooks, pencils, tape measures, hand lenses, and cameras. Granted, I did add GPS...</p>
+                        <div id="tags">
+                            <a class="tag">Drone</a>
+                            <a class="tag">Gopher Tortoises</a>
+                            <a class="tag sapelo">Sapelo Island</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/Content-->
+        </div>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <!--   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
+        <script src="js/on-page-functions.js"></script>
+</body>
+
+</html>
