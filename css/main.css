@@ -1,3 +1,84 @@
+video#bgvid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translatex(-50%) translatey(-50%);
+  -moz-transform: translatex(-50%) translatey(-50%);
+  -webkit-transform: translatex(-50%) translatey(-50%);
+  transform: translatex(-50%) translatey(-50%);
+  background-size: cover;
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  text-align: center;
+  color: white;
+}
+.overlay h1 {
+  margin-top: 0;
+  font-size: 60px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  padding-top: 300px;
+  text-transform: uppercase;
+  line-height: 1.25em;
+  font-weight: 200;
+  position: relative;
+}
+.overlay h1:before {
+  content: "";
+  position: absolute;
+  left: 25%;
+  bottom: -7px;
+  height: 1px;
+  width: 50%;
+  border-bottom: 1px solid #FFF;
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+.overlay h2 {
+  font-size: 22px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5em;
+  font-weight: 300;
+}
+.overlay .btn-primary {
+  background-color: #66c396;
+  text-transform: uppercase;
+  border: 0;
+  padding: 15px 25px;
+  font-size: 18px;
+  margin-top: 25px;
+}
+.overlay .btn-primary a {
+  text-decoration: none;
+  color: #FFF;
+}
+.overlay .btn-primary a:hover {
+  color: #FFF;
+  text-decoration: none;
+}
+.overlay .btn-primary:hover {
+  background-color: #45b17d;
+}
+@media screen and (max-device-width: 800px) {
+  html {
+    background: url(polina.jpg) #000000 no-repeat center center fixed;
+  }
+  #bgvid {
+    display: none;
+  }
+}
 div#panoDiv {
   height: 600px;
   display: none;
@@ -404,8 +485,6 @@ h1 {
 }
 @media screen and (max-width: 1800px) {
   .general_content_styles {
-    max-width: 60%;
+    max-width: 50%;
   }
 }
-
-/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */

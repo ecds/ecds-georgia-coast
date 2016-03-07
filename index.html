@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Georgia Coast Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="dist/leaflet.awesome-markers.css">
+    <link href="css/main.css" rel="stylesheet" media="screen">
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]> <script src="../../assets/js/html5shiv.js"></script> <script src="../../assets/js/respond.min.js"></script> <![endif]-->
+    <!--Google maps API linl-->
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCsbzuJDUEOoq-jS1HO-LUXW4qo0gW9FNs"></script>
+    <!--Your map settings script-->
+    <script type="text/javascript" src="js/all_videos.js"></script>
+    <!--jQuery-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+
+</head>
+<body>
+   
+
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+<!--     <script src="dist/leaflet.awesome-markers.js"></script>
+ -->    
+    <!--map-->
+<!--     <div id="map_canvas" class="map">
+        <div id="map" style="width: 100%; height: 100%; position: absolute;"></div>
+    </div> -->
+        
+
+    <!--/map-->
+    <div class="row site">
+        <div class="col-md-1 general_menu" id="thisMenu">
+            <script type="text/javascript">
+                $('#thisMenu').load('includes/navigation.html');
+            </script>
+        </div>
+
+        <!--Content-->
+  
+
+<video autoplay loop poster="images/st-catherines.jpg" id="bgvid">
+    <!--<source src="polina.webm" type="video/webm">-->
+    <source src="footage/stcatherinesflyover.mp4" type="video/mp4">
+</video>
+<div class="overlay">
+    <h1>Welcome to the <strong>Georgia Coast</strong></h1>
+    <h2>
+        
+The Georgia coast, approximately 100 miles long is defined by its barrier islands and their back-barrier environments. With a variety of life in maritime forests, salt marshes, tidal channels and creeks, back-dune meadows, coastal dunes, beaches, and offshore environments, the barrier islands and their back barrier environments are biologically rich. The seasonally subtropical climate of the islands, combined with large tidal fluxes, helps make Georgia salt marshes among the most biologically productive ecosystems in the world. The Georgia coast also holds nearly one-third of the salt marshes in the eastern U.S.
+    </h2>
+    <button class="btn btn-primary"><a href="islands.html">Explore the Islands</a></button>
+</div>
+            </div>
+            
+        <!--/Content-->
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
+    <script src="js/on-page-functions.js"></script>
+
+    <script>
+    $(document).ready(function() {
+        $( ".overlay" ).delay( 10000 ).fadeIn(600);
+        $('video').playbackRate = 9.0;
+    });
+    </script>
+    <!--[if lt IE 9]>
+<script>
+    document.createElement('video');
+</script>
+<![endif]-->
+</body>
+</html>
