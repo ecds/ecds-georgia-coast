@@ -20,7 +20,7 @@ function formatIsotope() {
             $(this).find("i").addClass('fa fa-video-camera')
         }
         else if (thisContentType == 'article') {
-            $(this).find("i").addClass('fa fa-file-type-o')
+            $(this).find("i").addClass('fa fa-file-text-o')
         }
         else {
             $(this).find("i").css("display","none")
