@@ -28,9 +28,10 @@ function getLeaflet(lat,lng,zoom) {
         //OpenStreetMap.addTo(map);
 
         var sapelo_marsh_landing = L.marker([31.41778, -81.29559], {icon: L.AwesomeMarkers.icon({icon: 'video-camera', prefix: 'fa', markerColor: 'red', spin:false}) }).addTo(map).bindPopup("Sapelo Marsh Landing").addTo(videos).addTo(videos);
-
+        
+        var sapelo_cabretta_beach_pop = '<div class="flex-video widescreen" style="margin: 0 auto;text-align:center;"><iframe allowfullscreen="" src="http://player.vimeo.com/video/71876963" frameborder="0" width="500" height="281"></iframe></div> '
         var sapelo_cabretta_beach = L.marker([31.436647, -81.235684], {icon: L.AwesomeMarkers.icon({icon: 'repeat', prefix: 'fa', markerColor: 'green', spin:true}) }).addTo(map);  
-        sapelo_cabretta_beach.bindPopup("Cabretta Beach Panotour").addTo(panotour);
+        sapelo_cabretta_beach.bindPopup(sapelo_cabretta_beach_pop).addTo(panotour);
 
         var sapelo_shell_hammock = L.marker([31.40016, -81.2868], {icon: L.AwesomeMarkers.icon({icon: 'video-camera', prefix: 'fa', markerColor: 'red', spin:false}) }).addTo(map).bindPopup("Shell Hammock").addTo(videos);
 
