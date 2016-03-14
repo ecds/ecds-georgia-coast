@@ -1,0 +1,55 @@
+.all-islands {
+    //height: 100%;
+    padding-left: 74px;
+    padding-right: 0; 
+    .island-row {
+        width: 100%;
+        position: relative;
+    }
+    .tile-expand {
+        height: 20%;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-bottom: solid 1px #CCC;
+        color: #FFF;
+        .base-tile {
+            max-width: 600px;
+            padding-left: 15px;
+        }
+        &:hover {
+            width: 100% !important;
+            > .hidden-information {
+                display: block;
+            }
+        }
+        .hidden-information {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+}
+
+.countyLabel {
+    min-width: 120px;
+    &.Savannah {
+        margin-top: 100px !important;
+    }
+    .label {
+        background-color: white;
+        border-radius: 5px;
+        border: solid 1px #CCC;
+        font-size: 13px;
+        font-weight: normal;
+        color: #333;
+        font-family: 'Open Sans', sans-serif;
+    }
+}
+
+@media screen and (max-width: 991px) {
+.all-islands {
+    height: 100%;
+    padding-left: 50px;
+    padding-right: 0;
+}
+}

@@ -15,7 +15,10 @@ video#bgvid {
 }
 
 .overlay {
-    height: 100%;
+    &.auto-on {
+        display: block;
+    }
+    min-height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     display: none;
@@ -52,30 +55,14 @@ video#bgvid {
         line-height: 1.5em;
         font-weight: 300;
     }
-    .btn-primary {
-        background-color: @green;
-        text-transform: uppercase;
-        border: 0;
-        padding: 15px 25px;
-        font-size: 18px;
-        margin-top: 25px;
-        a {
-            text-decoration: none;
-            color: #FFF;
-            &:hover {
-                color: #FFF;
-                text-decoration: none;
-            }
-        }
-        &:hover {
-            background-color: darken(@green, 10%)
-        }
+    >button {
+            margin-right: 40px;
     }
 }
 
 @media screen and (max-device-width: 800px) {
     html {
-        background: url(polina.jpg) #000 no-repeat center center fixed;
+        background: url(images/st-catherines-video.jpg) #000 no-repeat center center fixed;
     }
     #bgvid {
         display: none;

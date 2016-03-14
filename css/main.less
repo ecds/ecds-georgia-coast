@@ -1,5 +1,5 @@
 // Color variables (appears count calculates by raw css)
-@import 'home.less';
+
 @white: #ffffff; 
 @red: #D94B3F;
 @yellow: #FFDD46;
@@ -13,6 +13,49 @@
 @height11: 0;
 
 @import "panotour.less";
+@import 'home.less';
+@import 'islands.less';
+
+
+.btn-primary {
+        background-color: @green;
+        text-transform: uppercase;
+        border: 0;
+        padding: 15px 25px;
+        font-size: 18px;
+        margin-top: 25px;
+        a {
+            text-decoration: none;
+            color: #FFF;
+            &:hover {
+                color: #FFF;
+                text-decoration: none;
+            }
+        }
+        &:hover {
+            background-color: darken(@green, 10%)
+        }
+    }
+
+.btn-secondary {
+    background-color: @red;
+        text-transform: uppercase;
+        border: 0;
+        padding: 15px 25px;
+        font-size: 18px;
+        margin-top: 25px;
+        a {
+            text-decoration: none;
+            color: #FFF;
+            &:hover {
+                color: #FFF;
+                text-decoration: none;
+            }
+        }
+        &:hover {
+            background-color: darken(@red, 10%)
+        }
+}
 
 .tag-border (@color) {
     border-left:12px solid @color;
@@ -442,6 +485,10 @@ h1 {
 
 @media screen and (max-width:1800px) {
     .general_content_styles {
-        max-width: 50%;
+        max-width: 70%;
     }
+}
+
+@media screen and (max-width: 1600px) {
+
 }

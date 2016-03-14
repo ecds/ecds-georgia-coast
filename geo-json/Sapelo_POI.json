@@ -1,0 +1,28 @@
+{"name":"SapeloPOI","type":"FeatureCollection"
+,"features":[
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.29559,31.41778]},"properties":{"Island":"Sapelo","Location":"Marsh Landing","Loc_type":"","Longitude":-81.29559,"Latitude":31.41778}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.2868,31.40016]},"properties":{"Island":"Sapelo","Location":"Shell Hammock","Loc_type":"","Longitude":-81.2868,"Latitude":31.40016}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.27856,31.39793]},"properties":{"Island":"Sapelo","Location":"Water Gardens","Loc_type":"","Longitude":-81.27856,"Latitude":31.39793}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.27986,31.39734]},"properties":{"Island":"Sapelo","Location":"UGAMI","Loc_type":"","Longitude":-81.27986,"Latitude":31.39734}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.28568,31.39126]},"properties":{"Island":"Sapelo","Location":"Sapelo Lighthouse","Loc_type":"","Longitude":-81.28568,"Latitude":31.39126}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.26437,31.39048]},"properties":{"Island":"Sapelo","Location":"Nannygoat Beach","Loc_type":"","Longitude":-81.26437,"Latitude":31.39048}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.27002,31.39306]},"properties":{"Island":"Sapelo","Location":"Beach Road Bridge","Loc_type":"","Longitude":-81.27002,"Latitude":31.39306}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.27087,31.39461]},"properties":{"Island":"Sapelo","Location":"Nature Trail Observation Deck","Loc_type":"","Longitude":-81.27087,"Latitude":31.39461}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.26988,31.39472]},"properties":{"Island":"Sapelo","Location":"Nature Trail Bridge","Loc_type":"","Longitude":-81.26988,"Latitude":31.39472}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.27396,31.39756]},"properties":{"Island":"Sapelo","Location":"Greenhouse","Loc_type":"","Longitude":-81.27396,"Latitude":31.39756}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.27702,31.39708]},"properties":{"Island":"Sapelo","Location":"Reynolds Mansion","Loc_type":"","Longitude":-81.27702,"Latitude":31.39708}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.273568,31.395159]},"properties":{"Island":"Sapelo","Location":"Nature Trail Entry","Loc_type":"","Longitude":-81.273568,"Latitude":31.395159}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.261617,31.395847]},"properties":{"Island":"Sapelo","Location":"Nature Trail Beach Access","Loc_type":"","Longitude":-81.261617,"Latitude":31.395847}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.229506,31.499082]},"properties":{"Island":"Sapelo","Location":"Racoon Bluff","Loc_type":"","Longitude":-81.229506,"Latitude":31.499082}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.244701,31.514824]},"properties":{"Island":"Sapelo","Location":"Shell Ring","Loc_type":"","Longitude":-81.244701,"Latitude":31.514824}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.254634,31.501003]},"properties":{"Island":"Sapelo","Location":"Chocolate Plantation","Loc_type":"","Longitude":-81.254634,"Latitude":31.501003}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.235684,31.436647]},"properties":{"Island":"Sapelo","Location":"Cabretta Beach","Loc_type":"","Longitude":-81.235684,"Latitude":31.436647}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.236453,31.438]},"properties":{"Island":"Sapelo","Location":"Cabretta Inlet","Loc_type":"","Longitude":-81.236453,"Latitude":31.438}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.237552,31.43958]},"properties":{"Island":"Sapelo","Location":"Cabretta Relic Marsh","Loc_type":"","Longitude":-81.237552,"Latitude":31.43958}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.234212,31.514568]},"properties":{"Island":"Sapelo","Location":"Reynolds Duck Pond","Loc_type":"","Longitude":-81.234212,"Latitude":31.514568}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.275418,31.436491]},"properties":{"Island":"Sapelo","Location":"Borrow Pit","Loc_type":"","Longitude":-81.275418,"Latitude":31.436491}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.250615,31.429754]},"properties":{"Island":"Sapelo","Location":"Hog Hammock Beach Road","Loc_type":"","Longitude":-81.250615,"Latitude":31.429754}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.229721,31.496933]},"properties":{"Island":"Sapelo","Location":"First Baptist Church","Loc_type":"","Longitude":-81.229721,"Latitude":31.496933}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.258496,31.4062]},"properties":{"Island":"Sapelo","Location":"Old Beach Road Access","Loc_type":"","Longitude":-81.258496,"Latitude":31.4062}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.263909,31.396613]},"properties":{"Island":"Sapelo","Location":"Nature Trail Maritime Forest Observation Deck","Loc_type":"","Longitude":-81.263909,"Latitude":31.396613}}
+]}
