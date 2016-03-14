@@ -1,7 +1,21 @@
 // TOGGLE ICON IN YELLOW COLLAPSE MAP BUTTON
+
+$(document).ready(function() {
+    var mapWidth = ($(window).width()) - ($("#cont").width()) - 75
+    console.log(mapWidth)
+    $(".map").css("width",mapWidth)
+});
+
+
+
+
 $('#hideMap').click(function() {
     $('#cont').toggle();
     $(this).toggleClass("fa-caret-right collapse");
+    $(".map").toggleClass("full-width")
+    map.remove()
+    $("#map_canvas").append("<div id='map'></div>");
+    getLeaflet(31.630837, -81.152171,13)
 });
 
 function formatIsotope() {

@@ -16,6 +16,12 @@
 @import 'home.less';
 @import 'islands.less';
 
+#map {
+    width: 50%;
+}
+#map.full_width {
+    width: 100%;
+}
 
 .btn-primary {
         background-color: @green;
@@ -474,8 +480,11 @@ h1 {
 
 .map {
     min-height: @height100;
-    min-width: @width100;
     position: fixed !important;
+    right: 0;
+    &.full-width {
+        width: 100% !important;
+    }
     #map {
         width: 100%; 
         height: 100%; 
