@@ -4,14 +4,6 @@
 <head>
     <title>Georgia Coast Template</title>
    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-    <!--Panotour-->
-    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
-    <meta name="video_height" content="480"></meta>
-    <meta name="video_width" content="640"></meta>
-    <meta name="generator" content="Panotour Pro V2.5.0 64bits" />
-    <link rel="image_src" href="testdata/thumbnail.jpg" />
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <!-- Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -71,14 +63,27 @@
                 <div class="col-md-12">
                     <h1>The Relict Marsh at Cabretta Beach</h1>
                 <div id="panoDIV"></div>
-                    <script type="text/javascript" src="testdata/test.js"></script>
-                    <script type="text/javascript">
-                        embedpano({
+                    <script type="text/javascript" src="cabretta_aerialdata/cabretta_aerial.js"></script>
+               <!--    <script type="text/javascript">
+                      embedpano({
                         swf:"testdata/test.swf"
                         ,target:"panoDIV"
                         ,passQueryParameters:true,
                         height:600
-                        });
+                        }); 
+                    </script>-->
+                        
+                    <script type="text/javascript">
+                    embedpano({
+                        id:"krpanoSWFObject"
+                        ,xml:"cabretta_aerialdata/cabretta_aerial.xml"
+                        ,target:"panoDIV"
+                        ,passQueryParameters:true
+                        ,bgcolor:"#000000"
+                        ,html5:"only"
+                        ,vars:{skipintro:true,norotation:true},
+                        height:300
+                    });
                     </script>
                 </div>
 
