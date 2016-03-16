@@ -56,9 +56,13 @@ function getLeaflet(lat,lng,zoom) {
         var sapelo_reynolds_mansion = L.marker([31.39708, -81.27702], {icon: L.AwesomeMarkers.icon({icon: 'camera', prefix: 'fa', markerColor: 'blue', spin:false}) }).bindPopup("Reynolds Mansion").addTo(images);
 
         //sapelo articles
-        var sapelo_cabretta_fossils = L.marker([31.443465, -81.234475], {icon: L.AwesomeMarkers.icon({icon: 'file-text', prefix: 'fa', markerColor: 'yellow', spin:false}) }).bindPopup("Fossils in Progress").addTo(articles);
-        var sapelo_cabretta_lost_barrier = L.marker([31.433713, -81.238634], {icon: L.AwesomeMarkers.icon({icon: 'file-text', prefix: 'fa', markerColor: 'yellow', spin:false}) }).bindPopup("The Lost Barrier Islands of Georgia").addTo(articles);
+        var sapelo_cabretta_fossils = L.marker([31.443465, -81.234475], {icon: L.AwesomeMarkers.icon({icon: 'file-text', prefix: 'fa', markerColor: 'orange', spin:false}) }).bindPopup("Fossils in Progress").addTo(articles);
+        var sapelo_cabretta_lost_barrier = L.marker([31.433713, -81.238634], {icon: L.AwesomeMarkers.icon({icon: 'file-text', prefix: 'fa', markerColor: 'orange', spin:false}) }).bindPopup("The Lost Barrier Islands of Georgia").addTo(articles);
 
+        //panotours
+        var sapelo_cabretta_360 = L.marker([31.448899, -81.235913], {icon: L.AwesomeMarkers.icon({icon: 'image', prefix: 'fa', markerColor: 'green', spin:false}) }).bindPopup("Cabretta Island  360&deg; Panorama").addTo(panotour);
+        var sapelo_cabretta_aerial = L.marker([31.447028, -81.235346], {icon: L.AwesomeMarkers.icon({icon: 'image', prefix: 'fa', markerColor: 'green', spin:false}) }).bindPopup("Cabretta Relict Marsh Aerial Panorama").addTo(panotour);
+       
 
 // Sapelo  Sapelo Lighthouse          
 // Sapelo  Nannygoat Beach        
