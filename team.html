@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Georgia Coast Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="css/main.css" rel="stylesheet" media="screen">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]> <script src="../../assets/js/html5shiv.js"></script> <script src="../../assets/js/respond.min.js"></script> <![endif]-->
+    <!--Google maps API linl-->
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCsbzuJDUEOoq-jS1HO-LUXW4qo0gW9FNs"></script>
+    <!--Your map settings script-->
+    <script type="text/javascript" src="js/map.js"></script>
+    <!--jQuery-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
+
+</head>
+<body>
+
+    <!--autorization modal-->
+    <div class="modal fade" id="autorization">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Autorization</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" />
+                                Check me out
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a href="1.html" class="btn btn-danger btn-sm">Sign in</a>
+                    <a href="1.html" class="btn btn-primary btn-sm">Create account</a>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <!--map-->
+    <div id="map_canvas" class="map"></div>
+        
+
+    <!--/map-->
+    <div class="row site">
+        <div class="col-md-1 general_menu" id="thisMenu">
+            <script type="text/javascript">
+                $('#thisMenu').load('includes/navigation.html');
+            </script>
+        </div>
+        <!-- Toggle Sidebar Button 
+        <a id="hideMap" class="fa fa-caret-left"></a>
+         /Toggle Sidebar Button -->
+        <!--Content-->
+        <div class="col-md-8 full_width static_content">
+            <!--Header-->
+            <div class="row">
+                <div class="col-md-12 header">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="images/logo.png" />
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+            <!--Static Content-->
+            <div class="row long-content">
+                <div class="col-md-12">
+                    <h1>The Georgia Coast Atlas Team</h1>
+                    <p>
+                    A accumsan mi cras blandit morbi ad condimentum vitae tristique sed tempus vestibulum fringilla donec dignissim potenti. A a mus scelerisque euismod mollis ridiculus sodales porttitor integer parturient integer orci dapibus eu libero quis mi pharetra. Nec id dignissim porta condimentum lacus parturient odio quisque a ullamcorper a a rhoncus sociis curabitur at mi parturient cubilia facilisis curabitur. Vestibulum imperdiet vivamus integer ullamcorper etiam suspendisse at porttitor parturient est pretium a augue fringilla mi ipsum diam curae ullamcorper.</p>
+
+                    <p>Ligula vestibulum est hendrerit bibendum ut integer gravida placerat gravida a molestie sodales vehicula mollis sagittis ullamcorper a consequat mi mollis pretium euismod ullamcorper vestibulum sed mauris arcu. Cubilia nibh adipiscing a adipiscing a parturient sit parturient vestibulum pharetra aliquam at condimentum integer vestibulum ullamcorper cursus vel condimentum odio. Parturient adipiscing a tellus nisl phasellus adipiscing a sapien facilisis vestibulum quam nullam dis odio magnis vestibulum a lectus parturient pharetra parturient vel phasellus molestie. Mi volutpat vestibulum a inceptos nec mollis maecenas faucibus quis vitae fermentum posuere id a mi.</p>
+                    <div class="row">
+                        <div class="col-md-3"><img src="images/team/tony_martin.jpg" alt="Anthony Martin" class="img-circle center-block" width="108"><p style="text-align:center">Anthony (Tony) Martin</p></div>
+                        <div class="col-md-3"><img src="images/team/michael_page.jpg" alt="Michael Page" class="img-circle center-block" width="108"><p style="text-align:center">Michael Page</p></div>
+                        <div class="col-md-3"><img src="images/team/steve_bransford.png" alt="Steve Bransford" class="img-circle center-block" width="108"><p style="text-align:center">Steve Bransford</p></div>
+                        <div class="col-md-3"><img src="images/team/allen_tullos.jpg" alt="Allen Tullos" class="img-circle center-block" width="108"><p style="text-align:center">Allen Tullos</p></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3"><img src="images/team/shannon_odaniel.png" alt="Shannon O'Daniel" class="img-circle center-block" width="108"><p style="text-align:center">Shannon O'Daniel</p></div>
+                        <div class="col-md-3"><img src="images/team/anandi_salinas.jpg" alt="Anandi Salinas" class="img-circle center-block" width="108"><p style="text-align:center">Anandi Salinas</p></div>
+                        <div class="col-md-3"><img src="images/team/saundra_barrett.png" alt="Saundra Barrett" class="img-circle center-block" width="108"><p style="text-align:center">Saundra Barrett</p></div>
+                        <div class="col-md-3"><img src="images/team/alan_pike.jpg" alt="Alan Pike" class="img-circle center-block" width="108"><p style="text-align:center">Alan Pike</p></div>
+                    </div>
+                </div>
+            </div>
+            <!--/Long Form Content -->
+    
+        </div>
+        <div class="col-md-4 right-column">
+            <!--Features-->
+            <h1>Explore the Coast</h1>
+                <div class="callout">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="http://georgiapoliticalreview.com/wp-content/uploads/2013/05/sapelo-island.jpg"/>
+                        </div>
+                        <div class="description">
+                            <h4>Sapelo Island</h4>
+                            <p>A state-protected island (barrier island) located in McIntosh County, Georgia, Sapelo Island is only accessible by airplane or boat, with the primary ferry coming from the Sapelo Island Visitors Center.</p>
+                           <a href="sapelo.html"> <div class="btn btn-primary">Explore Sapelo Island</div></a>
+                        </div>
+                </div>
+                <div class="callout">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/St._Catherine%27s_Island_Salt_Marsh.jpg/2560px-St._Catherine%27s_Island_Salt_Marsh.jpg"/>
+                        </div>
+                        <div class="description">
+                            <h4>St. Catherine's Island</h4>
+                            <p>St. Catherines Island is ten miles long and anywhere from one to three miles wide. .</p>
+                            <a href="st_catherines.html"><div class="btn btn-primary">Explore St. Catherine's Island</div></a>
+                        </div>
+                </div>
+                <div class="callout">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="http://www.cabinbluff.com/images/hero_cumberland_island.jpg"/>
+                        </div>
+                        <div class="description">
+                            <h4>Cumberland Island</h4>
+                            <p>One of the largest undeveloped barrier islands in along the Atlantic coast, The island has one of the largest wilderness areas on the east coast.</p>
+                            <div class="btn btn-primary">Explore Cumberland Island</div>
+                        </div>
+                </div>
+                <div class="callout">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="http://cdn2-b.examiner.com/sites/default/files/styles/image_content_width/hash/3c/4b/1344825123_4160_201.JPG?itok=RlfZVOh5"/>
+                        </div>
+                        <div class="description">
+                            <h4>Ossabaw Island</h4>
+                            <p>Contains 9,000 acres of wooded uplands with freshwater ponds and 16,000 acres of marshlands interlaced with tidal creeks.</p>
+                            <div class="btn btn-primary">Explore Ossabaw Island</div>
+                        </div>
+                </div>
+                <div class="callout">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="http://www.fws.gov/wassaw/Images/boneyardlarge.jpg"/>
+                        </div>
+                        <div class="description">
+                            <h4>Wassaw Island</h4>
+                            <p>10,053 acres of marsh, mudflats, and tidal creeks, including approximately 7 miles of undeveloped beaches.</p>
+                            <div class="btn btn-primary">Explore Wassabaw Island</div>
+                        </div>
+                </div>
+                <div class="callout">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="http://www.thearmchairexplorer.com/georgia/a-georgia/nwrs/wolf-island-birds.jpg"/>
+                        </div>
+                        <div class="description">
+                            <h4>Wolf Island</h4>
+                            <p>Established in 1930 as a migratory bird sanctuary, consists of a long narrow strip of oceanfront beach backed by a broad band of salt marsh.</p>
+                            <div class="btn btn-primary">Explore Wolf Island</div>
+                        </div>
+                </div>
+                <div class="callout">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="http://media-cdn.tripadvisor.com/media/photo-s/01/72/89/33/tybee-island.jpg"/>
+                        </div>
+                        <div class="description">
+                            <h4>Tybee Island</h4>
+                            <p>Easternmost point in the state of Georgia, entire island is a part of the Savannah Metropolitan Statistical Area.</p>
+                            <div class="btn btn-primary">Explore Tybee Island</div>
+                        </div>
+                </div>
+                <div class="callout">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="http://ssisup.com/wp-content/uploads/2013/02/Saint_Simons_Island_GA_Marsh-1-e1362709161998.jpg"/>
+                        </div>
+                        <div class="description">
+                            <h4>Sea Island</h4>
+                            <p>The surrounding marshland, through which visitors are able to drive, was immortalized in 'The Marshes of Glynn' by Sidney Lanier in 1878.</p>
+                            <div class="btn btn-primary">Explore Sea Island</div>
+                        </div>
+                </div>
+        </div>
+        <!--/Content-->
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
+    <script src="js/on-page-functions.js"></script>
+
+    <script>
+        console.log($( window ).height())
+
+    </script>
+
+</body>
+</html>
