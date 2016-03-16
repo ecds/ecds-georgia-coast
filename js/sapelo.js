@@ -15,7 +15,6 @@ function getLeaflet(lat,lng,zoom) {
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         });
 
-        
 
         var map = L.map('map', {
             center: [lat, lng],
@@ -23,51 +22,7 @@ function getLeaflet(lat,lng,zoom) {
             layers: [OpenStreetMap]
         });
 
-        var counties = L.layerGroup([]);
-        $.ajax({
-            type: "POST",
-            url: "geo-json/GAcoastalcounties.json",
-            dataType: 'json',
-            success: function (response) {
-                //geojsonLayer = L.geoJson(response).addTo(map);
-                var GAcoastalcounties = L.geoJson(response, {
-                     style: function (feature) {
-                         
-                     },
-                     onEachFeature: function (feature, layer) {
-                         layer.addTo(counties);
-                         var countyLabel = L.divIcon({
-                              // Specify a class name we can refer to in CSS.
-                              className: 'countyLabel '+ feature.properties.NAME,
-                              html: "<div class='label'>"+feature.properties.NAME+"</div>",
-                              iconSize: [0,0]
-                              // Set marker width and height
-                            });
-                         var countyCenter = layer.getBounds().getCenter();
-                         L.marker([calculateLatitudeofPolygon(layer._latlngs), calculateLongitudeofPolygon(layer._latlngs)], {icon: countyLabel}).addTo(counties);
-                         
-                     }
-                 })
 
-            }
-        });
-
-        function calculateLatitudeofPolygon(layer) {
-              var length = layer.length;
-              var allLats = 0
-              for (var i = 0; i < length; i++) {
-                  allLats += layer[i].lat
-              }
-              return (allLats/length)
-        }
-        function calculateLongitudeofPolygon(layer) {
-              var length = layer.length;
-              var allLngs = 0
-              for (var i = 0; i < length; i++) {
-                  allLngs += layer[i].lng
-              }
-              return (allLngs/length)
-        }
 
         var sapelo_poi = L.layerGroup([]);
 
@@ -76,7 +31,15 @@ function getLeaflet(lat,lng,zoom) {
             url: "geo-json/Sapelo_POI.json",
             dataType: 'json',
             success: function (response) {
-                geojsonLayer = L.geoJson(response).addTo(sapelo_poi);
+                geojsonLayer = L.geoJson(response, {
+                      // style: function(feature) {
+                      //   icon: L.AwesomeMarkers.icon({icon: 'camera', prefix: 'fa', markerColor: 'blue', spin:false}) 
+                      // },
+                      onEachFeature: function (feature, layer) {
+                        layer.bindPopup(feature.properties.Location)
+                        layer.addTo(sapelo_poi)
+                     }
+                 });
             }
         });
 
@@ -112,7 +75,6 @@ function getLeaflet(lat,lng,zoom) {
         };
 
         var overlayMaps = {
-            "Counties": counties,
             "Sapelo POIs" : sapelo_poi,
             "shoreline1857" : shoreline1857,
             "shoreline1920" : shoreline1920
