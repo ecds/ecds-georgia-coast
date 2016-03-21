@@ -62,6 +62,7 @@ function getLeaflet(lat,lng,zoom) {
         //panotours
         var sapelo_cabretta_360 = L.marker([31.448899, -81.235913], {icon: L.AwesomeMarkers.icon({icon: 'image', prefix: 'fa', markerColor: 'green', spin:false}) }).bindPopup("Cabretta Island  360&deg; Panorama").addTo(panotour);
         var sapelo_cabretta_aerial = L.marker([31.447028, -81.235346], {icon: L.AwesomeMarkers.icon({icon: 'image', prefix: 'fa', markerColor: 'green', spin:false}) }).bindPopup("Cabretta Relict Marsh Aerial Panorama").addTo(panotour);
+        var sapelo_1976 = L.marker([31.465634, -81.251975], {icon: L.AwesomeMarkers.icon({icon: 'image', prefix: 'fa', markerColor: 'green', spin:false}) }).bindPopup("Sapelo Island 1976").addTo(panotour);
        
 
 // Sapelo  Sapelo Lighthouse          

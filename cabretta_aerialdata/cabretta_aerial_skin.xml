@@ -36,22 +36,6 @@ tween(alpha, 1);
 
 
     
-  <!-- Spot Style - Default Point Spot Style -->
-  <style name="IconDefaultPointSpotStyle"
-         url="%FIRSTXML%/spots/hotspot_user_defaultpoint0.png"
-         visible="false"
-         onloaded="showPermanentTooltip(all);"
-
-         height="25"
-         width="25"
-         />
-
-
-
-
-
-
-    
   <!-- Spot Style - Default Point Spot Style 1 -->
   <style name="IconDefaultPointSpotStyle1"
          url="%FIRSTXML%/spots/hotspot_user_defaultpoint1.png"
@@ -109,9 +93,6 @@ tween(alpha, 1);
     add(controlBar_classicbackgroundwidthwhenclosed, get(controlBar_classicbutton_pos), 20);
 
 
-    set(layer[controlBar_classicbtn_display_info].x, get(controlBar_classicbutton_pos));
-    set(layer[controlBar_classicbtn_close_info  ].x, get(controlBar_classicbutton_pos));
-    inc(controlBar_classicbutton_pos, 36);
 
     if (device.desktop,
       set(layer[controlBar_classicbtn_display_help].x, get(controlBar_classicbutton_pos));
@@ -127,10 +108,6 @@ tween(alpha, 1);
 
 
 
-
-    set(layer[controlBar_classicbtn_sound_on ].x, get(controlBar_classicbutton_pos));
-    set(layer[controlBar_classicbtn_sound_off].x, get(controlBar_classicbutton_pos));
-    inc(controlBar_classicbutton_pos, 36);
 
 
     if (device.desktop,
@@ -346,23 +323,6 @@ tween(alpha, 1);
             />
 
 
-    <layer name="controlBar_classicbtn_sound_on"
-            url="%FIRSTXML%/graphics/classiccontrolbar/btn_start_sound.png"
-            onclick="playTourSounds();
-"
-            style="controlBar_classic_btn_style"
-            visible="false"
-            tooltip="controlBar_classicsoundsOnTip"
-            />
-    <layer name="controlBar_classicbtn_sound_off"
-            url="%FIRSTXML%/graphics/classiccontrolbar/btn_stop_sound.png"
-            onclick="stopTourSounds();
-"
-            style="controlBar_classic_btn_style"
-            visible="false"
-            tooltip="controlBar_classicsoundsOffTip"
-            />
-
 
 
 
@@ -404,23 +364,6 @@ tween(alpha, 1);
             tooltip="controlBar_classichideHelpTip"
             />
 
-
-    <layer name="controlBar_classicbtn_display_info"
-            url="%FIRSTXML%/graphics/classiccontrolbar/btn_info.png"
-            onclick="showTourInfo();
-"
-            style="controlBar_classic_btn_style"
-            visible="false"
-            tooltip="controlBar_classicdisplayInfoTip"
-            />
-    <layer name="controlBar_classicbtn_close_info"
-            url="%FIRSTXML%/graphics/classiccontrolbar/btn_info.png"
-            onclick="hideTourInfo();
-"
-            style="controlBar_classic_btn_style"
-            visible="false"
-            tooltip="controlBar_classichideInfoTip"
-            />
 
 
     <layer name="controlBar_classicbtn_hidecontrols"
@@ -479,7 +422,6 @@ tween(alpha, 1);
     set(layer[controlBar_classicbtn_showcontrols].visible, true);
     controlBar_classicupdateFullscreenButtons();
 
-    controlBar_classicupdateSoundButtons();
 
 
 
@@ -497,7 +439,6 @@ tween(alpha, 1);
 
     controlBar_classicupdateHelpButtons();
 
-    controlBar_classicupdateInfoButtons();
 
     if(controlBar_classicbackgroundwidthwhenclosed == 0,
       set(layer[controlBar_classicmenu_controlbar_bg_img].visible, false);
@@ -551,11 +492,9 @@ tween(alpha, 1);
 
     controlBar_classicupdateHelpButtons();
 
-    controlBar_classicupdateInfoButtons();
 
     controlBar_classicupdateFullscreenButtons();
 
-    controlBar_classicupdateSoundButtons();
 
 
 
@@ -612,31 +551,6 @@ tween(alpha, 1);
 	</action>
 
 
-	<events name="controlBar_classicHideShowInfoEvents" 
-		onhidetourinfo="controlBar_classicupdateInfoButtons();" 
-		onshowtourinfo="controlBar_classicupdateInfoButtons();" 
-		keep="true" />
-	<action name="controlBar_classicHideInfoButtons">
-		set(layer[controlBar_classicbtn_display_info].visible, false);
-		set(layer[controlBar_classicbtn_close_info].visible, false);
-	</action>
-	<action name="controlBar_classicShowInfoButtons">
-		if (tour_displayinfo,
-			set(layer[controlBar_classicbtn_close_info].visible, true);
-			set(layer[controlBar_classicbtn_display_info].visible, false);
-		,
-			set(layer[controlBar_classicbtn_display_info].visible, true);
-			set(layer[controlBar_classicbtn_close_info].visible, false);
-		);
-	</action>
-	<action name="controlBar_classicupdateInfoButtons">
-		if (controlBar_classicIsOpened,
-			controlBar_classicShowInfoButtons();
-		,
-			controlBar_classicHideInfoButtons();
-		);
-	</action>
-
 
 	<events name="controlBar_classicmenufullscreenchangeevent"
 		onenterfullscreen="controlBar_classicupdateFullscreenButtons();"
@@ -667,31 +581,6 @@ tween(alpha, 1);
 		);
 	</action>
 
-
-	<events name="controlBar_classicplaystopsoundsevent" 
-		playtoursoundsevent="controlBar_classicupdateSoundButtons();" 
-		stoptoursoundsevent="controlBar_classicupdateSoundButtons();" 
-		keep="true" />
-	<action name="controlBar_classicHideSoundButtons">
-		set(layer[controlBar_classicbtn_sound_off].visible, false);
-		set(layer[controlBar_classicbtn_sound_on].visible , false);
-	</action>
-	<action name="controlBar_classicShowSoundButtons">
-		if (tour_soundson == false,
-			set(layer[controlBar_classicbtn_sound_off].visible, false);
-			set(layer[controlBar_classicbtn_sound_on].visible , true);
-		,
-			set(layer[controlBar_classicbtn_sound_off].visible, true);
-			set(layer[controlBar_classicbtn_sound_on].visible , false);
-		);
-	</action>
-	<action name="controlBar_classicupdateSoundButtons">
-		if (controlBar_classicIsOpened,
-			controlBar_classicShowSoundButtons();
-		,
-			controlBar_classicHideSoundButtons();
-		);
-	</action>
 
 
 	<events name="controlBar_classichotspotsdisplayevents"
@@ -744,90 +633,22 @@ tween(alpha, 1);
 	/>
 
 
-<!-- ********** -->
-<!-- Progress Bar and Loopings -->
-<!-- id : progressbar -->
-<!-- ********** -->
-
-  <progress showwait.flash="loopings(
-				0xffffff,
-				15,15,
-				0,0,
-				0xffffff,8,
-				0,0,center
-				)"
-			showreloads.flash="false"
-			parent=""
-			/>
+  <!-- Hide / Show Controls -->
+  <action name="hideTourControls">set(tour_displaycontrols, false);events.dispatch(hidetourcontrols);</action>
+  <action name="showTourControls">set(tour_displaycontrols, true); events.dispatch(showtourcontrols);</action>
 
 
-  <layer name="progressbar_bg"
-    align="center"
-    bgcolor="0x000000"
-    bgalpha="1.0"
-    bgborder="0"
-    onclick="progressbar_stop();"
-    enabled="true"
-    handcursor="false"
-    bgcapture="true"
-    x="0" y="50"
-    type="container"
-    width="200" height="10"
-    visible="true"
-    keep="true">
-      <layer name="progressbar_bar" 
-        align="topleft"
-        bgcolor="0xdddddd"
-        bgalpha="1.0"
-        x="0" y="0"
-        type="container"
-        width="0%"
-        height="100%"
-        enabled="false"
-        bgshadow="0 0 2 0 0x000000 0.6 inset"
-        keep="true"
-        />
-  </layer>
-  <action name="progressbar_start">
-    if(scene[get(xml.scene)].video,
-      progressbar_stop();
-    ,
-      mul(progress_val, get(progress.progress), 100);
-      txtadd(progress_percent, get(progress_val),"%");
-      set(layer[progressbar_bar].width, get(progress_percent));
-    if (device.html5, 
-      mul(xcrop, layer[progressbarwheel].frame, 64);
-      txtadd(layer[progressbarwheel].crop, get(xcrop), '|0|64|64');
-      
-      inc(layer[progressbarwheel].frame);
-      if(layer[progressbarwheel].frame GE layer[progressbarwheel].frames, set(layer[progressbarwheel].frame,0));
-    );
-      delayedcall(progressbar_progresscall, 0.1,progressbar_start());
-      if(progress_val == 100,
-        progressbar_stop();
-      );
-    );
-  </action>
-  <action name="progressbar_stop">
-    stopdelayedcall(progressbar_progresscall);
-    set(layer[progressbar_bg].visible, false);
-    set(layer[progressbar_bar].width, "0%");
-    if (device.html5, set(layer[progressbarwheel].visible, false););
-  </action>
-  <events name="progressbar_events" onloadcomplete="progressbar_stop();" onxmlcomplete="if (device.html5,set(layer[progressbarwheel].visible, true););set(layer[progressbar_bg].visible, true);progressbar_start();" keep="true" />
+  <!-- Fullscreen Management -->
+  <action name="exitFullScreen" devices="fullscreensupport">set(tour_fullscreen,false);set(fullscreen,false);</action>
+  <action name="enterFullScreen" devices="fullscreensupport">set(tour_fullscreen,true);set(fullscreen,true);</action>
+  <action name="switchFullScreen">if(tour_fullscreen,exitFullScreen();,enterFullScreen(););</action>
 
-  <!-- loading wheel -->
-  <layer name="progressbarwheel"
-         keep="true"
-         devices="html5"
-         visible="false"
-         url="%FIRSTXML%/graphics/progressbarandloopings/loadingwheel.png"
-         crop="0|0|64|64"
-         align="center"
-         x="0" y="0"
-         frame="0" frames="12"
-         width="30"
-         height="30" />
+  
+  <events name="krpanoExitFullscreenEvent"
+    onexitfullscreen="if(tour_fullscreen,exitFullScreenChangeEvent(););"
+    keep="true" />
+
+  <action name="exitFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,false);events.dispatch(onexitfullscreen);</action>
 
 <action name="viewControlZoomIn">
 	if(%1,
@@ -868,116 +689,6 @@ tween(alpha, 1);
 <action name="viewControlZoomStop">
 	set(fov_moveforce, 0);
 </action>
-
-  <!-- Hide / Show Controls -->
-  <action name="hideTourControls">set(tour_displaycontrols, false);events.dispatch(hidetourcontrols);</action>
-  <action name="showTourControls">set(tour_displaycontrols, true); events.dispatch(showtourcontrols);</action>
-
-
-<action name="viewControlMoveUp">
-	if(%1,
-		if(%2,
-			set(isfullvertical, false);
-			ifnot(scene[get(xml.scene)].planar,
-				sub(viewvfov, panoview.vmax, panoview.vmin);
-				if (viewvfov == 180,
-					set(isfullvertical, true);
-				);
-			);
-			if(isfullvertical == false AND calc(mod(view.vlookat, 90)-%2) LT view.vlookatmin,
-				moveto(get(view.hlookat), get(view.vlookatmin));
-			,
-				moveto(get(view.hlookat), calc(mod(view.vlookat, 90)-%2));
-			);
-		,
-			set(vlookat_moveforce, -1);
-			delayedcall(0.1, viewControlMoveVertStop());
-		);
-	,
-		set(vlookat_moveforce, -1);
-	);
-</action>
-<action name="viewControlMoveDown">
-	if(%1,
-		if(%2,
-			set(isfullvertical, false);
-			ifnot(scene[get(xml.scene)].planar,
-				sub(viewvfov, panoview.vmax, panoview.vmin);
-				if (viewvfov == 180,
-					set(isfullvertical, true);
-				);
-			);
-			if(sceneisfull360 == false AND calc(mod(view.vlookat, 90)+%2) GT view.vlookatmax,
-				moveto(get(view.hlookat), get(view.vlookatmax));
-			,
-				moveto(get(view.hlookat), calc(mod(view.vlookat, 90)+%2));
-			);
-		,
-			set(vlookat_moveforce, +1);
-			delayedcall(0.1, viewControlMoveVertStop());
-		);
-	,
-		set(vlookat_moveforce, +1);
-	);
-</action>
-<action name="viewControlMoveLeft">
-	if(%1,
-		if(%2,
-			set(isfullhorizontal, false);
-			ifnot(scene[get(xml.scene)].planar,
-				sub(viewhfov, panoview.hmax, panoview.hmin);
-				if (viewhfov == 360,
-					set(isfullhorizontal, true);
-				);
-			);
-			if(isfullhorizontal == false AND calc(view.hlookat-%2) LT view.hlookatmin,
-				moveto(get(view.hlookatmin), get(view.vlookat));
-			,
-				moveto(calc(view.hlookat-%2), get(view.vlookat));
-			);
-		,
-			set(hlookat_moveforce, -1);
-			delayedcall(0.1, viewControlMoveHoriStop());
-		);
-	,
-		set(hlookat_moveforce, -1);
-	);
-</action>
-<action name="viewControlMoveRight">
-	if(%1,
-		if(%2,
-			set(isfullhorizontal, false);
-			ifnot(scene[get(xml.scene)].planar,
-				sub(viewhfov, panoview.hmax, panoview.hmin);
-				if (viewhfov == 360,
-					set(isfullhorizontal, true);
-				);
-			);
-			if(isfullhorizontal == false AND calc(view.hlookat+%2) GT view.hlookatmax,
-				moveto(get(view.hlookatmax), get(view.vlookat));
-			,
-				moveto(calc(view.hlookat+%2), get(view.vlookat));
-			);
-		,
-			set(hlookat_moveforce, +1);
-			delayedcall(0.1, viewControlMoveHoriStop());
-			
-		);
-	,
-		set(hlookat_moveforce, +1);
-	);
-</action>
-<action name="viewControlMoveHoriStop">
-	set(hlookat_moveforce, 0);
-</action>
-<action name="viewControlMoveVertStop">
-	set(vlookat_moveforce, 0);
-</action>
-
-  <!-- Tour Information -->
-  <action name="hideTourInfo">set(tour_displayinfo, false);events.dispatch(onhidetourinfo);</action>
-  <action name="showTourInfo">set(tour_displayinfo, true); events.dispatch(onshowtourinfo);</action>
-
 
   <!-- Sounds Management -->
   <plugin name="soundinterface"
@@ -1206,11 +917,11 @@ tween(alpha, 1);
     preloadsound("blackbeard_creek.mp3");
     preloadsound("relict-marsh.mp3");
     preloadsound("storm-washove_fans.mp3");
-    preloadsound("abandoned_tidal_creek.mp3");
     preloadsound("tidal_creek.mp3");
     preloadsound("modern_salt_marsh.mp3");
     preloadsound("tree-boneyard.mp3");
     preloadsound("cabretta_beach.mp3");
+    preloadsound("abandoned_tidal_creek.mp3");
   </action>
 
   <action name="play3DLocalSounds">
@@ -1430,16 +1141,104 @@ tween(alpha, 1);
     );
   </action>
 
-  <!-- Fullscreen Management -->
-  <action name="exitFullScreen" devices="fullscreensupport">set(tour_fullscreen,false);set(fullscreen,false);</action>
-  <action name="enterFullScreen" devices="fullscreensupport">set(tour_fullscreen,true);set(fullscreen,true);</action>
-  <action name="switchFullScreen">if(tour_fullscreen,exitFullScreen();,enterFullScreen(););</action>
-
-  
-  <events name="krpanoExitFullscreenEvent"
-    onexitfullscreen="if(tour_fullscreen,exitFullScreenChangeEvent(););"
-    keep="true" />
-
-  <action name="exitFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,false);events.dispatch(onexitfullscreen);</action>
+<action name="viewControlMoveUp">
+	if(%1,
+		if(%2,
+			set(isfullvertical, false);
+			ifnot(scene[get(xml.scene)].planar,
+				sub(viewvfov, panoview.vmax, panoview.vmin);
+				if (viewvfov == 180,
+					set(isfullvertical, true);
+				);
+			);
+			if(isfullvertical == false AND calc(mod(view.vlookat, 90)-%2) LT view.vlookatmin,
+				moveto(get(view.hlookat), get(view.vlookatmin));
+			,
+				moveto(get(view.hlookat), calc(mod(view.vlookat, 90)-%2));
+			);
+		,
+			set(vlookat_moveforce, -1);
+			delayedcall(0.1, viewControlMoveVertStop());
+		);
+	,
+		set(vlookat_moveforce, -1);
+	);
+</action>
+<action name="viewControlMoveDown">
+	if(%1,
+		if(%2,
+			set(isfullvertical, false);
+			ifnot(scene[get(xml.scene)].planar,
+				sub(viewvfov, panoview.vmax, panoview.vmin);
+				if (viewvfov == 180,
+					set(isfullvertical, true);
+				);
+			);
+			if(sceneisfull360 == false AND calc(mod(view.vlookat, 90)+%2) GT view.vlookatmax,
+				moveto(get(view.hlookat), get(view.vlookatmax));
+			,
+				moveto(get(view.hlookat), calc(mod(view.vlookat, 90)+%2));
+			);
+		,
+			set(vlookat_moveforce, +1);
+			delayedcall(0.1, viewControlMoveVertStop());
+		);
+	,
+		set(vlookat_moveforce, +1);
+	);
+</action>
+<action name="viewControlMoveLeft">
+	if(%1,
+		if(%2,
+			set(isfullhorizontal, false);
+			ifnot(scene[get(xml.scene)].planar,
+				sub(viewhfov, panoview.hmax, panoview.hmin);
+				if (viewhfov == 360,
+					set(isfullhorizontal, true);
+				);
+			);
+			if(isfullhorizontal == false AND calc(view.hlookat-%2) LT view.hlookatmin,
+				moveto(get(view.hlookatmin), get(view.vlookat));
+			,
+				moveto(calc(view.hlookat-%2), get(view.vlookat));
+			);
+		,
+			set(hlookat_moveforce, -1);
+			delayedcall(0.1, viewControlMoveHoriStop());
+		);
+	,
+		set(hlookat_moveforce, -1);
+	);
+</action>
+<action name="viewControlMoveRight">
+	if(%1,
+		if(%2,
+			set(isfullhorizontal, false);
+			ifnot(scene[get(xml.scene)].planar,
+				sub(viewhfov, panoview.hmax, panoview.hmin);
+				if (viewhfov == 360,
+					set(isfullhorizontal, true);
+				);
+			);
+			if(isfullhorizontal == false AND calc(view.hlookat+%2) GT view.hlookatmax,
+				moveto(get(view.hlookatmax), get(view.vlookat));
+			,
+				moveto(calc(view.hlookat+%2), get(view.vlookat));
+			);
+		,
+			set(hlookat_moveforce, +1);
+			delayedcall(0.1, viewControlMoveHoriStop());
+			
+		);
+	,
+		set(hlookat_moveforce, +1);
+	);
+</action>
+<action name="viewControlMoveHoriStop">
+	set(hlookat_moveforce, 0);
+</action>
+<action name="viewControlMoveVertStop">
+	set(vlookat_moveforce, 0);
+</action>
 
 </krpano>

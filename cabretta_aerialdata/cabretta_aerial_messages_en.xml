@@ -15,20 +15,16 @@
   <data name="en_spotpoint131_tooltip"><![CDATA[Blackbeard Creek]]></data>
   <data name="en_spotpoint132_tooltip"><![CDATA[Relict Marsh]]></data>
   <data name="en_spotpoint133_tooltip"><![CDATA[Storm-Washover Fan]]></data>
-  <data name="en_spotpoint134_tooltip"><![CDATA[Abandoned Tidal Creek]]></data>
   <data name="en_spotpoint135_tooltip"><![CDATA[Tidal Creek]]></data>
   <data name="en_spotpoint136_tooltip"><![CDATA[Modern Salt Marsh]]></data>
   <data name="en_spotpoint137_tooltip"><![CDATA[Tree Boneyard]]></data>
   <data name="en_spotpoint138_tooltip"><![CDATA[Cabretta Beach]]></data>
   <data name="en_spotpoint178_tooltip"><![CDATA[Go to Cabretta 360 Tour]]></data>
   <data name="en_spotpoint178openurlwebsiteurl"><![CDATA[cabretta_360.html]]></data>
+  <data name="en_spotpoint189_tooltip"><![CDATA[Abandoned Tidal Creek]]></data>
 
 
-  <data name="en_pano153_title"><![CDATA[IMG_0532]]></data>
-  <data name="en_spotpoint172_tooltip"><![CDATA[Back to Cabretta Beach]]></data>
-
-
-	<data name="en_spotmap177_tooltip"><![CDATA[]]></data>
+	<data name="en_spotmap194_tooltip"><![CDATA[]]></data>
 
 
 
@@ -41,14 +37,10 @@
   <data name="en_controlBar_classicmoveDownTip"><![CDATA[Move down]]></data>
   <data name="en_controlBar_classicopenFsTip"><![CDATA[Enter fullscreen]]></data>
   <data name="en_controlBar_classiccloseFsTip"><![CDATA[Exit fullscreen]]></data>
-  <data name="en_controlBar_classicsoundsOnTip"><![CDATA[Start sounds]]></data>
-  <data name="en_controlBar_classicsoundsOffTip"><![CDATA[Stop sounds]]></data>
   <data name="en_controlBar_classicshowSpotsTip"><![CDATA[Show hotspots]]></data>
   <data name="en_controlBar_classichideSpotsTip"><![CDATA[Hide hotspots]]></data>
   <data name="en_controlBar_classicdisplayHelpTip"><![CDATA[Show help screen]]></data>
   <data name="en_controlBar_classichideHelpTip"><![CDATA[Hide help screen]]></data>
-  <data name="en_controlBar_classicdisplayInfoTip"><![CDATA[Show information]]></data>
-  <data name="en_controlBar_classichideInfoTip"><![CDATA[Hide information]]></data>
   <data name="en_controlBar_classicdisplayControlsTip"><![CDATA[Show controls]]></data>
   <data name="en_controlBar_classichideControlsTip"><![CDATA[Hide controls]]></data>
   <data name="en_controlBar_classicctrlmodeDragTip"><![CDATA[Change control mode]]></data>
@@ -85,9 +77,6 @@
   <data name="en_vr_setup_cb7"><![CDATA[Successful calibration]]></data>
   <data name="en_vr_setup_cb8"><![CDATA[Calibration failed]]></data>
   <data name="en_vr_setup_unavailable"><![CDATA[VR mode[br]is unavailable on your device]]></data>
-
-
-
 
 
 

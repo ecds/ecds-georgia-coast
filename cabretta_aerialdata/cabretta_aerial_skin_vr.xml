@@ -34,22 +34,6 @@ tween(alpha, 1);
 
 
     
-  <!-- Spot Style - Default Point Spot Style -->
-  <style name="IconDefaultPointSpotStyle"
-         url="%FIRSTXML%/spots/hotspot_user_defaultpoint0.png"
-         visible="false"
-
-
-         height="25"
-         width="25"
-         />
-
-
-
-
-
-
-    
   <!-- Spot Style - Default Point Spot Style 1 -->
   <style name="IconDefaultPointSpotStyle1"
          url="%FIRSTXML%/spots/hotspot_user_defaultpoint1.png"
@@ -76,6 +60,23 @@ tween(alpha, 1);
   </action>
 
 
+
+  <!-- Hide / Show Controls -->
+  <action name="hideTourControls">set(tour_displaycontrols, false);events.dispatch(hidetourcontrols);</action>
+  <action name="showTourControls">set(tour_displaycontrols, true); events.dispatch(showtourcontrols);</action>
+
+
+  <!-- Fullscreen Management -->
+  <action name="exitFullScreen" devices="fullscreensupport">set(tour_fullscreen,false);set(fullscreen,false);</action>
+  <action name="enterFullScreen" devices="fullscreensupport">set(tour_fullscreen,true);set(fullscreen,true);</action>
+  <action name="switchFullScreen">if(tour_fullscreen,exitFullScreen();,enterFullScreen(););</action>
+
+  
+  <events name="krpanoExitFullscreenEvent"
+    onexitfullscreen="if(tour_fullscreen,exitFullScreenChangeEvent(););"
+    keep="true" />
+
+  <action name="exitFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,false);events.dispatch(onexitfullscreen);</action>
 
 <action name="viewControlZoomIn">
 	if(%1,
@@ -116,116 +117,6 @@ tween(alpha, 1);
 <action name="viewControlZoomStop">
 	set(fov_moveforce, 0);
 </action>
-
-  <!-- Hide / Show Controls -->
-  <action name="hideTourControls">set(tour_displaycontrols, false);events.dispatch(hidetourcontrols);</action>
-  <action name="showTourControls">set(tour_displaycontrols, true); events.dispatch(showtourcontrols);</action>
-
-
-<action name="viewControlMoveUp">
-	if(%1,
-		if(%2,
-			set(isfullvertical, false);
-			ifnot(scene[get(xml.scene)].planar,
-				sub(viewvfov, panoview.vmax, panoview.vmin);
-				if (viewvfov == 180,
-					set(isfullvertical, true);
-				);
-			);
-			if(isfullvertical == false AND calc(mod(view.vlookat, 90)-%2) LT view.vlookatmin,
-				moveto(get(view.hlookat), get(view.vlookatmin));
-			,
-				moveto(get(view.hlookat), calc(mod(view.vlookat, 90)-%2));
-			);
-		,
-			set(vlookat_moveforce, -1);
-			delayedcall(0.1, viewControlMoveVertStop());
-		);
-	,
-		set(vlookat_moveforce, -1);
-	);
-</action>
-<action name="viewControlMoveDown">
-	if(%1,
-		if(%2,
-			set(isfullvertical, false);
-			ifnot(scene[get(xml.scene)].planar,
-				sub(viewvfov, panoview.vmax, panoview.vmin);
-				if (viewvfov == 180,
-					set(isfullvertical, true);
-				);
-			);
-			if(sceneisfull360 == false AND calc(mod(view.vlookat, 90)+%2) GT view.vlookatmax,
-				moveto(get(view.hlookat), get(view.vlookatmax));
-			,
-				moveto(get(view.hlookat), calc(mod(view.vlookat, 90)+%2));
-			);
-		,
-			set(vlookat_moveforce, +1);
-			delayedcall(0.1, viewControlMoveVertStop());
-		);
-	,
-		set(vlookat_moveforce, +1);
-	);
-</action>
-<action name="viewControlMoveLeft">
-	if(%1,
-		if(%2,
-			set(isfullhorizontal, false);
-			ifnot(scene[get(xml.scene)].planar,
-				sub(viewhfov, panoview.hmax, panoview.hmin);
-				if (viewhfov == 360,
-					set(isfullhorizontal, true);
-				);
-			);
-			if(isfullhorizontal == false AND calc(view.hlookat-%2) LT view.hlookatmin,
-				moveto(get(view.hlookatmin), get(view.vlookat));
-			,
-				moveto(calc(view.hlookat-%2), get(view.vlookat));
-			);
-		,
-			set(hlookat_moveforce, -1);
-			delayedcall(0.1, viewControlMoveHoriStop());
-		);
-	,
-		set(hlookat_moveforce, -1);
-	);
-</action>
-<action name="viewControlMoveRight">
-	if(%1,
-		if(%2,
-			set(isfullhorizontal, false);
-			ifnot(scene[get(xml.scene)].planar,
-				sub(viewhfov, panoview.hmax, panoview.hmin);
-				if (viewhfov == 360,
-					set(isfullhorizontal, true);
-				);
-			);
-			if(isfullhorizontal == false AND calc(view.hlookat+%2) GT view.hlookatmax,
-				moveto(get(view.hlookatmax), get(view.vlookat));
-			,
-				moveto(calc(view.hlookat+%2), get(view.vlookat));
-			);
-		,
-			set(hlookat_moveforce, +1);
-			delayedcall(0.1, viewControlMoveHoriStop());
-			
-		);
-	,
-		set(hlookat_moveforce, +1);
-	);
-</action>
-<action name="viewControlMoveHoriStop">
-	set(hlookat_moveforce, 0);
-</action>
-<action name="viewControlMoveVertStop">
-	set(vlookat_moveforce, 0);
-</action>
-
-  <!-- Tour Information -->
-  <action name="hideTourInfo">set(tour_displayinfo, false);events.dispatch(onhidetourinfo);</action>
-  <action name="showTourInfo">set(tour_displayinfo, true); events.dispatch(onshowtourinfo);</action>
-
 
   <!-- Sounds Management -->
   <plugin name="soundinterface"
@@ -454,11 +345,11 @@ tween(alpha, 1);
     preloadsound("blackbeard_creek.mp3");
     preloadsound("relict-marsh.mp3");
     preloadsound("storm-washove_fans.mp3");
-    preloadsound("abandoned_tidal_creek.mp3");
     preloadsound("tidal_creek.mp3");
     preloadsound("modern_salt_marsh.mp3");
     preloadsound("tree-boneyard.mp3");
     preloadsound("cabretta_beach.mp3");
+    preloadsound("abandoned_tidal_creek.mp3");
   </action>
 
   <action name="play3DLocalSounds">
@@ -678,16 +569,104 @@ tween(alpha, 1);
     );
   </action>
 
-  <!-- Fullscreen Management -->
-  <action name="exitFullScreen" devices="fullscreensupport">set(tour_fullscreen,false);set(fullscreen,false);</action>
-  <action name="enterFullScreen" devices="fullscreensupport">set(tour_fullscreen,true);set(fullscreen,true);</action>
-  <action name="switchFullScreen">if(tour_fullscreen,exitFullScreen();,enterFullScreen(););</action>
-
-  
-  <events name="krpanoExitFullscreenEvent"
-    onexitfullscreen="if(tour_fullscreen,exitFullScreenChangeEvent(););"
-    keep="true" />
-
-  <action name="exitFullScreenChangeEvent" devices="fullscreensupport">set(tour_fullscreen,false);events.dispatch(onexitfullscreen);</action>
+<action name="viewControlMoveUp">
+	if(%1,
+		if(%2,
+			set(isfullvertical, false);
+			ifnot(scene[get(xml.scene)].planar,
+				sub(viewvfov, panoview.vmax, panoview.vmin);
+				if (viewvfov == 180,
+					set(isfullvertical, true);
+				);
+			);
+			if(isfullvertical == false AND calc(mod(view.vlookat, 90)-%2) LT view.vlookatmin,
+				moveto(get(view.hlookat), get(view.vlookatmin));
+			,
+				moveto(get(view.hlookat), calc(mod(view.vlookat, 90)-%2));
+			);
+		,
+			set(vlookat_moveforce, -1);
+			delayedcall(0.1, viewControlMoveVertStop());
+		);
+	,
+		set(vlookat_moveforce, -1);
+	);
+</action>
+<action name="viewControlMoveDown">
+	if(%1,
+		if(%2,
+			set(isfullvertical, false);
+			ifnot(scene[get(xml.scene)].planar,
+				sub(viewvfov, panoview.vmax, panoview.vmin);
+				if (viewvfov == 180,
+					set(isfullvertical, true);
+				);
+			);
+			if(sceneisfull360 == false AND calc(mod(view.vlookat, 90)+%2) GT view.vlookatmax,
+				moveto(get(view.hlookat), get(view.vlookatmax));
+			,
+				moveto(get(view.hlookat), calc(mod(view.vlookat, 90)+%2));
+			);
+		,
+			set(vlookat_moveforce, +1);
+			delayedcall(0.1, viewControlMoveVertStop());
+		);
+	,
+		set(vlookat_moveforce, +1);
+	);
+</action>
+<action name="viewControlMoveLeft">
+	if(%1,
+		if(%2,
+			set(isfullhorizontal, false);
+			ifnot(scene[get(xml.scene)].planar,
+				sub(viewhfov, panoview.hmax, panoview.hmin);
+				if (viewhfov == 360,
+					set(isfullhorizontal, true);
+				);
+			);
+			if(isfullhorizontal == false AND calc(view.hlookat-%2) LT view.hlookatmin,
+				moveto(get(view.hlookatmin), get(view.vlookat));
+			,
+				moveto(calc(view.hlookat-%2), get(view.vlookat));
+			);
+		,
+			set(hlookat_moveforce, -1);
+			delayedcall(0.1, viewControlMoveHoriStop());
+		);
+	,
+		set(hlookat_moveforce, -1);
+	);
+</action>
+<action name="viewControlMoveRight">
+	if(%1,
+		if(%2,
+			set(isfullhorizontal, false);
+			ifnot(scene[get(xml.scene)].planar,
+				sub(viewhfov, panoview.hmax, panoview.hmin);
+				if (viewhfov == 360,
+					set(isfullhorizontal, true);
+				);
+			);
+			if(isfullhorizontal == false AND calc(view.hlookat+%2) GT view.hlookatmax,
+				moveto(get(view.hlookatmax), get(view.vlookat));
+			,
+				moveto(calc(view.hlookat+%2), get(view.vlookat));
+			);
+		,
+			set(hlookat_moveforce, +1);
+			delayedcall(0.1, viewControlMoveHoriStop());
+			
+		);
+	,
+		set(hlookat_moveforce, +1);
+	);
+</action>
+<action name="viewControlMoveHoriStop">
+	set(hlookat_moveforce, 0);
+</action>
+<action name="viewControlMoveVertStop">
+	set(vlookat_moveforce, 0);
+</action>
 
 </krpano>

@@ -6,10 +6,8 @@
   <style name="IconDefaultPointSpotStyle"
          url="%FIRSTXML%/spots/hotspot_user_defaultpoint0.png"
          visible="false"
-         zoom="true"
-
          alpha="0.8"
-         onloaded="if(scene[get(xml.scene)].planar,if(zoom,set(zoom, false);););showPermanentTooltip(all);"
+         onloaded="showPermanentTooltip(all);"
          onover="onoverIconDefaultPointSpotStyle"
          onout="onoutIconDefaultPointSpotStyle"
 
