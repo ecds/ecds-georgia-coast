@@ -8,21 +8,23 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="dist/leaflet.awesome-markers.css">
     <link href="css/main.css" rel="stylesheet" media="screen">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]> <script src="../../assets/js/html5shiv.js"></script> <script src="../../assets/js/respond.min.js"></script> <![endif]-->
     <!--Google maps API linl-->
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCsbzuJDUEOoq-jS1HO-LUXW4qo0gW9FNs"></script>
     <!--Your map settings script-->
-    <script type="text/javascript" src="js/map.js"></script>
+    <script type="text/javascript" src="js/plain-map.js"></script>
     <!--jQuery-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
 </head>
 
-<body onload="getLeaflet(31.436647, -81.235684,14)">
+<body onload="getLeaflet(31.4339291,-81.2450594,15)" data-type="article">
     <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+    <script src="dist/leaflet.awesome-markers.js"></script>
     <!--map-->
     <div id="map_canvas" class="map">
         <div id="map"></div>
@@ -63,11 +65,11 @@
                     <h3>Tony Martin</h3>
                     <figure class="half-image pull-right">
                         <img class="img-responsive" src="images/1Series-of-Tubes2.jpg">
-                        <figcaption>Cabretta Beach on Sapelo Island at low tide, its sandflat adorned with beautiful ripples and many traces of animal life. Sand is abundant here because of a nearby tidal channel and strong ebb-tide currents that tend to deposit more sand here than in other places around the island. This sand then provides lots of places for animals that live on or in it, making trails and burrows. This interaction between animals and sediments demonstrates how ecology and geology intersect through ichnology, the study of traces. Among those traces are the dark “pipes” sticking out of that sandy surface, explained soon. (Photograph by Anthony Martin.)</figcaption>
+                        <figcaption>Cabretta Beach on Sapelo Island at low tide, its sandflat adorned with beautiful ripples and many traces of animal life. Sand is abundant here because of a nearby tidal channel and strong ebb-tide currents that tend to deposit more sand here than in other places around the island. This sand then provides lots of places for animals that live on or in it, making trails and burrows. This interaction between animals and sediments demonstrates how ecology and geology intersect through ichnology, the study of traces. Among those traces are the dark "pipes" sticking out of that sandy surface, explained soon. (Photograph by Anthony Martin.)</figcaption>
                     </figure>
-                   <p>The Georgia coast is well known for its historic role in the development of modern ecology, starting in the 1950s and ongoing today. But what about geologists? Fortunately, they were not long behind the ecologists, starting their research projects on Sapelo Island and other Georgia barrier islands in the early 1960s. Indeed, through that seminal work and investigations afterwards, these islands are currently renown for the insights they bestowed on our understanding of sedimentary geology.
+                   <p>The Georgia coast is well known for its historic role in the development of modern ecology, starting in the 1950s and ongoing today. But what about geologists? Fortunately, they were not long behind the ecologists, starting their research projects on Sapelo Island and other Georgia barrier islands in the early 1960s. Indeed, through that seminal work and investigations afterwards, these islands are currently renown for the insights they bestowed on our understanding of sedimentary geology.
 </p> 
-                   <p>Why would geologists be attracted to these islands made of shifting sand and mud that were nearly devoid of anything resembling a rock? Before sedimentary rocks can be made, sediments are needed, and those sediments must get deposited before solidifying into rock. Hence these geologists were interested in learning how the modern sands and muds of the barrier islands were deposited, eroded, or otherwise moved in coastal environments, a dynamism that can be watched and studied every day along any Georgia shoreline. The products of such sediment movement and deposition are sedimentary structures, which are either formed from physical processes – such as wind, waves, or tides – or biological processes, such as burrowing. Hence sedimentary structures can be classified as either physical or biogenic, respectively.
+                   <p>Why would geologists be attracted to these islands made of shifting sand and mud that were nearly devoid of anything resembling a rock? Before sedimentary rocks can be made, sediments are needed, and those sediments must get deposited before solidifying into rock. Hence these geologists were interested in learning how the modern sands and muds of the barrier islands were deposited, eroded, or otherwise moved in coastal environments, a dynamism that can be watched and studied every day along any Georgia shoreline. The products of such sediment movement and deposition are sedimentary structures, which are either formed from physical processes - such as wind, waves, or tides - or biological processes, such as burrowing. Hence sedimentary structures can be classified as either physical or biogenic, respectively.
 </p>
                     <blockquote><p>Through this integrated approach, they successfully showed that the long, linear sand ridges in on the coastal plain of southeastern Georgia were actually former dunes and beaches of ancient barrier islands.</p></blockquote>
                     <figure class="half-image pull-left">
@@ -76,22 +78,22 @@
                            </figcaption>
                     </figure>
 
-                    <p>Geologists who studied the Georgia barrier islands in the 1960s were among the first people in North America to apply what they observed in modern environments to ancient sedimentary deposits, and like the ecologists, they did it in Georgia. For example, in 1964, a few of these geologists – John H. Hoyt, Robert J. Weimer, and V.J. (“Jim”) Henry – used a combination of: (1) geology, which involved looking at physical sedimentary structures and the sediments themselves; (2) modern traces made by coastal Georgia animals; and (3) Pleistocene trace fossils.
+                    <p>Geologists who studied the Georgia barrier islands in the 1960s were among the first people in North America to apply what they observed in modern environments to ancient sedimentary deposits, and like the ecologists, they did it in Georgia. For example, in 1964, a few of these geologists - John H. Hoyt, Robert J. Weimer, and V.J. ("Jim") Henry - used a combination of: (1) geology, which involved looking at physical sedimentary structures and the sediments themselves; (2) modern traces made by coastal Georgia animals; and (3) Pleistocene trace fossils.
 </p>
-                    <p>Through this integrated approach, they successfully showed that the long, linear sand ridges in on the coastal plain of southeastern Georgia were actually former dunes and beaches of ancient barrier islands. These sand ridges, which are barely discernible rises on a mostly flat coastal plain, are southwest-northeast trending and more-or-less parallel to the present Georgia shoreline. Remarkably, these ridges denote the positions of sea-level highs during the last few million years on the Georgia coastal plain. The geologists applied Native American and colonial names to each of these island systems – Wicomico, Penholoway, Talbot, Pamlico, Princess Anne, and Silver Bluff – with the most inland system reflecting the highest sea level.
+                    <p>Through this integrated approach, they successfully showed that the long, linear sand ridges in on the coastal plain of southeastern Georgia were actually former dunes and beaches of ancient barrier islands. These sand ridges, which are barely discernible rises on a mostly flat coastal plain, are southwest-northeast trending and more-or-less parallel to the present Georgia shoreline. Remarkably, these ridges denote the positions of sea-level highs during the last few million years on the Georgia coastal plain. The geologists applied Native American and colonial names to each of these island systems - Wicomico, Penholoway, Talbot, Pamlico, Princess Anne, and Silver Bluff - with the most inland system reflecting the highest sea level.
 </p>
-                    <p>So how did these geologists figure out that a bunch of sand hills were actually lost barrier islands? And what does this all of this have to do with traces and trace fossils? The geologists first observed modern traces on Georgia shorelines that were burrows made by ghost shrimp, also known by biologists as callianassid shrimp. On a sandy beach surface, the tops of these burrows look like tiny shield volcanoes, and a burrow occupied by a ghost shrimp will complete that allusion by “erupting” water and fecal pellets through a narrow aperture.
+                    <p>So how did these geologists figure out that a bunch of sand hills were actually lost barrier islands? And what does this all of this have to do with traces and trace fossils? The geologists first observed modern traces on Georgia shorelines that were burrows made by ghost shrimp, also known by biologists as callianassid shrimp. On a sandy beach surface, the tops of these burrows look like tiny shield volcanoes, and a burrow occupied by a ghost shrimp will complete that allusion by "erupting" water and fecal pellets through a narrow aperture.
 </p>
 
                      <figure>
                         <img class="img-responsive" src="images/3Shrimp-Burrow-Top1.jpg">
-                        <figcaption>Top of a typical callianassid shrimp burrow, looking much like a little volcano and adorned by fecal pellets, which coincidentally resemble “chocolate sprinkles,” but will likely disappoint in a taste test. (Photograph by Anthony Martin, taken on St. Catherines Island.)
+                        <figcaption>Top of a typical callianassid shrimp burrow, looking much like a little volcano and adorned by fecal pellets, which coincidentally resemble "chocolate sprinkles," but will likely disappoint in a taste test. (Photograph by Anthony Martin, taken on St. Catherines Island.)
 </figcaption>
                     </figure>
 
                     <figure>
                         <img class="img-responsive" src="images/4GhostShrimp-SCI1.jpg">
-                        <figcaption>A couple of ghost shrimp, which are either a male-female pair of Carolina ghost shrimp (Callichirus major) or a Carolina ghost shrimp and a Georgia ghost shrimp (Biffarius biformis). These shrimp have big claws, which they use as their main “digging tools.” Scale = 1 cm (0.4 in) (Photograph by Anthony Martin, taken on St. Catherines Island, Georgia.)
+                        <figcaption>A couple of ghost shrimp, which are either a male-female pair of Carolina ghost shrimp (Callichirus major) or a Carolina ghost shrimp and a Georgia ghost shrimp (Biffarius biformis). These shrimp have big claws, which they use as their main "digging tools." Scale = 1 cm (0.4 in) (Photograph by Anthony Martin, taken on St. Catherines Island, Georgia.)
                         </figcaption>
                     </figure>
 
@@ -112,7 +114,7 @@
     <div class="item active">
       <img src="images/xsection_burrow.png" alt="Cross section of ghost shrimp burrow">
       <div class="carousel-caption">
-        <p>Cross-sectional diagram of a typical ghost shrimp burrow system, showing its knobby exterior walls, “wine-bottle” shape toward the top of the burrow system, and branching parts below. Key: A = aperture, S = shaft, T = tunnel, BJ = burrow junction, TC = turnaround chamber. Figure from Martin (2013), <i>Life Traces of the Georgia Coast</i>.</p>
+        <p>Cross-sectional diagram of a typical ghost shrimp burrow system, showing its knobby exterior walls, "wine-bottle" shape toward the top of the burrow system, and branching parts below. Key: A = aperture, S = shaft, T = tunnel, BJ = burrow junction, TC = turnaround chamber. Figure from Martin (2013), <i>Life Traces of the Georgia Coast</i>.</p>
       </div>
     </div>
 
@@ -157,7 +159,7 @@
 <!--
                     <figure class="half-image pull-left">
                         <img class="img-responsive" src="images/xsection_burrow.png">
-                        <figcaption>Cross-sectional diagram of a typical ghost shrimp burrow system, showing its knobby exterior walls, “wine-bottle” shape toward the top of the burrow system, and branching parts below. Key: A = aperture, S = shaft, T = tunnel, BJ = burrow junction, TC = turnaround chamber. Figure from Martin (2013), <i>Life Traces of the Georgia Coast</i>.</figcaption>
+                        <figcaption>Cross-sectional diagram of a typical ghost shrimp burrow system, showing its knobby exterior walls, "wine-bottle" shape toward the top of the burrow system, and branching parts below. Key: A = aperture, S = shaft, T = tunnel, BJ = burrow junction, TC = turnaround chamber. Figure from Martin (2013), <i>Life Traces of the Georgia Coast</i>.</figcaption>
                     </figure>
 
 
@@ -166,7 +168,7 @@
                         <figcaption>A small portion of a ghost-shrimp burrow, showing its wall reinforced by rounded pellets of sand and stuck together with all-natural adhesive, shrimp spit. (Photograph by Anthony Martin, taken on Sapelo Island.)</figcaption>
                     </figure>
 -->
-                    <p>Amazingly, these shafts descend vertically far below the beach, as much as 2-3 meters (6.5-10 feet) deep. Here they turn horizontal, oblique, and vertical, and tunnels intersect, branch, and otherwise look like a complex tangle of piping, perhaps reminding baby-boomers of “jungle gyms” that they used to enjoy as children.
+                    <p>Amazingly, these shafts descend vertically far below the beach, as much as 2-3 meters (6.5-10 feet) deep. Here they turn horizontal, oblique, and vertical, and tunnels intersect, branch, and otherwise look like a complex tangle of piping, perhaps reminding baby-boomers of "jungle gyms" that they used to enjoy as children.
 </p>
                     <blockquote><p>This is when geologists started realizing that the Georgia barrier islands were made of both Pleistocene and modern sediments as amalgams of two shorelines, and hence unlike any other known barrier islands in the world.</p></blockquote>
 <!--
@@ -207,7 +209,7 @@
                     </figure>
                 </div>
             </div>
-                    <p>Geology and ecology combined further later in the 1960s, when paleontologists who also were well trained in biology began looking at how organisms – such as ghost shrimp, fiddler crabs, ghost crabs, mussels, and many other animals – actually change coastal sediments through their behavior and traces. So were these scientists considered geologists, biologists, or ecologists? They were actually greater than the sum of their parts: they were ichnologists. And what they found through their studies of modern traces on the Georgia barrier islands made these places even more scientifically famous, becoming recognized worldwide as among the best for comparing modern traces with trace fossils.
+                    <p>Geology and ecology combined further later in the 1960s, when paleontologists who also were well trained in biology began looking at how organisms - such as ghost shrimp, fiddler crabs, ghost crabs, mussels, and many other animals - actually change coastal sediments through their behavior and traces. So were these scientists considered geologists, biologists, or ecologists? They were actually greater than the sum of their parts: they were ichnologists. And what they found through their studies of modern traces on the Georgia barrier islands made these places even more scientifically famous, becoming recognized worldwide as among the best for comparing modern traces with trace fossils.
 </p>
                     <p><strong>Anthony (Tony) Martin</strong> is a paleontologist and geologist who specializes in ichnology, the study of modern and ancient traces caused by animal behavior, such as tracks, trails, burrows, and nests. He is a Professor of Practice in the Department of Environmental Sciences at Emory University, where he has been for 25 years. At Emory, he teaches a variety of courses in paleontology, geology, and the environmental sciences on campus and in field courses, including study-abroad programs.</p>
                     <h2>Further Reading</h2>
