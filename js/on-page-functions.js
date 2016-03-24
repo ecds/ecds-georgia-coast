@@ -4,10 +4,17 @@ $(document).ready(function() {
     var mapWidth = ($(window).width()) - ($("#cont").width()) - 75
     console.log(mapWidth)
     $(".map").css("width",mapWidth)
+    $('[id*="_island"]').hover(function(e){
+        console.log($(this).attr('data-toggle'))
+    });
+    
 });
 
 
 
+function showThisIsland(layerID) {
+    console.log("show")
+}
 
 $('#hideMap').click(function() {
     $('#cont').toggle();

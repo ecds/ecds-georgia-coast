@@ -2,13 +2,11 @@
 function getLeaflet(lat,lng,zoom) {
 
 
-        var OpenStreetMap = L.tileLayer('http://otile{s}.mqcdn.com/tiles/1.0.0/{type}/{z}/{x}/{y}.{ext}', {
-            type: 'map',
-            ext: 'jpg',
-            attribution: 'Tiles Courtesy of <a href="http://www.mapquest.com/">MapQuest</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-            subdomains: '1234',
+        var OpenStreetMap = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+            attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012',
             layers: [baseMaps, overlayMaps]
-        });
+});
+
 
         var OpenStreetMap_BlackAndWhite = L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
             maxZoom: 18,
@@ -20,8 +18,15 @@ function getLeaflet(lat,lng,zoom) {
         var map = L.map('map', {
             center: [lat, lng],
             zoom: zoom,
+            zoomControl:false,
             layers: [OpenStreetMap]
         });
+
+        var countyStyle = {
+          "color": "#66C396",
+          "weight": 2,
+          "opacity": 0.85
+      };
 
         var counties = L.layerGroup([]);
         $.ajax({
@@ -32,7 +37,7 @@ function getLeaflet(lat,lng,zoom) {
                 //geojsonLayer = L.geoJson(response).addTo(map);
                 var GAcoastalcounties = L.geoJson(response, {
                      style: function (feature) {
-                         
+                         return countyStyle
                      },
                      onEachFeature: function (feature, layer) {
                          layer.addTo(counties);
@@ -69,42 +74,39 @@ function getLeaflet(lat,lng,zoom) {
               return (allLngs/length)
         }
 
-        var sapelo_poi = L.layerGroup([]);
-
-         $.ajax({
+        var boundaryStyle = {
+          "color": "#4989F3",
+          "weight": 2,
+          "opacity": 0.85
+      };
+      var highlightStyle = {
+        "weight": 9
+      };
+        var boundaries = L.layerGroup([]);
+        $.ajax({
             type: "POST",
-            url: "geo-json/Sapelo_POI.json",
+            url: "geo-json/IslandBounds.json",
             dataType: 'json',
             success: function (response) {
-                geojsonLayer = L.geoJson(response).addTo(sapelo_poi);
+                //geojsonLayer = L.geoJson(response).addTo(map);
+                var GAcoastalboundaries = L.geoJson(response, {
+                    style: function(feature) { return boundaryStyle },
+                     onEachFeature: function (feature, layer) {
+                        layer.addTo(boundaries);
+                        var thisDiv = feature.properties.Name.replace(/([~!@#$%^&*()_+=`{}\[\]\|\\:;'<>,.\/? ])+/g, '-').replace(/^(-)+|(-)+$/g,'').toLowerCase()
+                        layer.on("mouseover", function (e) {
+                          layer.setStyle(highlightStyle);
+                          $("#"+thisDiv).toggleClass("hover");
+                          location.hash = "#" + thisDiv;
+                        });
+                        layer.on("mouseout", function (e) {
+                          layer.setStyle(boundaryStyle); 
+                          $("#"+thisDiv).toggleClass("hover");
+                        });
+                     }
+                 })
             }
         });
-
-         var shoreline1857 = L.layerGroup([]);
-
-         $.ajax({
-            type: "POST",
-            url: "geo-json/Coastlines_Storms-selected/Sapelo_1857-1870coastline.json",
-            dataType: 'json',
-            success: function (response) {
-                geojsonLayer = L.geoJson(response, {color : "#66C396", weight : "2"
-                }).addTo(shoreline1857);
-            }
-        });
-
-         var shoreline1920 = L.layerGroup([]);
-
-         $.ajax({
-            type: "POST",
-            url: "geo-json/Coastlines_Storms-selected/Sapelo_1920-1925coastline.json",
-            dataType: 'json',
-            success: function (response) {
-
-                geojsonLayer = L.geoJson(response, {color : "#D94B3F", weight : "2"
-                }).addTo(shoreline1920);
-            }
-        });
-        
       
         var baseMaps = {
             "Open Street Map": OpenStreetMap,
@@ -112,12 +114,9 @@ function getLeaflet(lat,lng,zoom) {
         };
 
         var overlayMaps = {
-            "Counties": counties,
-            "Sapelo POIs" : sapelo_poi,
-            "shoreline1857" : shoreline1857,
-            "shoreline1920" : shoreline1920
+            "Counties": counties
         };
-
-        L.control.layers(baseMaps, overlayMaps).addTo(map);
+        boundaries.addTo(map)
+        L.control.layers(baseMaps, overlayMaps,{collapsed: false}).addTo(map);
 
 }

@@ -24,7 +24,7 @@ function getLeaflet(lat,lng,zoom) {
 
 
 
-        var sapelo_poi = L.layerGroup([]);
+        var sapelo_images = L.layerGroup([]);
 
          $.ajax({
             type: "POST",
@@ -37,7 +37,7 @@ function getLeaflet(lat,lng,zoom) {
                       // },
                       onEachFeature: function (feature, layer) {
                         layer.bindPopup(feature.properties.Location)
-                        layer.addTo(sapelo_poi)
+                        layer.addTo(sapelo_images)
                      }
                  });
             }
@@ -67,6 +67,78 @@ function getLeaflet(lat,lng,zoom) {
                 }).addTo(shoreline1920);
             }
         });
+
+         var shoreline1971 = L.layerGroup([]);
+
+         $.ajax({
+            type: "POST",
+            url: "geo-json/Coastlines_Storms-selected/Sapelo_1971-1973coastline.json",
+            dataType: 'json',
+            success: function (response) {
+
+                geojsonLayer = L.geoJson(response, {color : "#4989F3", weight : "2"
+                }).addTo(shoreline1971);
+
+            }
+        });
+
+         var shoreline1999 = L.layerGroup([]);
+
+         $.ajax({
+            type: "POST",
+            url: "geo-json/Coastlines_Storms-selected/Sapelo_1999coastline.json",
+            dataType: 'json',
+            success: function (response) {
+
+                geojsonLayer = L.geoJson(response, {color : "#455a64", weight : "2"
+                }).addTo(shoreline1971);
+            }
+        });
+
+         $.ajax({
+            type: "POST",
+            url: "geo-json/SapeloQuads.json",
+            dataType: 'json',
+            success: function (response) {
+
+                geojsonLayer = L.geoJson(response, {
+                      // style: function(feature) ({
+                      //   color : "#455a64", 
+                      //   weight : "2"
+                      // }),
+                      onEachFeature: function (feature, layer) {
+                        layer.bindPopup(feature.properties.QUADNAME)
+                        var countyLabel = L.divIcon({
+                              // Specify a class name we can refer to in CSS.
+                              className: 'countyLabel '+ feature.properties.QUADNAME,
+                              html: "<div class='label'>"+feature.properties.QUADNAME+"</div>",
+                              iconSize: [0,0]
+                              // Set marker width and height
+                            });
+                         L.marker([calculateLatitudeofPolygon(layer._latlngs), calculateLongitudeofPolygon(layer._latlngs)], {icon: countyLabel}).addTo(map);
+
+                     }
+                 });
+                geojsonLayer.addTo(map)
+            }
+        }); 
+
+         function calculateLatitudeofPolygon(layer) {
+              var length = layer.length;
+              var allLats = 0
+              for (var i = 0; i < length; i++) {
+                  allLats += layer[i].lat
+              }
+              return (allLats/length)
+        }
+        function calculateLongitudeofPolygon(layer) {
+              var length = layer.length;
+              var allLngs = 0
+              for (var i = 0; i < length; i++) {
+                  allLngs += layer[i].lng
+              }
+              return (allLngs/length)
+        }
         
       
         var baseMaps = {
@@ -75,9 +147,11 @@ function getLeaflet(lat,lng,zoom) {
         };
 
         var overlayMaps = {
-            "Sapelo POIs" : sapelo_poi,
+            "Sapelo POIs" : sapelo_images,
             "shoreline1857" : shoreline1857,
-            "shoreline1920" : shoreline1920
+            "shoreline1920" : shoreline1920,
+            "shoreline1971" : shoreline1971,
+            "shoreline1999" : shoreline1999
         };
 
         L.control.layers(baseMaps, overlayMaps).addTo(map);

@@ -73,31 +73,22 @@ video#bgvid {
   padding-left: 74px;
   padding-right: 0;
 }
-.all-islands .island-row {
-  width: 100%;
-  position: relative;
-}
-.all-islands .tile-expand {
+.all-islands .tile {
   height: 20%;
   background-color: rgba(0, 0, 0, 0.7);
   border-bottom: solid 1px #CCC;
   color: #FFF;
+  padding: 15px 5px;
 }
-.all-islands .tile-expand .base-tile {
+.all-islands .tile .base-tile {
   max-width: 600px;
   padding-left: 15px;
 }
-.all-islands .tile-expand:hover {
-  width: 100% !important;
+.all-islands .tile .base-tile h1 {
+  margin-top: 0;
 }
-.all-islands .tile-expand:hover > .hidden-information {
-  display: block;
-}
-.all-islands .tile-expand .hidden-information {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 0;
+.all-islands .tile.hover {
+  background-color: rgba(0, 0, 0, 0.9);
 }
 .countyLabel {
   min-width: 120px;

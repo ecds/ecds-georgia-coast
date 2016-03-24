@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Georgia Coast Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="dist/leaflet.awesome-markers.css">
+    <link href="css/main.css" rel="stylesheet" media="screen">
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]> <script src="../../assets/js/html5shiv.js"></script> <script src="../../assets/js/respond.min.js"></script> <![endif]-->
+    <!--Google maps API linl-->
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCsbzuJDUEOoq-jS1HO-LUXW4qo0gW9FNs"></script>
+    <!--Your map settings script-->
+    <script type="text/javascript" src="js/map.js"></script>
+    <!--jQuery-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+
+</head>
+<body onload="getLeaflet(31.4028749,-81.5877394,10)">
+   
+
+    <script src="http://leaflet.github.io/Leaflet.draw/lib/leaflet/leaflet.js"></script>
+    <script src="http://leaflet.github.io/Leaflet.label/leaflet.label.js"></script>
+    <script src="dist/leaflet.awesome-markers.js"></script>
+    
+    <!--map-->
+    <div id="map_canvas" class="map">
+        <div id="map" style="width: 100%; height: 100%; position: absolute;"></div>
+    </div>
+        
+
+    <!--/map-->
+    <div class="row site">
+        <div class="col-md-1 general_menu" id="thisMenu">
+            <script type="text/javascript">
+                $('#thisMenu').load('includes/navigation.html');
+            </script>
+        </div>
+
+        <!--Content-->
+        <div class="col-md-12 all-islands">
+        <!-- <div class="row">
+            <div class="col-sm-4 tile-expand" id="cumberland-island">
+                <div class="base-tile">
+                    <h1>Cumberland Island</h1>
+                    <p>Cumberland Island is one of the Sea Islands of the southeastern United States and is the largest in terms of continuously exposed land. It is located on the Atlantic Ocean off the coast of the U.S. state of Georgia and is part of Camden County, Georgia (30°51′N, 81°27′W). Cumberland Island constitutes the westernmost point of shoreline on the Atlantic Ocean in the United States. The island is 17.5 miles (28.2 km) long, with an area of 36,415 acres (147.37 km2 or 56.25 square miles), including 16,850 acres (68.2 km2) of marsh, mudflats, and tidal creeks. There is no bridge to the island; most visitors reach the island by the Cumberland Ferry from St. Marys.</p>
+                    <button class="btn btn-primary"><a href="islands.html">Explore Cumberland Island</a></button>
+                </div>
+                <div class="hidden-information">This is the additional information</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 tile-expand" id="sapelo-island">
+                <div class="base-tile">
+                    <h1>Sapelo Island</h1>
+                    <p>Cumberland Island is one of the Sea Islands of the southeastern United States and is the largest in terms of continuously exposed land. It is located on the Atlantic Ocean off the coast of the U.S. state of Georgia and is part of Camden County, Georgia (30°51′N, 81°27′W). Cumberland Island constitutes the westernmost point of shoreline on the Atlantic Ocean in the United States. The island is 17.5 miles (28.2 km) long, with an area of 36,415 acres (147.37 km2 or 56.25 square miles), including 16,850 acres (68.2 km2) of marsh, mudflats, and tidal creeks. There is no bridge to the island; most visitors reach the island by the Cumberland Ferry from St. Marys.</p>
+                    <button class="btn btn-primary"><a href="islands.html">Explore Cumberland Island</a></button>
+                </div>
+                <div class="hidden-information">This is the additional information</div>
+            </div> -->
+        </div>
+    </div>
+            </div>
+            
+        <!--/Content-->
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
+    <script src="js/on-page-functions.js"></script>
+
+    <!--[if lt IE 9]>
+<script>
+    document.createElement('video');
+</script>
+<![endif]-->
+
+
+</body>
+</html>
