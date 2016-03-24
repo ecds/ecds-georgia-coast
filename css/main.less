@@ -41,6 +41,26 @@
         &:hover {
             background-color: darken(@green, 10%)
         }
+        &.disabled {
+            background-color: #333;
+            opacity: 1;
+            &:before {
+                content: "COMING SOON";
+                position: absolute;
+                color: red;
+                font-weight: bold;
+                -ms-transform: rotate(7deg);
+                -webkit-transform: rotate(7deg);
+                transform: rotate(7deg);
+                left: 25%;
+            }
+            a {
+                opacity: 0.25;
+            }
+            &:hover {
+                background-color: #333;
+            }
+        }
     }
 
 .btn-secondary {
@@ -492,7 +512,36 @@ h1 {
     }
 }
 
+//carousel
+.carousel-inner img{
+    margin:auto;
+}
+#myCarousel {
+    margin-bottom: 10px;
+}
 
+.carousel-caption {
+    position: relative;
+    left: auto;
+    right: auto;
+    padding: 10px 5px 0 5px;
+    bottom: 0px;
+    color: #fff;
+    text-shadow: none;
+    background-color: rgba(0, 0, 0, .5);
+    font-style: italic;
+    font-size: 13px;
+
+}
+.carousel-control.left,
+.carousel-control.right{
+    background-image:none;
+    text-shadow: 0px 1px 5px rgba(0, 0, 0, 1);
+}
+
+.carousel-indicators{
+    bottom: 100px;
+}
 
 @media screen and (max-width:1800px) {
     .general_content_styles {

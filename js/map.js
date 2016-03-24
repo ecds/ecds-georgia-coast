@@ -80,7 +80,8 @@ function getLeaflet(lat,lng,zoom) {
           "opacity": 0.85
       };
       var highlightStyle = {
-        "weight": 9
+        "weight": 3,
+        "color" : "#D94B3F"
       };
         var boundaries = L.layerGroup([]);
         $.ajax({
@@ -102,6 +103,9 @@ function getLeaflet(lat,lng,zoom) {
                         layer.on("mouseout", function (e) {
                           layer.setStyle(boundaryStyle); 
                           $("#"+thisDiv).toggleClass("hover");
+                        });
+                        layer.on("click", function (e) {
+                          window.location.href = thisDiv+".html";
                         });
                      }
                  })
