@@ -60,6 +60,7 @@
             <div class="row long-content">
                 <div class="col-md-12">
                     <h1>Fossils in Progress</h1>
+                    <h3>Tony Martin</h3>
                     <figure>
                         <img class="img-responsive" src="http://www.georgialifetraces.com/wp-content/uploads/2011/11/Relict-Marsh-view.jpg">
                         <figcaption>Overall view of relict marsh exposed on Cabretta Beach, Sapelo Island, Georgia, with me for scale, but from 2004. Hence the scale might now be slightly wider now. (Photograph taken by Ruth Schowalter.)</figcaption>
@@ -139,6 +140,7 @@
                     </figure>
                     <p>The last time I took a group to students to the Cabretta Beach marsh, we were there for only about an hour before regretfully walking back to our field vehicle, followed by a ferry ride to the mainland part of Georgia and a long drive home to Atlanta. Yet I felt assured that the lessons about taphonomy, ancient environments, body fossils, trace fossils, and diagenesis imparted by this relict marsh encompassed enough material to fill a week’s worth of classes in an indoor classroom. Moreover, if we had been all enclosed by four walls and a ceiling, and without a former marsh underfoot, there was no guarantee that these concepts would be understood or retained.</p>
                     <p>This is why we geoscientist-educators take our students outside, enriching our collective awareness of how environments change through time and how we piece together the clues left behind from ancient environments. It’s memorable, it’s fun, and it works. But don’t take my word for it. Whether you’re an educator or student, try it yourself sometime, whether on the Georgia coast or elsewhere, and see what happens.</p>
+                    <p><strong>Anthony (Tony) Martin</strong> is a paleontologist and geologist who specializes in ichnology, the study of modern and ancient traces caused by animal behavior, such as tracks, trails, burrows, and nests. He is a Professor of Practice in the Department of Environmental Sciences at Emory University, where he has been for 25 years. At Emory, he teaches a variety of courses in paleontology, geology, and the environmental sciences on campus and in field courses, including study-abroad programs.</p>
                     <h2>Further Reading</h2>
                    <p>Basan, P.B., and Frey, R.W. 1977. Actual-palaeontology and neoichnology of salt marshes near Sapelo Island, Georgia. In Crimes, T.P., and Harper, J.C. (editors), <i>Trace Fossils 2</i>. Liverpool, Seel House Press: 41-70.</p>
                    <p>Edwards, J.M. and Frey, R.W. 1977. Substrate characteristics within a Holocene salt marsh, Sapelo Island, Georgia. <i>Senckenbergiana Maritima</i>, 9: 215-259.</p>
@@ -153,53 +155,21 @@
             <!--/Long Form Content -->
             <!--Features-->
             <h3>Related Content</h3>
-            <div class="row related-articles">
-                <div class="col-md-4">
-                    <div class="related">
-                        <a href="lost-barrier-islands.html">
-                        <div class="thumbnail">
-                            <img class="img-responsive" src="images/1Series-of-Tubes2.jpg" />
-                        </div>
-                        <i class="fa fa-camera"></i>
-                        <h4>The Lost Barrier Islands of Georgia</h4>
-                        <p>The Georgia coast is well known for its historic role in the development of modern ecology, starting in the 1950s and ongoing today. But what about geologists? Fortunately, they were not long behind the ecologists, starting their research...</p>
-                        <div id="tags">
-                            <a class="tag">Cabretta Beach</a>
-                            <a class="tag sapelo">Sapelo Island</a>
-                        </div>
-                        </a>
-                    </div>
-
+            <div class="filter tags">
+                <!-- <div class="filter-list">
+                    <label>Filter By Content Type:</label>
+                    <button class="tag content-type" data-filter="article"><span class="fa fa-file-text"></span></button>
+                    <button class="tag content-type" data-filter="photos"><span class="fa fa-camera"></span></button>
+                    <button class="tag content-type" data-filter="videos"><span class="fa fa-video-camera"></span></button>
+                </div> -->
+               <div id="isotope-tags" class="filter-list">
+                    <label>Filter By Tags:</label>
+                    <button class="tag active" data-filter="element">Show All</button>
                 </div>
-                <div class="col-md-4">
-                    <div class="related">
-                        <div class="thumbnail">
-                            <img class="img-responsive" src="http://img.youtube.com/vi/Nu2gjl7UBJc/maxresdefault.jpg" />
-                        </div>
-                        <i class="fa fa-video-camera"></i>
-                        <h4>Rooted in Time</h4>
-                        <p>As a paleontologist and geologist, time is always on my mind. Nonetheless, such musings do not always connect with millions or billions of years, the so-called "deep time" that earth scientists love to use whenever shocking people who normally ponder shorter time intervals used when, say, measuring the life of a fruit fly, or the length of a cat-themed video.</p>
-                        <div id="tags">
-                            <a class="tag">Relict Marsh</a>
-                            <a class="tag sapelo">Sapelo Island</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="related">
-                        <div class="thumbnail">
-                            <img class="img-responsive" src="http://www.georgialifetraces.com/wp-content/uploads/2015/07/Drone-Vulture.jpg" />
-                        </div>
-                        <i class="fa fa-file-text"></i>
-                        <h4>A Birds-Eye View of a Georgia Barrier Island</h4>
-                        <p>All scientists use tools when investigating how the natural world works. Yet as a traditionally trained field scientist – and an ichnologist – I’ve always been wary of adopting anything more complicated than field notebooks, pencils, tape measures, hand lenses, and cameras. Granted, I did add GPS...</p>
-                        <div id="tags">
-                            <a class="tag">Drone</a>
-                            <a class="tag">Gopher Tortoises</a>
-                            <a class="tag sapelo">Sapelo Island</a>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            <div class="spacer"></div>
+            <div id="sapelo-stories">
+                
             </div>
             <!--/Content-->
         </div>
@@ -208,6 +178,14 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
         <script src="js/on-page-functions.js"></script>
+            <script type="text/javascript">
+        // CALL FORMAT ISOTOPE FUNCTION FROM ON-PAGE-FUNCTIONS
+        $( document ).ready(function() {
+            $( "#sapelo-stories" ).load( "includes/sapelo-stories.html", function() {
+              formatIsotope();
+            });
+        });
+    </script>
 </body>
 
 </html>
