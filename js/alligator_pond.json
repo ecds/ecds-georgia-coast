@@ -1,0 +1,15 @@
+{
+    "imageGallery": {
+        "name": "Alligator Pond",
+            "images": {
+            "image": {
+                "url": "images/team.png",
+                "caption": "Team"
+            },
+            "image": {
+                "url": "images/periwinkles.png",
+                "caption": "Periwinkles"
+            }
+        }
+    }
+}

@@ -1,35 +1,4 @@
-
-function getLeaflet(lat,lng,zoom) {
-
-
-        var OpenStreetMap = L.tileLayer('http://otile{s}.mqcdn.com/tiles/1.0.0/{type}/{z}/{x}/{y}.{ext}', {
-            type: 'map',
-            ext: 'jpg',
-            attribution: 'Tiles Courtesy of <a href="http://www.mapquest.com/">MapQuest</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-            subdomains: '1234',
-            layers: [baseMaps, overlayMaps]
-        });
-
-        var OpenStreetMap_BlackAndWhite = L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
-            maxZoom: 18,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        });
-
-        var videos = L.layerGroup([]);
-        var panotour = L.layerGroup([]);
-        var images = L.layerGroup([]);
-        var articles = L.layerGroup([]);
-
-        var map = L.map('map', {
-            center: [lat, lng],
-            zoom: zoom,
-            layers: [OpenStreetMap, videos, panotour]
-        });
-
-        //OpenStreetMap.addTo(map);
-
-        
-
+                
         //sapelo articles
         var sapelo_cabretta_fossils = L.marker([31.443465, -81.234475], {icon: L.AwesomeMarkers.icon({icon: 'file-text', prefix: 'fa', markerColor: 'orange', spin:false}) }).bindPopup("Fossils in Progress").addTo(articles);
         var sapelo_cabretta_lost_barrier = L.marker([31.433713, -81.238634], {icon: L.AwesomeMarkers.icon({icon: 'file-text', prefix: 'fa', markerColor: 'orange', spin:false}) }).bindPopup("The Lost Barrier Islands of Georgia").addTo(articles);
@@ -40,7 +9,7 @@ function getLeaflet(lat,lng,zoom) {
         var sapelo_1976 = L.marker([31.465634, -81.251975], {icon: L.AwesomeMarkers.icon({icon: 'image', prefix: 'fa', markerColor: 'green', spin:false}) }).bindPopup("Sapelo Island 1976").addTo(panotour);
 
         //videos
-        //var sapelo_alligator_pond = L.marker([31.39793, -81.27856], {icon: L.AwesomeMarkers.icon({icon: 'video-camera', prefix: 'fa', markerColor: 'red', spin:false}) }).bindPopup("Alligator Pond").addTo(videos);
+        var sapelo_alligator_pond = L.marker([31.39793, -81.27856], {icon: L.AwesomeMarkers.icon({icon: 'video-camera', prefix: 'fa', markerColor: 'red', spin:false}) }).bindPopup("Alligator Pond").addTo(videos);
        
         var sapelo_borrow_pit = L.marker([31.436491, -81.275418], {icon: L.AwesomeMarkers.icon({icon: 'video-camera', prefix: 'fa', markerColor: 'red', spin:false}) }).bindPopup("Borrow Pit").addTo(videos);
       
@@ -69,46 +38,13 @@ function getLeaflet(lat,lng,zoom) {
         var sapelo_raccoon_bluff = L.marker([31.498983, -81.229219], {icon: L.AwesomeMarkers.icon({icon: 'video-camera', prefix: 'fa', markerColor: 'red', spin:false}) }).bindPopup("Raccoon Bluff").addTo(videos);
 
         //galleries
-        var sapelo_shell_ring_gallery = L.marker([31.514815, -81.244476], {icon: L.AwesomeMarkers.icon({icon: 'video-camera', prefix: 'fa', markerColor: 'blue', spin:false}) }).bindPopup('<div id="myCarousel" class="carousel slide" data-ride="carousel"> <ol class="carousel-indicators"> <li data-target="#myCarousel" data-slide-to="0" class="active"></li><li data-target="#myCarousel" data-slide-to="1"></li><li data-target="#myCarousel" data-slide-to="2"></li><li data-target="#myCarousel" data-slide-to="3"></li></ol> <div class="carousel-inner" role="listbox"> <div class="item active"> <img src="img_chania.jpg" alt="Chania"> </div><div class="item"> <img src="img_chania2.jpg" alt="Chania"> </div><div class="item"> <img src="img_flower.jpg" alt="Flower"> </div><div class="item"> <img src="img_flower2.jpg" alt="Flower"> </div></div><a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only">Next</span> </a></div><div id="myCarousel" class="carousel slide" data-ride="carousel"> <ol class="carousel-indicators"> <li data-target="#myCarousel" data-slide-to="0" class="active"></li><li data-target="#myCarousel" data-slide-to="1"></li><li data-target="#myCarousel" data-slide-to="2"></li><li data-target="#myCarousel" data-slide-to="3"></li></ol> <div class="carousel-inner" role="listbox"> <div class="item active"> <img src="img_chania.jpg" alt="Chania"> <div class="carousel-caption"> <h3>Chania</h3> <p>The atmosphere in Chania has a touch of Florence and Venice.</p></div></div><div class="item"> <img src="img_chania2.jpg" alt="Chania"> <div class="carousel-caption"> <h3>Chania</h3> <p>The atmosphere in Chania has a touch of Florence and Venice.</p></div></div><div class="item"> <img src="img_flower.jpg" alt="Flower"> <div class="carousel-caption"> <h3>Flowers</h3> <p>Beatiful flowers in Kolymbari, Crete.</p></div></div><div class="item"> <img src="img_flower2.jpg" alt="Flower"> <div class="carousel-caption"> <h3>Flowers</h3> <p>Beatiful flowers in Kolymbari, Crete.</p></div></div></div><a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only">Next</span> </a></div>').addTo(images);
+        var sapelo_shell_ring_gallery = L.marker([31.514815, -81.244476], {icon: L.AwesomeMarkers.icon({icon: 'video-camera', prefix: 'fa', markerColor: 'blue', spin:false}) }).bindPopup("Shell Ring").addTo(images);
         var sapelo_raccoon_bluff_gallery = L.marker([31.499258, -81.229529], {icon: L.AwesomeMarkers.icon({icon: 'video-camera', prefix: 'fa', markerColor: 'blue', spin:false}) }).bindPopup("Raccoon Bluff").addTo(images);
         var sapelo_nannygoat_beach_gallery = L.marker([31.389500, -81.265159], {icon: L.AwesomeMarkers.icon({icon: 'video-camera', prefix: 'fa', markerColor: 'blue', spin:false}) }).bindPopup("Nannygoat Beach").addTo(images);
         var sapelo_lighthouse_gallery = L.marker([31.39126, -81.28568], {icon: L.AwesomeMarkers.icon({icon: 'video-camera', prefix: 'fa', markerColor: 'blue', spin:false}) }).bindPopup("Sapelo Island Lighthouse").addTo(images);
-        var sapelo_marine_institute_gallery = L.marker([31.39734, -81.27986], {icon: L.AwesomeMarkers.icon({icon: 'video-camera', prefix: 'fa', markerColor: 'blue', spin:false}) }).bindPopup("Marine Institute").addTo(images);
+        var sapelo_marine_institute_gallery = L.marker([31.39734, -81.27986], {icon: L.AwesomeMarkers.icon({icon: 'video-camera', prefix: 'fa', markerColor: 'blue', spin:false}) }).bindPopup("Marine Institute").addTo(video);
         var sapelo_borrow_pit_gallery = L.marker([31.436370, -81.275273], {icon: L.AwesomeMarkers.icon({icon: 'video-camera', prefix: 'fa', markerColor: 'blue', spin:false}) }).bindPopup("Borrow Pit").addTo(images);
         var sapelo_raccoon_bluff_church_gallery = L.marker([31.496891, -81.229693], {icon: L.AwesomeMarkers.icon({icon: 'video-camera', prefix: 'fa', markerColor: 'blue', spin:false}) }).bindPopup("First African Baptist Church").addTo(images);
         var sapelo_greenhouse_gallery = L.marker([31.39756, -81.27396], {icon: L.AwesomeMarkers.icon({icon: 'video-camera', prefix: 'fa', markerColor: 'blue', spin:false}) }).bindPopup("Greenhouse").addTo(images);
-        var sapelo_alligator_pond_gallery = L.marker([31.397869, -81.278431], {icon: L.AwesomeMarkers.icon({icon: 'video-camera', prefix: 'fa', markerColor: 'blue', spin:false}) }).bindPopup(getGalleries("sapelo_alligator_pond_gallery")).addTo(images);
+        var sapelo_alligator_pond_gallery = L.marker([31.397869, -81.278431], {icon: L.AwesomeMarkers.icon({icon: 'video-camera', prefix: 'fa', markerColor: 'blue', spin:false}) }).bindPopup("<div id='#alligator_pond'><div>").addTo(images);
         var sapelo_nature_trail_gallery = L.marker([31.394498, -81.270047], {icon: L.AwesomeMarkers.icon({icon: 'video-camera', prefix: 'fa', markerColor: 'blue', spin:false}) }).bindPopup("Nature Trail").addTo(images);
-        
-        var baseMaps = {
-            "Open Street Map": OpenStreetMap,
-            "Open Street Map Black and White": OpenStreetMap_BlackAndWhite
-        };
-
-        var overlayMaps = {
-            "Videos": videos,
-            "Panotours": panotour,
-            "Images": images,
-            "Articles": articles
-        };
-
-        L.control.layers(baseMaps, overlayMaps).addTo(map);
-        map.removeLayer(images);
-}
-
-function getGalleries(galleryName) {
-   return galleryName
-    $.ajax({
-      type: "GET",
-      dataType: "json",
-      url: "js/alligator_pond.json",
-    })
-      .done(function(data) {
-            console.log(data.imageGallery.images.image.caption)
-          return "<div class=''>"+data.imageGallery.images.image.caption+"</div>"
-        })
-        .fail(function() {
-          console.log("Ajax failed to fetch data")
-    });
-
-}
