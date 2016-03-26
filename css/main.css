@@ -17,12 +17,17 @@ video#bgvid {
   background-size: cover;
 }
 .overlay {
+  display: table;
   min-height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   display: none;
   text-align: center;
   color: white;
+}
+.overlay .intro-content {
+  display: table-cell;
+  vertical-align: middle;
 }
 .overlay.auto-on {
   display: block;
@@ -34,7 +39,6 @@ video#bgvid {
   margin-left: auto;
   margin-right: auto;
   color: white;
-  padding-top: 300px;
   text-transform: uppercase;
   line-height: 1.25em;
   font-weight: 200;
@@ -61,12 +65,28 @@ video#bgvid {
 .overlay > button {
   margin-right: 40px;
 }
+@media screen and (max-width: 991px) {
+  .overlay {
+    padding-left: 50px;
+  }
+  .overlay h1 {
+    font-size: 40px;
+    width: 95%;
+  }
+  .overlay h2 {
+    width: 95%;
+    font-size: 17px;
+  }
+}
 @media screen and (max-device-width: 800px) {
   html {
     background: url(images/st-catherines-video.jpg) #000000 no-repeat center center fixed;
   }
   #bgvid {
     display: none;
+  }
+  .overlay h1 {
+    font-size: 40px;
   }
 }
 .all-islands {
@@ -186,8 +206,22 @@ video#bgvid {
   border-top: 13px solid transparent;
   border-bottom: 12px solid transparent;
 }
+.leaflet-popup-content {
+  width: auto !important;
+}
+.leaflet-popup-content .gallery-label {
+  font-size: 20px;
+  margin: 0;
+  color: #455a64;
+}
 .leaflet-popup-pane {
-  width: 300px;
+  width: auto !important;
+}
+.leaflet-popup-pane .carousel {
+  width: 500px;
+}
+.leaflet-popup-pane .carousel a.carousel-control {
+  color: #455a64;
 }
 .leaflet-popup-pane img {
   width: 100%;
@@ -264,6 +298,12 @@ h1 {
   padding: 15px 13px;
   text-decoration: none;
 }
+.general_menu ul li a:hover .title {
+  display: block;
+}
+.general_menu ul li a .title {
+  display: none;
+}
 .general_menu .avatar {
   display: block;
   padding: 25px 8px;
@@ -272,6 +312,9 @@ h1 {
   padding-left: 105px;
   background: #ffffff;
   padding-top: 20px;
+}
+.leaflet-popup-pane {
+  width: auto !important;
 }
 .general_content_styles {
   background: #ffffff;
@@ -293,6 +336,9 @@ h1 {
   width: 100%;
   margin-bottom: 10px;
   border: solid 1px #F1F1F1;
+}
+.general_content_styles .long-content video {
+  margin-bottom: 15px;
 }
 .general_content_styles figure + p:first-child {
   margin-top: 20px;
@@ -589,11 +635,12 @@ h1 {
   position: relative;
   left: auto;
   right: auto;
-  padding: 10px 5px 0 5px;
+  padding: 5px;
   bottom: 0px;
   color: #fff;
   text-shadow: none;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #F1F1F1;
+  color: #333;
   font-style: italic;
   font-size: 13px;
 }
@@ -610,6 +657,8 @@ h1 {
     max-width: 70%;
   }
 }
-@media screen and (max-width: 1600px) {
-  
+@media screen and (max-width: 1660px) {
+  .general_content_styles {
+    max-width: 60%;
+  }
 }

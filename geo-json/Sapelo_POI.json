@@ -6,7 +6,7 @@
 ,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.27986,31.39734]},"properties":{"Island":"Sapelo","Location":"UGAMI","Loc_type":"image","Longitude":-81.27986,"Latitude":31.39734}}
 ,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.28568,31.39126]},"properties":{"Island":"Sapelo","Location":"Sapelo Lighthouse","Loc_type":"image","Longitude":-81.28568,"Latitude":31.39126}}
 ,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.26437,31.39048]},"properties":{"Island":"Sapelo","Location":"Nannygoat Beach","Loc_type":"image","Longitude":-81.26437,"Latitude":31.39048}}
-,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.27002,31.39306]},"properties":{"Island":"Sapelo","Location":"Beach Road Bridge","Loc_type":"","Longitude":-81.27002,"Latitude":31.39306}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.27002,31.39306]},"properties":{"Island":"Sapelo","Location":"Beach Road Bridge","Loc_type":"video","Longitude":-81.27002,"Latitude":31.39306}}
 ,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.27087,31.39461]},"properties":{"Island":"Sapelo","Location":"Nature Trail Observation Deck","Loc_type":"","Longitude":-81.27087,"Latitude":31.39461}}
 ,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.26988,31.39472]},"properties":{"Island":"Sapelo","Location":"Nature Trail Bridge","Loc_type":"","Longitude":-81.26988,"Latitude":31.39472}}
 ,{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.27396,31.39756]},"properties":{"Island":"Sapelo","Location":"Greenhouse","Loc_type":"","Longitude":-81.27396,"Latitude":31.39756}}

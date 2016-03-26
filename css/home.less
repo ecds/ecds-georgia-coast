@@ -15,6 +15,11 @@ video#bgvid {
 }
 
 .overlay {
+    display: table;
+    .intro-content {
+        display: table-cell;
+        vertical-align: middle;
+    }
     &.auto-on {
         display: block;
     }
@@ -31,7 +36,6 @@ video#bgvid {
         margin-left: auto;
         margin-right: auto;
         color: white;
-        padding-top: 300px;
         text-transform: uppercase;
         line-height: 1.25em;
         font-weight: 200;
@@ -60,11 +64,30 @@ video#bgvid {
     }
 }
 
+@media screen and (max-width: 991px) {
+    .overlay {
+        padding-left: 50px;
+        h1 {
+            font-size: 40px;
+            width: 95%;
+        }
+        h2 {
+            width: 95%;
+            font-size: 17px;
+        }
+    }
+}
+
 @media screen and (max-device-width: 800px) {
     html {
         background: url(images/st-catherines-video.jpg) #000 no-repeat center center fixed;
     }
     #bgvid {
         display: none;
+    }
+    .overlay {
+        h1 {
+            font-size: 40px;
+        }
     }
 }

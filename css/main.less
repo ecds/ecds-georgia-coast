@@ -94,8 +94,22 @@
 .second-border {
     .tag-border(@yellow)
 }
+.leaflet-popup-content {
+    width: auto !important;
+    .gallery-label {
+        font-size: 20px;
+        margin: 0;
+        color: @slateBlue;
+    }
+}
 .leaflet-popup-pane {
-    width: 300px;
+    width: auto !important;
+    .carousel {
+        width: 500px;
+        a.carousel-control {
+            color: @slateBlue;
+        }
+    }
     img {
         width: 100%;
     }
@@ -170,7 +184,13 @@ h1 {
                     margin-bottom: -1px;
                     padding: 15px 13px;
                     text-decoration: none;
+                    .title {
+                        display: block;
+                    }
                 }
+                .title {
+                        display: none;
+                    }
             }
         }
     }
@@ -184,6 +204,10 @@ h1 {
     padding-left: 105px;
     background: @white;
     padding-top: 20px;
+}
+
+.leaflet-popup-pane {
+    width: auto !important;
 }
 
 .general_content_styles {
@@ -207,6 +231,9 @@ h1 {
             width: 100%;
             margin-bottom: 10px;
             border: solid 1px #F1F1F1;
+        }
+        video {
+            margin-bottom: 15px;
         }
     } 
     figure + p:first-child { 
@@ -524,11 +551,12 @@ h1 {
     position: relative;
     left: auto;
     right: auto;
-    padding: 10px 5px 0 5px;
+    padding: 5px;
     bottom: 0px;
     color: #fff;
     text-shadow: none;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: #F1F1F1;
+    color: #333;
     font-style: italic;
     font-size: 13px;
 
@@ -549,6 +577,8 @@ h1 {
     }
 }
 
-@media screen and (max-width: 1600px) {
-
+@media screen and (max-width: 1660px) {
+    .general_content_styles {
+        max-width: 60%;
+    }
 }

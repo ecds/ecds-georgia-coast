@@ -44,35 +44,7 @@
                 $('#thisMenu').load('includes/navigation.html');
             </script>
         </div>
-
-        <!--Content-->
-  
-
-<script type="text/javascript">
-var $boxs = $("#elements > .element");
-var $btns = $(".filter .tag").on("click", function() {
-  
-  var active = 
-    $btns.removeClass("active")
-      .filter(this)
-      .addClass("active")
-      .data("filter");
-  
-  $boxs
-    .hide()
-    .filter( "." + active )
-    .fadeIn(100);
-
-});
-</script>
-               
-            </div>
-            
-        <!--/Content-->
-    </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <!--   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+  </div>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
     <script src="js/on-page-functions.js"></script>
 </body>
