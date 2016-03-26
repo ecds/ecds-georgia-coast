@@ -92,7 +92,16 @@ function getLeaflet(lat,lng,zoom) {
                                     thisGallery += '<div class="item"><img src="'+val.url+'">'
                                 }
                                 if (val.caption) {
-                                    thisGallery += '<div class="carousel-caption"><p>'+val.caption+'</p></div>'
+                                    thisGallery += '<div class="carousel-caption">'
+                                    if (val.credit) {
+                                        thisGallery += '<p class="credit">'+val.credit+'</p>'
+                                    }
+                                    thisGallery += '<p>'+val.caption+'</p>'
+                                    
+                                    thisGallery += '</div>'
+                                }
+                                if (val.credit && !val.caption) {
+                                    thisGallery += '<div class="carousel-caption"><p class="credit">'+val.credit+'</p></div>'
                                 }
                                 thisGallery += '</div>'
                             });

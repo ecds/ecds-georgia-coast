@@ -360,10 +360,27 @@
          "properties":{  
             "Island":"Sapelo",
             "Location":"Borrow Pit",
-            "Loc_type":"",
+            "Loc_type":"photo-gallery",
             "Longitude":-81.275418,
             "Latitude":31.436491
-         }
+         },
+         "images": [{
+                "url":"images/borrow_pit/borrow_pit_1.jpg",
+                "caption":"This is a caption"
+            },
+            {
+                "url":"images/borrow_pit/borrow_pit_2.jpg",
+                "caption":"This is a caption"
+                
+            },
+            {
+                "url":"images/borrow_pit/borrow_pit_3.jpg",
+                "caption":"This is a caption"
+            },
+            {
+                "url":"images/borrow_pit/borrow_pit_4.jpg",
+                "caption":"This is a caption"
+            }]
       },
       {  
          "type":"Feature",
@@ -394,10 +411,48 @@
          "properties":{  
             "Island":"Sapelo",
             "Location":"First Baptist Church",
-            "Loc_type":"",
+            "Loc_type":"photo-gallery",
             "Longitude":-81.229721,
             "Latitude":31.496933
-         }
+         },
+         "images": [{
+                "url":"images/church/img_1.jpg",
+                "caption":"This is a caption",
+                "credit":"Photo courtesy of SCAD"
+            },
+            {
+                "url":"images/church/img_2.jpg",
+                "caption":"This is a caption"
+                
+            },
+            {
+                "url":"images/church/img_3.jpg",
+                "caption":"This is a caption"
+            },
+            {
+                "url":"images/church/scad_1.jpg",
+                "credit":"Photo courtesy of SCAD"
+            },
+            {
+                "url":"images/church/scad_2.jpg",
+                "credit":"Photo courtesy of SCAD"
+            },
+            {
+                "url":"images/church/scad_3.jpg",
+                "credit":"Photo courtesy of SCAD"
+            },
+            {
+                "url":"images/church/scad_4.jpg",
+                "credit":"Photo courtesy of SCAD"
+            },
+            {
+                "url":"images/church/scad_5.jpg",
+                "credit":"Photo courtesy of SCAD"
+            },
+            {
+                "url":"images/church/scad_6.jpg",
+                "credit":"Photo courtesy of SCAD"
+            }]
       },
       {  
          "type":"Feature",
@@ -465,8 +520,7 @@
             {
                 "url":"images/alligator_pond/img_4.jpg",
                 "caption":"This is a caption"
-            }
-            ]
+            }]
       }
 
    ]

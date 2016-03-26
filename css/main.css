@@ -628,9 +628,6 @@ h1 {
 .carousel-inner img {
   margin: auto;
 }
-#myCarousel {
-  margin-bottom: 10px;
-}
 .carousel-caption {
   position: relative;
   left: auto;
@@ -642,7 +639,14 @@ h1 {
   background-color: #F1F1F1;
   color: #333;
   font-style: italic;
-  font-size: 13px;
+  font-size: 12px;
+  margin: 0;
+}
+.carousel-caption .credit {
+  margin: 0;
+  text-align: right;
+  font-size: 10px;
+  padding: 0 5px;
 }
 .carousel-control.left,
 .carousel-control.right {
