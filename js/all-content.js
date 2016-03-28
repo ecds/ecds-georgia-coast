@@ -25,6 +25,7 @@ function getLeaflet(lat,lng,zoom) {
         var articles = L.layerGroup([]);
         var images = L.layerGroup([]);
         var galleries = L.layerGroup([]);
+        var pointsOfInterest = L.layerGroup([]);
 
         var imageStyle =  L.AwesomeMarkers.icon({
             icon: 'camera', 
@@ -58,6 +59,13 @@ function getLeaflet(lat,lng,zoom) {
             icon: 'picture-o', 
             prefix: 'fa', 
             markerColor: 'blue', 
+            spin:false
+        });
+
+        var poiStyle =  L.AwesomeMarkers.icon({
+            icon: 'circle', 
+            prefix: 'fa', 
+            markerColor: 'pink', 
             spin:false
         });
 
@@ -114,7 +122,24 @@ function getLeaflet(lat,lng,zoom) {
               return (allLngs/length)
         }
 
+        var sapelo_images = L.layerGroup([]);
 
+         $.ajax({
+            type: "POST",
+            url: "geo-json/Sapelo_POI.json",
+            dataType: 'json',
+            success: function (response) {
+                geojsonLayer = L.geoJson(response, {
+                      // style: function(feature) {
+                      //   icon: L.AwesomeMarkers.icon({icon: 'camera', prefix: 'fa', markerColor: 'blue', spin:false}) 
+                      // },
+                      onEachFeature: function (feature, layer) {
+                        layer.bindPopup(feature.properties.Location)
+                        layer.addTo(sapelo_images)
+                     }
+                 });
+            }
+        });
         $.ajax({
             type: "POST",
             url: "geo-json/all_content.json",
@@ -145,6 +170,11 @@ function getLeaflet(lat,lng,zoom) {
                         else if (feature.properties.Loc_type == 'article'){
                             return L.marker(latlng, {
                                 icon: articleStyle
+                            })
+                        }
+                        else if (feature.properties.Loc_type == 'point-of-interest'){
+                            return L.marker(latlng, {
+                                icon: poiStyle
                             })
                         }
                     },
@@ -186,6 +216,16 @@ function getLeaflet(lat,lng,zoom) {
                             }
                             layer.bindPopup(thisPopup)
                             layer.addTo(articles)
+                        }
+                        else if (feature.properties.Loc_type == "point-of-interest") {
+                            if (feature.properties.Description) {
+                                thisPopup += "<div class='articleDescription'>"+feature.properties.Description+"</div>"
+                            }
+                            if (feature.properties.URL) {
+                                thisPopup += "<a href='"+feature.properties.URL+"'><div class='btn btn-primary'>Read Article</div></a>"
+                            }
+                            layer.bindPopup(thisPopup)
+                            layer.addTo(pointsOfInterest)
                         }
                         else if (feature.properties.Loc_type == "photo-gallery") {
                             layer.addTo(galleries)
@@ -260,21 +300,23 @@ function getLeaflet(lat,lng,zoom) {
 
         if (islandToShow == "Not Specified") {
             var overlayMaps = {
+                "Points of Interest":pointsOfInterest,
                 "County Borders":counties,   
                 "Videos": videos,
                 //"Images": images,
                 "Photo Galleries": galleries,
                 "Articles": articles,
-                "Panoramas":panoramas
+                "Panoramas":panoramas,
             }
         }
         else {
             var overlayMaps = { 
+                "Points of Interest":pointsOfInterest,
                 "Videos": videos,
                 //"Images": images,
                 "Photo Galleries": galleries,
                 "Articles": articles,
-                "Panoramas":panoramas
+                "Panoramas":panoramas,
             };
         }
 

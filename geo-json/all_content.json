@@ -780,7 +780,193 @@
             {
                 "url":"images/nature_trail/nature_6.jpg"
             }]
+      },
+      {
+         "type":"Feature",
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -81.234212,
+               31.514568
+            ]
+         },
+         "properties":{
+            "Island":"Sapelo",
+            "Location":"Reynolds Duck Pond",
+            "Loc_type":"point-of-interest",
+            "Longitude":-81.234212,
+            "Latitude":31.514568
+         }
+      },
+      {
+         "type":"Feature",
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -81.250615,
+               31.429754
+            ]
+         },
+         "properties":{
+            "Island":"Sapelo",
+            "Location":"Hog Hammock Beach Road",
+            "Loc_type":"point-of-interest",
+            "Longitude":-81.250615,
+            "Latitude":31.429754
+         }
+      },
+      {
+         "type":"Feature",
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -81.29559,
+               31.41778
+            ]
+         },
+         "properties":{
+            "Island":"Sapelo",
+            "Location":"Marsh Landing",
+            "Loc_type":"point-of-interest",
+            "Longitude":-81.29559,
+            "Latitude":31.41778
+         }
+      },
+      {
+         "type":"Feature",
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -81.2868,
+               31.40016
+            ]
+         },
+         "properties":{
+            "Island":"Sapelo",
+            "Location":"Shell Hammock",
+            "Loc_type":"point-of-interest",
+            "Longitude":-81.2868,
+            "Latitude":31.40016
+         }
+      },
+      {
+         "type":"Feature",
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -81.258496,
+               31.4062
+            ]
+         },
+         "properties":{
+            "Island":"Sapelo",
+            "Location":"Old Beach Road Access",
+            "Loc_type":"point-of-interest",
+            "Longitude":-81.258496,
+            "Latitude":31.4062
+         }
+      },
+      {
+         "type":"Feature",
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -81.263909,
+               31.396613
+            ]
+         },
+         "properties":{
+            "Island":"Sapelo",
+            "Location":"Nature Trail Maritime Forest Observation Deck",
+            "Loc_type":"point-of-interest",
+            "Longitude":-81.263909,
+            "Latitude":31.396613
+         }
+      },
+      {
+         "type":"Feature",
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -81.261617,
+               31.395847
+            ]
+         },
+         "properties":{
+            "Island":"Sapelo",
+            "Location":"Nature Trail Beach Access",
+            "Loc_type":"point-of-interest",
+            "Longitude":-81.261617,
+            "Latitude":31.395847
+         }
+      },
+      {
+         "type":"Feature",
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -81.27702,
+               31.39708
+            ]
+         },
+         "properties":{
+            "Island":"Sapelo",
+            "Location":"Reynolds Mansion",
+            "Loc_type":"point-of-interest",
+            "Longitude":-81.27702,
+            "Latitude":31.39708
+         }
+      },
+      {
+         "type":"Feature",
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -81.273568,
+               31.395159
+            ]
+         },
+         "properties":{
+            "Island":"Sapelo",
+            "Location":"Nature Trail Entry",
+            "Loc_type":"point-of-interest",
+            "Longitude":-81.273568,
+            "Latitude":31.395159
+         }
+      },
+      {
+         "type":"Feature",
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -81.236453,
+               31.438
+            ]
+         },
+         "properties":{
+            "Island":"Sapelo",
+            "Location":"Cabretta Inlet",
+            "Loc_type":"point-of-interest",
+            "Longitude":-81.236453,
+            "Latitude":31.438
+         }
+      },
+      {
+         "type":"Feature",
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -81.235684,
+               31.436647
+            ]
+         },
+         "properties":{
+            "Island":"Sapelo",
+            "Location":"Cabretta Beach",
+            "Loc_type":"point-of-interest",
+            "Longitude":-81.235684,
+            "Latitude":31.436647
+         }
       }
-
    ]
 }
