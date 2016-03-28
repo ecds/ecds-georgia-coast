@@ -119,160 +119,17 @@
          "geometry":{  
             "type":"Point",
             "coordinates":[  
-               -81.29559,
-               31.41778
+               -81.275418,
+               31.436491
             ]
          },
          "properties":{  
             "Island":"Sapelo",
-            "Location":"Marsh Landing",
-            "Loc_type":"image",
-            "Longitude":-81.29559,
-            "Latitude":31.41778
-         }
-      },
-      {  
-         "type":"Feature",
-         "geometry":{  
-            "type":"Point",
-            "coordinates":[  
-               -81.2868,
-               31.40016
-            ]
-         },
-         "properties":{  
-            "Island":"Sapelo",
-            "Location":"Shell Hammock",
-            "Loc_type":"image",
-            "Longitude":-81.2868,
-            "Latitude":31.40016
-         }
-      },
-      {  
-         "type":"Feature",
-         "geometry":{  
-            "type":"Point",
-            "coordinates":[  
-               -81.27856,
-               31.39793
-            ]
-         },
-         "properties":{  
-            "Island":"Sapelo",
-            "Location":"Water Gardens",
-            "Loc_type":"image",
-            "Longitude":-81.27856,
-            "Latitude":31.39793
-         }
-      },
-      {  
-         "type":"Feature",
-         "geometry":{  
-            "type":"Point",
-            "coordinates":[  
-               -81.27986,
-               31.39734
-            ]
-         },
-         "properties":{  
-            "Island":"Sapelo",
-            "Location":"UGAMI",
-            "Loc_type":"image",
-            "Longitude":-81.27986,
-            "Latitude":31.39734
-         }
-      },
-      {  
-         "type":"Feature",
-         "geometry":{  
-            "type":"Point",
-            "coordinates":[  
-               -81.28568,
-               31.39126
-            ]
-         },
-         "properties":{  
-            "Island":"Sapelo",
-            "Location":"Sapelo Lighthouse",
-            "Loc_type":"photo-gallery",
-            "Longitude":-81.28568,
-            "Latitude":31.39126
-         },
-         "images": [{
-                "url":"images/lighthouse/lighthouse_1.jpg"
-            },
-            {
-                "url":"images/lighthouse/lighthouse_2.jpg"
-            },
-            {
-                "url":"images/lighthouse/lighthouse_3.jpg"
-            },
-            {
-                "url":"images/lighthouse/lighthouse_4.jpg"
-            },
-            {
-                "url":"images/lighthouse/lighthouse_5.jpg"
-            },
-            {
-                "url":"images/lighthouse/lighthouse_6.jpg"
-            },
-            {
-                "url":"images/lighthouse/lighthouse_7.jpg"
-            }]
-      },
-      {  
-         "type":"Feature",
-         "geometry":{  
-            "type":"Point",
-            "coordinates":[  
-               -81.26437,
-               31.39048
-            ]
-         },
-         "properties":{  
-            "Island":"Sapelo",
-            "Location":"Nannygoat Beach",
-            "Loc_type":"photo-gallery",
-            "Longitude":-81.26437,
-            "Latitude":31.39048
-         },
-         "images": [{
-                "url":"images/nannygoat/img_1.jpg"
-            },
-            {
-                "url":"images/nannygoat/img_2.jpg"
-            },
-            {
-                "url":"images/nannygoat/img_3.jpg"
-            },
-            {
-                "url":"images/nannygoat/img_4.jpg"
-            },
-            {
-                "url":"images/nannygoat/img_5.jpg"
-            },
-            {
-                "url":"images/nannygoat/img_6.jpg"
-            },
-            {
-                "url":"images/nannygoat/img_7.jpg"
-            }]
-      },
-      {  
-         "type":"Feature",
-         "geometry":{  
-            "type":"Point",
-            "coordinates":[  
-               -81.27002,
-               31.39306
-            ]
-         },
-         "properties":{  
-            "Island":"Sapelo",
-            "Location":"Beach Road Bridge",
+            "Location":"Borrow Pit Video",
+            "video_id":"160131723",
             "Loc_type":"video",
-            "Longitude":-81.27002,
-            "Latitude":31.39306
+            "Longitude":-81.275418,
+            "Latitude":31.436491
          }
       },
       {  
@@ -280,198 +137,17 @@
          "geometry":{  
             "type":"Point",
             "coordinates":[  
-               -81.27087,
-               31.39461
+               -81.235062,
+               31.444522
             ]
          },
          "properties":{  
             "Island":"Sapelo",
-            "Location":"Nature Trail Observation Deck",
+            "Location":"Cabretta Beach Tree Boneyard video",
             "Loc_type":"video",
-            "Longitude":-81.27087,
-            "Latitude":31.39461
-         }
-      },
-      {  
-         "type":"Feature",
-         "geometry":{  
-            "type":"Point",
-            "coordinates":[  
-               -81.26988,
-               31.39472
-            ]
-         },
-         "properties":{  
-            "Island":"Sapelo",
-            "Location":"Nature Trail Bridge",
-            "Loc_type":"video",
-            "Longitude":-81.26988,
-            "Latitude":31.39472
-         }
-      },
-      {  
-         "type":"Feature",
-         "geometry":{  
-            "type":"Point",
-            "coordinates":[  
-               -81.27396,
-               31.39756
-            ]
-         },
-         "properties":{  
-            "Island":"Sapelo",
-            "Location":"Greenhouse",
-            "Loc_type":"video",
-            "Longitude":-81.27396,
-            "Latitude":31.39756
-         },
-         "images": [{
-                "url":"images/greenhouse/greenhouse_1.jpg"
-            },
-            {
-                "url":"images/greenhouse/greenhouse_2.jpg"
-            }]
-      },
-      {  
-         "type":"Feature",
-         "geometry":{  
-            "type":"Point",
-            "coordinates":[  
-               -81.27702,
-               31.39708
-            ]
-         },
-         "properties":{  
-            "Island":"Sapelo",
-            "Location":"Reynolds Mansion",
-            "Loc_type":"photo-gallery",
-            "Longitude":-81.27702,
-            "Latitude":31.39708
-         },
-         "images": [{
-                "url":"images/about_islands.png" 
-            },
-            {
-                "url":"images/cord_grass.png"
-            }]
-      },
-      {  
-         "type":"Feature",
-         "geometry":{  
-            "type":"Point",
-            "coordinates":[  
-               -81.273568,
-               31.395159
-            ]
-         },
-         "properties":{  
-            "Island":"Sapelo",
-            "Location":"Nature Trail Entry",
-            "Loc_type":"",
-            "Longitude":-81.273568,
-            "Latitude":31.395159
-         }
-      },
-      {  
-         "type":"Feature",
-         "geometry":{  
-            "type":"Point",
-            "coordinates":[  
-               -81.261617,
-               31.395847
-            ]
-         },
-         "properties":{  
-            "Island":"Sapelo",
-            "Location":"Nature Trail Beach Access",
-            "Loc_type":"",
-            "Longitude":-81.261617,
-            "Latitude":31.395847
-         }
-      },
-      {  
-         "type":"Feature",
-         "geometry":{  
-            "type":"Point",
-            "coordinates":[  
-               -81.229506,
-               31.499082
-            ]
-         },
-         "properties":{  
-            "Island":"Sapelo",
-            "Location":"Racoon Bluff",
-            "Loc_type":"",
-            "Longitude":-81.229506,
-            "Latitude":31.499082
-         }
-      },
-      {  
-         "type":"Feature",
-         "geometry":{  
-            "type":"Point",
-            "coordinates":[  
-               -81.244701,
-               31.514824
-            ]
-         },
-         "properties":{  
-            "Island":"Sapelo",
-            "Location":"Shell Ring",
-            "Loc_type":"",
-            "Longitude":-81.244701,
-            "Latitude":31.514824
-         }
-      },
-      {  
-         "type":"Feature",
-         "geometry":{  
-            "type":"Point",
-            "coordinates":[  
-               -81.254634,
-               31.501003
-            ]
-         },
-         "properties":{  
-            "Island":"Sapelo",
-            "Location":"Chocolate Plantation",
-            "Loc_type":"",
-            "Longitude":-81.254634,
-            "Latitude":31.501003
-         }
-      },
-      {  
-         "type":"Feature",
-         "geometry":{  
-            "type":"Point",
-            "coordinates":[  
-               -81.235684,
-               31.436647
-            ]
-         },
-         "properties":{  
-            "Island":"Sapelo",
-            "Location":"Cabretta Beach",
-            "Loc_type":"",
-            "Longitude":-81.235684,
-            "Latitude":31.436647
-         }
-      },
-      {  
-         "type":"Feature",
-         "geometry":{  
-            "type":"Point",
-            "coordinates":[  
-               -81.236453,
-               31.438
-            ]
-         },
-         "properties":{  
-            "Island":"Sapelo",
-            "Location":"Cabretta Inlet",
-            "Loc_type":"",
-            "Longitude":-81.236453,
-            "Latitude":31.438
+            "video_id":"160132035",
+            "Longitude":-81.235062,
+            "Latitude":31.444522
          }
       },
       {  
@@ -485,8 +161,9 @@
          },
          "properties":{  
             "Island":"Sapelo",
-            "Location":"Cabretta Relic Marsh",
-            "Loc_type":"",
+            "Location":"Cabretta Beach Relict Marsh Video",
+            "video_id":"160132294",
+            "Loc_type":"video",
             "Longitude":-81.237552,
             "Latitude":31.43958
          }
@@ -496,16 +173,17 @@
          "geometry":{  
             "type":"Point",
             "coordinates":[  
-               -81.234212,
-               31.514568
+               -81.233886,
+               31.441161
             ]
          },
          "properties":{  
             "Island":"Sapelo",
-            "Location":"Reynolds Duck Pond",
-            "Loc_type":"",
-            "Longitude":-81.234212,
-            "Latitude":31.514568
+            "Location":"Cabretta Beach Tide Timelapse Video",
+            "video_id":"160132499",
+            "Loc_type":"video",
+            "Longitude":-81.233886,
+            "Latitude":31.441161
          }
       },
       {  
@@ -513,50 +191,17 @@
          "geometry":{  
             "type":"Point",
             "coordinates":[  
-               -81.275418,
-               31.436491
+               -81.254634,
+               31.501003
             ]
          },
          "properties":{  
             "Island":"Sapelo",
-            "Location":"Borrow Pit",
-            "Loc_type":"photo-gallery",
-            "Longitude":-81.275418,
-            "Latitude":31.436491
-         },
-         "images": [{
-                "url":"images/borrow_pit/borrow_pit_1.jpg",
-                "caption":"This is a caption"
-            },
-            {
-                "url":"images/borrow_pit/borrow_pit_2.jpg",
-                "caption":"This is a caption"
-                
-            },
-            {
-                "url":"images/borrow_pit/borrow_pit_3.jpg",
-                "caption":"This is a caption"
-            },
-            {
-                "url":"images/borrow_pit/borrow_pit_4.jpg",
-                "caption":"This is a caption"
-            }]
-      },
-      {  
-         "type":"Feature",
-         "geometry":{  
-            "type":"Point",
-            "coordinates":[  
-               -81.250615,
-               31.429754
-            ]
-         },
-         "properties":{  
-            "Island":"Sapelo",
-            "Location":"Hog Hammock Beach Road",
-            "Loc_type":"",
-            "Longitude":-81.250615,
-            "Latitude":31.429754
+            "Location":"Chocolate Plantation Video",
+            "video_id":"160132764",
+            "Loc_type":"video",
+            "Longitude":-81.254634,
+            "Latitude":31.501003
          }
       },
       {  
@@ -570,10 +215,437 @@
          },
          "properties":{  
             "Island":"Sapelo",
-            "Location":"First Baptist Church",
-            "Loc_type":"photo-gallery",
+            "Location":"First African Baptist Church Video",
+            "Loc_type":"video",
+            "video_id":"160132905",
             "Longitude":-81.229721,
             "Latitude":31.496933
+         }
+      },
+      {  
+         "type":"Feature",
+         "geometry":{  
+            "type":"Point",
+            "coordinates":[  
+               -81.26437,
+               31.39048
+            ]
+         },
+         "properties":{  
+            "Island":"Sapelo",
+            "Location":"Ghost Shrimp on Nannygoat Beach Video",
+            "Loc_type":"video",
+            "video_id":"160133306",
+            "Longitude":-81.26437,
+            "Latitude":31.39048
+         }
+      },
+      {  
+         "type":"Feature",
+         "geometry":{  
+            "type":"Point",
+            "coordinates":[  
+               -81.269276,
+               31.384358
+            ]
+         },
+         "properties":{  
+            "Island":"Sapelo",
+            "Location":"Runnels on Nannygoat Beach Video",
+            "Loc_type":"video",
+            "video_id":"160133801",
+            "Longitude":-81.269276,
+            "Latitude":31.384358
+         }
+      },
+      {  
+         "type":"Feature",
+         "geometry":{  
+            "type":"Point",
+            "coordinates":[  
+               -81.269262,
+               31.387273
+            ]
+         },
+         "properties":{  
+            "Island":"Sapelo",
+            "Location":"Back Dune Meadows Video",
+            "Loc_type":"video",
+            "video_id":"160133995",
+            "Longitude":-81.269262,
+            "Latitude":31.387273
+         }
+      },
+      {  
+         "type":"Feature",
+         "geometry":{  
+            "type":"Point",
+            "coordinates":[  
+               -81.27087,
+               31.39461
+            ]
+         },
+         "properties":{  
+            "Island":"Sapelo",
+            "Location":"Periwinkles in the Nature Trail Video",
+            "Loc_type":"video",
+            "video_id":"160134092",
+            "Longitude":-81.27087,
+            "Latitude":31.39461
+         }
+      },
+      {  
+         "type":"Feature",
+         "geometry":{  
+            "type":"Point",
+            "coordinates":[  
+               -81.27002,
+               31.39306
+            ]
+         },
+         "properties":{  
+            "Island":"Sapelo",
+            "Location":"Relict Dunes Video",
+            "Loc_type":"video",
+            "video_id":"160134265",
+            "Longitude":-81.27002,
+            "Latitude":31.39306
+         }
+      },
+      {  
+         "type":"Feature",
+         "geometry":{  
+            "type":"Point",
+            "coordinates":[  
+               -81.26988,
+               31.39472
+            ]
+         },
+         "properties":{  
+            "Island":"Sapelo",
+            "Location":"Nature Trail Tidal Creek Video",
+            "Loc_type":"video",
+            "video_id":"160134546",
+            "Longitude":-81.26988,
+            "Latitude":31.39472
+         }
+      },
+      {  
+         "type":"Feature",
+         "geometry":{  
+            "type":"Point",
+            "coordinates":[  
+               -81.272254,
+               31.397075
+            ]
+         },
+         "properties":{  
+            "Island":"Sapelo",
+            "Location":"Video",
+            "Loc_type":"video",
+            "video_id":"160134430",
+            "Longitude":-81.272254,
+            "Latitude":31.397075
+         }
+      },
+      {  
+         "type":"Feature",
+         "geometry":{  
+            "type":"Point",
+            "coordinates":[  
+              -81.244701,
+               31.514824
+            ]
+         },
+         "properties":{  
+            "Island":"Sapelo",
+            "Location":"Shell Ring Video",
+            "Loc_type":"video",
+            "video_id":"160134749",
+            "Longitude":-81.244701,
+            "Latitude":31.514824
+         }
+      },
+      {  
+         "type":"Feature",
+         "geometry":{  
+            "type":"Point",
+            "coordinates":[  
+               -81.229506,
+               31.499082
+            ]
+         },
+         "properties":{  
+            "Island":"Sapelo",
+            "Location":"Raccoon Bluff Outcrop Video",
+            "Loc_type":"video",
+            "video_id":"160135378",
+            "Longitude":-81.229506,
+            "Latitude":31.499082
+         }
+      },
+      {  
+         "type":"Feature",
+         "geometry":{  
+            "type":"Point",
+            "coordinates":[  
+               -81.229219,
+               31.498983
+            ]
+         },
+         "properties":{  
+            "Island":"Sapelo",
+            "Location":"Raccoon Bluff Video",
+            "Loc_type":"video",
+            "video_id":"160135531",
+            "Longitude":-81.229219,
+            "Latitude":31.498983
+         }
+      },
+      {  
+         "type":"Feature",
+         "geometry":{  
+            "type":"Point",
+            "coordinates":[  
+               -81.244476,
+               31.514815
+            ]
+         },
+         "properties":{  
+            "Island":"Sapelo",
+            "Location":"Shell Ring Gallery",
+            "Loc_type":"photo-gallery",
+            "Longitude":-81.244476,
+            "Latitude":31.514815
+         },
+         "images": [{
+                "url":"images/shell_ring/shell_1.jpg",
+                "caption":"This is a caption"
+            },
+            {
+                "url":"images/shell_ring/shell_2.jpg",
+                "caption":"This is a caption"
+                
+            },
+            {
+                "url":"images/shell_ring/shell_3.jpg",
+                "caption":"This is a caption"
+            },
+            {
+                "url":"images/shell_ring/shell_4.jpg",
+                "caption":"This is a caption"
+            },{
+                "url":"images/shell_ring/shell_5.jpg",
+                "caption":"This is a caption"
+            }]
+      },
+      {  
+         "type":"Feature",
+         "geometry":{  
+            "type":"Point",
+            "coordinates":[  
+               -81.229529,
+               31.499258
+            ]
+         },
+         "properties":{  
+            "Island":"Sapelo",
+            "Location":"Raccoon Bluff Gallery",
+            "Loc_type":"photo-gallery",
+            "Longitude":-81.229529,
+            "Latitude":31.499258
+         },
+         "images": [{
+                "url":"images/raccoon_bluff/raccoon_1.jpg"
+                
+            },
+            {
+                "url":"images/raccoon_bluff/raccoon_2.jpg"
+                
+            },
+            {
+                "url":"images/raccoon_bluff/raccoon_3.jpg"
+                
+            },
+            {
+                "url":"images/raccoon_bluff/raccoon_4.jpg"
+                
+            },{
+                "url":"images/raccoon_bluff/raccoon_5.jpg"
+               
+            }]
+      },
+      {  
+         "type":"Feature",
+         "geometry":{  
+            "type":"Point",
+            "coordinates":[  
+               -81.265159,
+               31.389500
+            ]
+         },
+         "properties":{  
+            "Island":"Sapelo",
+            "Location":"Nannygoat Beach Gallery",
+            "Loc_type":"photo-gallery",
+            "Longitude":-81.265159,
+            "Latitude":31.389500
+         },
+         "images": [{
+                "url":"images/nannygoat/img_1.jpg"
+                
+            },
+            {
+                "url":"images/nannygoat/img_2.jpg"
+                
+            },
+            {
+                "url":"images/nannygoat/img_3.jpg"
+                
+            },
+            {
+                "url":"images/nannygoat/img_4.jpg"
+                
+            },{
+                "url":"images/nannygoat/img_5.jpg"
+               
+            },{
+                "url":"images/nannygoat/img_6.jpg"
+               
+            },{
+                "url":"images/nannygoat/img_7.jpg"
+               
+            }]
+      },
+      {  
+         "type":"Feature",
+         "geometry":{  
+            "type":"Point",
+            "coordinates":[  
+               -81.28568,
+               31.39126
+            ]
+         },
+         "properties":{  
+            "Island":"Sapelo",
+            "Location":"Sapelo Island Lighthouse",
+            "Loc_type":"photo-gallery",
+            "Longitude":-81.28568,
+            "Latitude":31.39126
+         },
+         "images": [{
+                "url":"images/lighthouse/lighthouse_1.jpg"
+                
+            },
+            {
+                "url":"images/lighthouse/lighthouse_2.jpg"
+                
+            },
+            {
+                "url":"images/lighthouse/lighthouse_3.jpg"
+                
+            },
+            {
+                "url":"images/lighthouse/lighthouse_4.jpg"
+                
+            },{
+                "url":"images/lighthouse/lighthouse_5.jpg"
+               
+            },{
+                "url":"images/lighthouse/lighthouse_6.jpg"
+               
+            },{
+                "url":"images/lighthouse/lighthouse_7.jpg"
+               
+            }]
+      },
+      {  
+         "type":"Feature",
+         "geometry":{  
+            "type":"Point",
+            "coordinates":[  
+               -81.27986,
+               31.39734
+            ]
+         },
+         "properties":{  
+            "Island":"Sapelo",
+            "Location":"Marine Institute Gallery",
+            "Loc_type":"photo-gallery",
+            "Longitude":-81.27986,
+            "Latitude":31.39734
+         },
+         "images": [{
+                "url":"images/marine_institute/mi_1.jpg"
+
+            },
+            {
+                "url":"images/marine_institute/mi_2.jpg"
+
+                
+            },
+            {
+                "url":"images/marine_institute/mi_3.jpg"
+
+            },
+            {
+                "url":"images/marine_institute/mi_4.jpg"
+
+            },
+            {
+                "url":"images/marine_institute/mi_5.jpg"
+
+            }]
+      },
+      {  
+         "type":"Feature",
+         "geometry":{  
+            "type":"Point",
+            "coordinates":[  
+               -81.275273,
+               31.436370
+            ]
+         },
+         "properties":{  
+            "Island":"Sapelo",
+            "Location":"Borrow Pit Gallery",
+            "Loc_type":"photo-gallery",
+            "Longitude":-81.275273,
+            "Latitude":31.436370
+         },
+         "images": [{
+                "url":"images/borrow_pit/borrow_pit_1.jpg"
+
+            },
+            {
+                "url":"images/borrow_pit/borrow_pit_2.jpg"
+
+                
+            },
+            {
+                "url":"images/borrow_pit/borrow_pit_3.jpg"
+
+            },
+            {
+                "url":"images/borrow_pit/borrow_pit_4.jpg"
+
+            }]
+      },
+      {  
+         "type":"Feature",
+         "geometry":{  
+            "type":"Point",
+            "coordinates":[  
+               -81.229693,
+               31.496891
+            ]
+         },
+         "properties":{  
+            "Island":"Sapelo",
+            "Location":"First African Baptist Church Gallery",
+            "Loc_type":"photo-gallery",
+            "Longitude":-81.229693,
+            "Latitude":31.496891
          },
          "images": [{
                 "url":"images/church/img_1.jpg",
@@ -619,65 +691,25 @@
          "geometry":{  
             "type":"Point",
             "coordinates":[  
-               -81.258496,
-               31.4062
+               -81.27396,
+               31.39756
             ]
          },
          "properties":{  
             "Island":"Sapelo",
-            "Location":"Old Beach Road Access",
-            "Loc_type":"",
-            "Longitude":-81.258496,
-            "Latitude":31.4062
-         }
-      },
-      {  
-         "type":"Feature",
-         "geometry":{  
-            "type":"Point",
-            "coordinates":[  
-               -81.263909,
-               31.396613
-            ]
-         },
-         "properties":{  
-            "Island":"Sapelo",
-            "Location":"Nature Trail Maritime Forest Observation Deck",
-            "Loc_type":"",
-            "Longitude":-81.263909,
-            "Latitude":31.396613
-         }
-      },
-      {
-         "type":"Feature",
-         "geometry": {
-            "type":"Point",
-            "coordinates":[
-               -81.27986,
-               31.39734
-            ]
-         },
-         "properties":{  
-            "Island":"Sapelo",
-            "Location":"Marine Institute",
+            "Location":"Greenhouse Gallery",
             "Loc_type":"photo-gallery",
-            "Longitude":-81.27986,
-            "Latitude":31.39734
+            "Longitude":-81.27396,
+            "Latitude":31.39756
          },
          "images": [{
-                "url":"images/marine_institute/mi_1.jpg"
+                "url":"images/greenhouse/greenhouse_1.jpg"
+
             },
             {
-                "url":"images/marine_institute/mi_2.jpg"
-            },
-            {
-                "url":"images/marine_institute/mi_3.jpg"
-            },
-            {
-                "url":"images/marine_institute/mi_4.jpg"
-            },
-            {
-                "url":"images/marine_institute/mi_5.jpg"
+                "url":"images/greenhouse/greenhouse_2.jpg"
+
+                
             }]
       },
       {  
@@ -691,27 +723,62 @@
          },
          "properties":{  
             "Island":"Sapelo",
-            "Location":"Sapelo Alligator Pond",
+            "Location":"Alligator Pond Gallery",
             "Loc_type":"photo-gallery",
             "Longitude":-81.278431,
             "Latitude":31.397869
          },
          "images": [{
-                "url":"images/alligator_pond/img_1.jpg",
-                "caption":"This is a caption"
+                "url":"images/alligator_pond/img_1.jpg"
+
             },
             {
-                "url":"images/alligator_pond/img_2.jpg",
-                "caption":"This is a caption"
+                "url":"images/alligator_pond/img_2.jpg"
+
                 
             },
             {
-                "url":"images/alligator_pond/img_3.jpg",
-                "caption":"This is a caption"
+                "url":"images/alligator_pond/img_3.jpg"
+
             },
             {
-                "url":"images/alligator_pond/img_4.jpg",
-                "caption":"This is a caption"
+                "url":"images/alligator_pond/img_4.jpg"
+
+            }]
+      },
+      {
+         "type":"Feature",
+         "geometry": {
+            "type":"Point",
+            "coordinates":[
+              -81.270047,
+               31.394498
+            ]
+         },
+         "properties":{  
+            "Island":"Sapelo",
+            "Location":"Nature Trail Gallery",
+            "Loc_type":"photo-gallery",
+            "Longitude":-81.270047,
+            "Latitude":31.394498
+         },
+         "images": [{
+                "url":"images/nature_trail/nature_1.jpg"
+            },
+            {
+                "url":"images/nature_trail/nature_2.jpg"
+            },
+            {
+                "url":"images/nature_trail/nature_3.jpg"
+            },
+            {
+                "url":"images/nature_trail/nature_4.jpg"
+            },
+            {
+                "url":"images/nature_trail/nature_5.jpg"
+            },
+            {
+                "url":"images/nature_trail/nature_6.jpg"
             }]
       }
 
