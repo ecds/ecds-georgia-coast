@@ -35,19 +35,13 @@ function formatIsotope() {
         var thisElement = $(this)
         var thisContentType = $(this).attr("data-content-type")
         if (thisContentType == 'photos') {
-            $(this).find("i").addClass('fa fa-camera red')
+            $(this).find("i").addClass('fa fa-camera')
         }
         else if (thisContentType == 'videos') {
-            $(this).find("i").addClass('fa fa-video-camera green')
+            $(this).find("i").addClass('fa fa-video-camera')
         }
         else if (thisContentType == 'article') {
-            $(this).find("i").addClass('fa fa-file-text-o orange')
-        }
-        else if (thisContentType == 'panorama') {
-            $(this).find("i").addClass('fa fa-circle-o-notch purple')
-        }
-        else if (thisContentType == 'photo-gallery') {
-            $(this).find("i").addClass('fa fa-picture-o blue')
+            $(this).find("i").addClass('fa fa-file-text-o')
         }
         else {
             $(this).find("i").css("display","none")
