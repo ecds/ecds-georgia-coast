@@ -1,7 +1,7 @@
 
 function getLeaflet(lat,lng,zoom) {
 
-        console.log($(this).attr('data-to-show'))
+        var dataToShow = $("body").attr('data-to-show')
 
         var OpenStreetMap = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
             attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012',
@@ -165,10 +165,28 @@ function getLeaflet(lat,lng,zoom) {
             }
         });
 
+        var startingLayers = [OpenStreetMap]
+        
+        if (dataToShow.indexOf('videos') !== -1 ) {
+            startingLayers.push(videos)      
+        }
+        if (dataToShow.indexOf('galleries') !== -1 ) {
+            startingLayers.push(galleries)      
+        }
+        if (dataToShow.indexOf('panoramas') !== -1 ) {
+            startingLayers.push(panoramas)      
+        }
+        if (dataToShow.indexOf('articles') !== -1 ) {
+            startingLayers.push(articles)      
+        }
+        if (dataToShow.indexOf('images') !== -1 ) {
+            startingLayers.push(images)      
+        }
+
         var map = L.map('map', {
             center: [lat, lng],
             zoom: zoom,
-            layers: [OpenStreetMap, videos, panoramas]
+            layers: startingLayers
         });
 
         //OpenStreetMap.addTo(map);
@@ -233,7 +251,7 @@ function getLeaflet(lat,lng,zoom) {
 
         var overlayMaps = {
             "Videos": videos,
-            "Images": images,
+            //"Images": images,
             "Photo Galleries": galleries,
             "Articles": articles,
             "Panoramas":panoramas
