@@ -69,7 +69,7 @@ video#bgvid {
 }
 @media screen and (max-width: 991px) {
   .overlay {
-    padding-left: 50px;
+    padding-left: 75px;
   }
   .overlay h1 {
     font-size: 40px;
@@ -78,17 +78,6 @@ video#bgvid {
   .overlay h2 {
     width: 95%;
     font-size: 17px;
-  }
-}
-@media screen and (max-device-width: 800px) {
-  html {
-    background: url(images/st-catherines-video.jpg) #000000 no-repeat center center fixed;
-  }
-  #bgvid {
-    display: none;
-  }
-  .overlay h1 {
-    font-size: 40px;
   }
 }
 .all-islands {
@@ -139,6 +128,9 @@ video#bgvid {
 }
 #map.full_width {
   width: 100%;
+}
+.col-md-4.logo {
+  padding: 0;
 }
 .btn-primary {
   background-color: #66c396;
