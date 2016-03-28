@@ -1,5 +1,7 @@
-div#panoDIV {
+#panoDIV {
   height: 500px;
+  padding-right: 15px;
+  margin-bottom: 15px;
 }
 video#bgvid {
   position: fixed;
@@ -209,10 +211,27 @@ video#bgvid {
 .leaflet-popup-content {
   width: auto !important;
 }
-.leaflet-popup-content .gallery-label {
+.leaflet-popup-content .gallery-label,
+.leaflet-popup-content .articleTitle {
   font-size: 20px;
   margin: 0;
   color: #455a64;
+  min-width: 300px;
+}
+.leaflet-popup-content .articleDescription {
+  font-size: 13px;
+  line-height: 1.5em;
+  margin-top: 5px;
+}
+.leaflet-popup-content .btn {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+.leaflet-popup-content .video {
+  width: 500px;
 }
 .leaflet-popup-pane {
   width: auto !important;
@@ -279,6 +298,9 @@ h1 {
 .general_menu ul {
   padding: 0px;
 }
+.general_menu ul li.nav-divider {
+  border-bottom: solid 1px #5a7582;
+}
 .general_menu ul li a {
   -moz-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
@@ -287,7 +309,34 @@ h1 {
   font-size: 22px;
   font-weight: normal;
   margin-bottom: -1px;
-  padding: 15px 13px;
+  padding: 15px 20px;
+  position: relative;
+}
+.general_menu ul li a i.marker {
+  background: url('../dist/images/markers-soft.png') no-repeat 0 0;
+  width: 35px;
+  height: 46px;
+  left: 0;
+  top: 0;
+  display: block;
+  text-align: center;
+  padding-top: 7px;
+  font-size: 14px;
+}
+.general_menu ul li a i.marker.orange {
+  background-position: -36px 0;
+}
+.general_menu ul li a i.marker.red {
+  background-position: 0 0;
+}
+.general_menu ul li a i.marker.green {
+  background-position: -72px 0;
+}
+.general_menu ul li a i.marker.blue {
+  background-position: -108px 0;
+}
+.general_menu ul li a i.marker.purple {
+  background-position: -144px 0;
 }
 .general_menu ul li a:hover {
   background: #20272c;
@@ -339,6 +388,9 @@ h1 {
 }
 .general_content_styles .long-content video {
   margin-bottom: 15px;
+}
+.general_content_styles .long-content p.lead {
+  padding: 0 15px 0 0;
 }
 .general_content_styles figure + p:first-child {
   margin-top: 20px;
@@ -519,7 +571,7 @@ h1 {
   outline: none;
 }
 .element {
-  padding: 10px;
+  padding: 10px 10px 10px 0;
 }
 .element .item {
   border: solid 1px #F1F1F1;

@@ -7,6 +7,118 @@
          "geometry":{  
             "type":"Point",
             "coordinates":[  
+               -81.234475,
+               31.443465
+            ] 
+         },
+         "properties":{  
+            "Island":"Sapelo",
+            "Location":"Fossils in Progress",
+            "Description":"Despite whatever lamentations are made about the 'incompleteness' of the fossil record, fossils are actually quite common. This truism is brought home even more so whenever trace fossils - tracks, burrows, and other evidence of organismal behavior...",
+            "URL":"fossils-in-progress.html",
+            "Loc_type":"article",
+            "Longitude":-81.234475,
+            "Latitude":31.443465
+         }
+      },
+      {  
+         "type":"Feature",
+         "geometry":{  
+            "type":"Point",
+            "coordinates":[  
+               -81.238634,
+               31.433713
+            ] 
+         },
+         "properties":{  
+            "Island":"Sapelo",
+            "Location":"The Lost Barrier Islands of Georgia",
+            "Description":"The Georgia coast is well known for its historic role in the development of modern ecology, starting in the 1950s and ongoing today. But what about geologists? Fortunately, they were not long behind the ecologists, starting their research projects on Sapelo Island and other Georgia barrier islands...",
+            "URL":"lost-barrier-islands-of-georgia.html",
+            "Loc_type":"article",
+            "Longitude":-81.238634,
+            "Latitude":31.433713
+         }
+      },
+      {  
+         "type":"Feature",
+         "geometry":{  
+            "type":"Point",
+            "coordinates":[  
+               -81.235913,
+               31.448899
+            ] 
+         },
+         "properties":{  
+            "Island":"Sapelo",
+            "Location":"Cabretta Panorama",
+            "Description":"This panorama shows the diverse and dynamic environments on and around Cabretta Island (a northeastern part of Sapelo Island) and Blackbeard Island.",
+            "URL":"cabretta_360.html",
+            "Loc_type":"panorama",
+            "Longitude":-81.235913,
+            "Latitude":31.448899
+         }
+      },
+      {  
+         "type":"Feature",
+         "geometry":{  
+            "type":"Point",
+            "coordinates":[  
+               -81.235346,
+               31.447028
+            ] 
+         },
+         "properties":{  
+            "Island":"Sapelo",
+            "Location":"Cabretta Aerial",
+            "Description":"This aerial view shows the eastern (seaward) edge of Cabretta Island and its complex blend of extant and past environments.",
+            "URL":"cabretta_aerial.html",
+            "Loc_type":"panorama",
+            "Longitude":-81.235346,
+            "Latitude":31.447028
+         }
+      },
+      {  
+         "type":"Feature",
+         "geometry":{  
+            "type":"Point",
+            "coordinates":[  
+               -81.251975,
+               31.465634
+            ] 
+         },
+         "properties":{  
+            "Island":"Sapelo",
+            "Location":"Sapelo 1976",
+            "URL":"sapelo1976.html",
+            "Loc_type":"panorama",
+            "Longitude":-81.251975,
+            "Latitude":31.465634
+         }
+      },
+      {  
+         "type":"Feature",
+         "geometry":{  
+            "type":"Point",
+            "coordinates":[  
+               -81.27856,
+               31.39793
+            ]
+         },
+         "properties":{  
+            "Island":"Sapelo",
+            "Location":"Alligator Pond Video",
+            "video_id":"160131561",
+            "Loc_type":"video",
+            "Longitude":-81.27856,
+            "Latitude":31.39793
+         }
+      },
+      {  
+         "type":"Feature",
+         "geometry":{  
+            "type":"Point",
+            "coordinates":[  
                -81.29559,
                31.41778
             ]
@@ -82,10 +194,31 @@
          "properties":{  
             "Island":"Sapelo",
             "Location":"Sapelo Lighthouse",
-            "Loc_type":"image",
+            "Loc_type":"photo-gallery",
             "Longitude":-81.28568,
             "Latitude":31.39126
-         }
+         },
+         "images": [{
+                "url":"images/lighthouse/lighthouse_1.jpg"
+            },
+            {
+                "url":"images/lighthouse/lighthouse_2.jpg"
+            },
+            {
+                "url":"images/lighthouse/lighthouse_3.jpg"
+            },
+            {
+                "url":"images/lighthouse/lighthouse_4.jpg"
+            },
+            {
+                "url":"images/lighthouse/lighthouse_5.jpg"
+            },
+            {
+                "url":"images/lighthouse/lighthouse_6.jpg"
+            },
+            {
+                "url":"images/lighthouse/lighthouse_7.jpg"
+            }]
       },
       {  
          "type":"Feature",
@@ -99,10 +232,31 @@
          "properties":{  
             "Island":"Sapelo",
             "Location":"Nannygoat Beach",
-            "Loc_type":"image",
+            "Loc_type":"photo-gallery",
             "Longitude":-81.26437,
             "Latitude":31.39048
-         }
+         },
+         "images": [{
+                "url":"images/nannygoat/img_1.jpg"
+            },
+            {
+                "url":"images/nannygoat/img_2.jpg"
+            },
+            {
+                "url":"images/nannygoat/img_3.jpg"
+            },
+            {
+                "url":"images/nannygoat/img_4.jpg"
+            },
+            {
+                "url":"images/nannygoat/img_5.jpg"
+            },
+            {
+                "url":"images/nannygoat/img_6.jpg"
+            },
+            {
+                "url":"images/nannygoat/img_7.jpg"
+            }]
       },
       {  
          "type":"Feature",
@@ -170,7 +324,13 @@
             "Loc_type":"video",
             "Longitude":-81.27396,
             "Latitude":31.39756
-         }
+         },
+         "images": [{
+                "url":"images/greenhouse/greenhouse_1.jpg"
+            },
+            {
+                "url":"images/greenhouse/greenhouse_2.jpg"
+            }]
       },
       {  
          "type":"Feature",
@@ -487,6 +647,38 @@
             "Longitude":-81.263909,
             "Latitude":31.396613
          }
+      },
+      {
+         "type":"Feature",
+         "geometry": {
+            "type":"Point",
+            "coordinates":[
+               -81.27986,
+               31.39734
+            ]
+         },
+         "properties":{  
+            "Island":"Sapelo",
+            "Location":"Marine Institute",
+            "Loc_type":"photo-gallery",
+            "Longitude":-81.27986,
+            "Latitude":31.39734
+         },
+         "images": [{
+                "url":"images/marine_institute/mi_1.jpg"
+            },
+            {
+                "url":"images/marine_institute/mi_2.jpg"
+            },
+            {
+                "url":"images/marine_institute/mi_3.jpg"
+            },
+            {
+                "url":"images/marine_institute/mi_4.jpg"
+            },
+            {
+                "url":"images/marine_institute/mi_5.jpg"
+            }]
       },
       {  
          "type":"Feature",

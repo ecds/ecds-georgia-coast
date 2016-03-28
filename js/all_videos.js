@@ -2,11 +2,8 @@
 function getLeaflet(lat,lng,zoom) {
 
 
-        var OpenStreetMap = L.tileLayer('http://otile{s}.mqcdn.com/tiles/1.0.0/{type}/{z}/{x}/{y}.{ext}', {
-            type: 'map',
-            ext: 'jpg',
-            attribution: 'Tiles Courtesy of <a href="http://www.mapquest.com/">MapQuest</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-            subdomains: '1234',
+        var OpenStreetMap = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+            attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012',
             layers: [baseMaps, overlayMaps]
         });
 
@@ -15,7 +12,7 @@ function getLeaflet(lat,lng,zoom) {
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         });
 
-        var panotour = L.layerGroup([]);
+        var panoramas = L.layerGroup([]);
         var videos = L.layerGroup([]);
         var articles = L.layerGroup([]);
         var images = L.layerGroup([]);
@@ -35,10 +32,24 @@ function getLeaflet(lat,lng,zoom) {
             spin:false
         });
 
+        var articleStyle =  L.AwesomeMarkers.icon({
+            icon: 'file-text', 
+            prefix: 'fa', 
+            markerColor: 'orange', 
+            spin:false
+        });
+
+        var panoramaStyle =  L.AwesomeMarkers.icon({
+            icon: 'circle-o-notch', 
+            prefix: 'fa', 
+            markerColor: 'purple', 
+            spin:true
+        });
+
         var galleryStyle =  L.AwesomeMarkers.icon({
             icon: 'picture-o', 
             prefix: 'fa', 
-            markerColor: 'purple', 
+            markerColor: 'blue', 
             spin:false
         });
 
@@ -65,22 +76,56 @@ function getLeaflet(lat,lng,zoom) {
                                 icon: galleryStyle
                             })
                         }
-                        else {
+                        else if (feature.properties.Loc_type == 'panorama'){
                             return L.marker(latlng, {
-                                icon: galleryStyle
+                                icon: panoramaStyle
+                            })
+                        }
+                        else if (feature.properties.Loc_type == 'article'){
+                            return L.marker(latlng, {
+                                icon: articleStyle
                             })
                         }
                     },
                     onEachFeature: function (feature, layer) {
+                        var thisPopup = ""
+                        thisPopup += "<div class='articleTitle'>"+feature.properties.Location+"</div>"
                         if (feature.properties.Loc_type == "image") {
-                            layer.bindPopup("feature.properties")
+                            layer.bindPopup(feature.properties.Location)
                             layer.addTo(images)
                         }
                         else if (feature.properties.Loc_type == "video") {
+                            if (feature.properties.Description) {
+                                thisPopup += "<div class='articleDescription'>"+feature.properties.Description+"</div>"
+                            }
+                            if (feature.properties.video_id) {
+                                thisPopup += '<div class="embed-responsive embed-responsive-16by9 video"><iframe src="https://player.vimeo.com/video/'+feature.properties.video_id+'?title=0&byline=0&portrait=0" width="100%" height="100%" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>'
+                            }
+                            layer.bindPopup(thisPopup)
                             layer.addTo(videos)
                         }
+                        else if (feature.properties.Loc_type == "panorama") {
+                            if (feature.properties.Description) {
+                                thisPopup += "<div class='articleDescription'>"+feature.properties.Description+"</div>"
+                            }
+                            if (feature.properties.URL) {
+                                thisPopup += "<a href='"+feature.properties.URL+"'><div class='btn btn-primary'>Go To Panorama</div></a>"
+                            }
+                            layer.bindPopup(thisPopup)
+                            layer.addTo(panoramas)
+                        }
+                        else if (feature.properties.Loc_type == "article") {
+                            if (feature.properties.Description) {
+                                thisPopup += "<div class='articleDescription'>"+feature.properties.Description+"</div>"
+                            }
+                            if (feature.properties.URL) {
+                                thisPopup += "<a href='"+feature.properties.URL+"'><div class='btn btn-primary'>Read Article</div></a>"
+                            }
+                            layer.bindPopup(thisPopup)
+                            layer.addTo(articles)
+                        }
                         else if (feature.properties.Loc_type == "photo-gallery") {
-                            layer.addTo(images)
+                            layer.addTo(galleries)
                             var thisGallery = ""
                             var thisGalleryId = feature.properties.Location.replace(/([~!@#$%^&*()_+=`{}\[\]\|\\:;'<>,.\/? ])+/g, '-').replace(/^(-)+|(-)+$/g,'').toLowerCase()
                             thisGallery = "<div id='" + thisGalleryId + "' class='carousel slide' data-ride='carousel'><p class='gallery-label'>"+feature.properties.Location+"</p><div class='carousel-inner' role='listbox'>"
@@ -122,7 +167,7 @@ function getLeaflet(lat,lng,zoom) {
         var map = L.map('map', {
             center: [lat, lng],
             zoom: zoom,
-            layers: [OpenStreetMap, videos, panotour]
+            layers: [OpenStreetMap, videos, panoramas]
         });
 
         //OpenStreetMap.addTo(map);
@@ -187,9 +232,10 @@ function getLeaflet(lat,lng,zoom) {
 
         var overlayMaps = {
             "Videos": videos,
-            "Panotours": panotour,
             "Images": images,
+            "Photo Galleries": galleries,
             "Articles": articles,
+            "Panoramas":panoramas
         };
 
         L.control.layers(baseMaps, overlayMaps).addTo(map);

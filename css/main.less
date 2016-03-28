@@ -96,10 +96,26 @@
 }
 .leaflet-popup-content {
     width: auto !important;
-    .gallery-label {
+    .gallery-label, .articleTitle {
         font-size: 20px;
         margin: 0;
         color: @slateBlue;
+        min-width: 300px;
+    }
+    .articleDescription {
+        font-size: 13px;
+        line-height: 1.5em;
+        margin-top: 5px;
+    }
+    .btn {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+    .video {
+        width: 500px;
     }
 }
 .leaflet-popup-pane {
@@ -166,6 +182,9 @@ h1 {
     ul {
         padding: 0px;
         li {
+            &.nav-divider {
+                border-bottom: solid 1px lighten(@slateBlue, 10%);
+            }
             a {
                 -moz-transition: all 0.3s ease;
                 -webkit-transition: all 0.3s ease;
@@ -175,7 +194,34 @@ h1 {
                 font-size: 22px;
                 font-weight: normal;
                 margin-bottom: -1px;
-                padding: 15px 13px;
+                padding: 15px 20px;
+                position:  relative;
+                i.marker {
+                        background: url('../dist/images/markers-soft.png') no-repeat 0 0;
+                      width: 35px;
+                      height: 46px;
+                      left:0;
+                      top:0;
+                      display: block;
+                      text-align: center;
+                        padding-top: 7px;
+                    font-size: 14px;
+                    &.orange {
+                        background-position: -36px 0;
+                    }
+                    &.red {
+                        background-position: 0 0;
+                    }
+                    &.green {
+                        background-position: -72px 0;
+                    }
+                    &.blue {
+                        background-position: -108px 0;
+                    }
+                    &.purple {
+                        background-position: -144px 0;
+                    }
+                }
                 &:hover {
                     background: #20272c;
                     display: block;
@@ -234,6 +280,9 @@ h1 {
         }
         video {
             margin-bottom: 15px;
+        }
+        p.lead {
+            padding: 0 15px 0 0;
         }
     } 
     figure + p:first-child { 
@@ -425,7 +474,7 @@ h1 {
         }
 }
 .element {
-    padding: 10px;
+    padding: 10px 10px 10px 0;
     .item {
         border: solid 1px #F1F1F1;
         position: relative;
