@@ -133,7 +133,7 @@ video#bgvid {
   padding: 0;
 }
 .btn-primary {
-  background-color: #66c396;
+  background-color: #70ad43;
   text-transform: uppercase;
   border: 0;
   padding: 15px 25px;
@@ -149,7 +149,7 @@ video#bgvid {
   text-decoration: none;
 }
 .btn-primary:hover {
-  background-color: #45b17d;
+  background-color: #588835;
 }
 .btn-primary.disabled {
   background-color: #333;
@@ -172,7 +172,7 @@ video#bgvid {
   background-color: #333;
 }
 .btn-secondary {
-  background-color: #d94b3f;
+  background-color: #cf3c28;
   text-transform: uppercase;
   border: 0;
   padding: 15px 25px;
@@ -188,10 +188,10 @@ video#bgvid {
   text-decoration: none;
 }
 .btn-secondary:hover {
-  background-color: #bf3226;
+  background-color: #a43020;
 }
 .triangle-border {
-  border-left: 12px solid #d94b3f;
+  border-left: 12px solid #cf3c28;
   border-top: 13px solid transparent;
   border-bottom: 12px solid transparent;
 }
@@ -449,6 +449,21 @@ h1 {
   background-color: #ffdd46;
   color: #ffffff;
 }
+.related i.purple {
+  background-color: #bf58a1;
+}
+.related i.red {
+  background-color: #cf3c28;
+}
+.related i.blue {
+  background-color: #37a5d7;
+}
+.related i.orange {
+  background-color: #f1942c;
+}
+.related i.green {
+  background-color: #70ad43;
+}
 #tags {
   text-align: right;
 }
@@ -459,7 +474,7 @@ h1 {
   display: inline-block;
   height: 25px;
   padding: 0 3px 0 7px;
-  background: #d94b3f;
+  background: #cf3c28;
   border-top-width: 1px;
   border-bottom-width: 1px;
   color: #ffffff;
@@ -473,16 +488,16 @@ h1 {
   padding-right: 5px;
 }
 #tags .tag.sapelo {
-  background-color: #66c396;
+  background-color: #70ad43;
 }
 #tags .tag.sapelo:after {
-  border-left: 12px solid #66c396;
+  border-left: 12px solid #70ad43;
 }
 #tags .tag.sapelo:hover {
-  background-color: #45b17d;
+  background-color: #588835;
 }
 #tags .tag.sapelo:hover:after {
-  border-left: 12px solid #66c396;
+  border-left: 12px solid #70ad43;
   border-top: 13px solid transparent;
   border-bottom: 12px solid transparent;
 }
@@ -498,16 +513,16 @@ h1 {
   top: 0px;
   width: 1px;
   height: 0px;
-  border-left: 12px solid #d94b3f;
+  border-left: 12px solid #cf3c28;
   border-top: 13px solid transparent;
   border-bottom: 12px solid transparent;
 }
 #tags .tag:hover {
   text-decoration: none;
-  background-color: #bf3226;
+  background-color: #a43020;
 }
 #tags .tag:hover:after {
-  border-left: 12px solid #bf3226;
+  border-left: 12px solid #a43020;
 }
 .feature-photo {
   margin-bottom: 10px;
@@ -554,7 +569,7 @@ h1 {
   border: 0;
 }
 .filter-list#isotope-tags .tag.active {
-  background: #d94b3f;
+  background: #cf3c28;
   color: #ffffff;
   outline: none;
 }
@@ -594,13 +609,15 @@ h1 {
   margin-bottom: 5px;
   padding: 0;
   border: none;
-  height: 150px;
+  height: 200px;
   overflow: hidden;
   border-radius: 0;
 }
 .element .item .thumbnail img {
-  min-height: 100%;
+  height: 100%;
   min-width: 100%;
+  position: relative;
+  max-width: none;
 }
 .right-column {
   background-color: #F1F1F1;

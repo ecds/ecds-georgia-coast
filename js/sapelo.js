@@ -2,11 +2,8 @@
 function getLeaflet(lat,lng,zoom) {
 
 
-        var OpenStreetMap = L.tileLayer('http://otile{s}.mqcdn.com/tiles/1.0.0/{type}/{z}/{x}/{y}.{ext}', {
-            type: 'map',
-            ext: 'jpg',
-            attribution: 'Tiles Courtesy of <a href="http://www.mapquest.com/">MapQuest</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-            subdomains: '1234',
+        var OpenStreetMap = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+            attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012',
             layers: [baseMaps, overlayMaps]
         });
 
@@ -21,8 +18,6 @@ function getLeaflet(lat,lng,zoom) {
             zoom: zoom,
             layers: [OpenStreetMap]
         });
-
-
 
         var sapelo_images = L.layerGroup([]);
 
@@ -50,7 +45,7 @@ function getLeaflet(lat,lng,zoom) {
             url: "geo-json/Coastlines_Storms-selected/Sapelo_1857-1870coastline.json",
             dataType: 'json',
             success: function (response) {
-                geojsonLayer = L.geoJson(response, {color : "#66C396", weight : "2"
+                geojsonLayer = L.geoJson(response, {color : "#bf58a1", weight : "3"
                 }).addTo(shoreline1857);
             }
         });
@@ -63,7 +58,7 @@ function getLeaflet(lat,lng,zoom) {
             dataType: 'json',
             success: function (response) {
 
-                geojsonLayer = L.geoJson(response, {color : "#D94B3F", weight : "2"
+                geojsonLayer = L.geoJson(response, {color : "#f1942c", weight : "3"
                 }).addTo(shoreline1920);
             }
         });
@@ -76,7 +71,7 @@ function getLeaflet(lat,lng,zoom) {
             dataType: 'json',
             success: function (response) {
 
-                geojsonLayer = L.geoJson(response, {color : "#4989F3", weight : "2"
+                geojsonLayer = L.geoJson(response, {color : "#70ad43", weight : "3"
                 }).addTo(shoreline1971);
 
             }
@@ -90,38 +85,10 @@ function getLeaflet(lat,lng,zoom) {
             dataType: 'json',
             success: function (response) {
 
-                geojsonLayer = L.geoJson(response, {color : "#455a64", weight : "2"
-                }).addTo(shoreline1971);
+                geojsonLayer = L.geoJson(response, {color : "#37a5d7", weight : "3"
+                }).addTo(shoreline1999);
             }
         });
-
-         $.ajax({
-            type: "POST",
-            url: "geo-json/SapeloQuads.json",
-            dataType: 'json',
-            success: function (response) {
-
-                geojsonLayer = L.geoJson(response, {
-                      // style: function(feature) ({
-                      //   color : "#455a64", 
-                      //   weight : "2"
-                      // }),
-                      onEachFeature: function (feature, layer) {
-                        layer.bindPopup(feature.properties.QUADNAME)
-                        var countyLabel = L.divIcon({
-                              // Specify a class name we can refer to in CSS.
-                              className: 'countyLabel '+ feature.properties.QUADNAME,
-                              html: "<div class='label'>"+feature.properties.QUADNAME+"</div>",
-                              iconSize: [0,0]
-                              // Set marker width and height
-                            });
-                         L.marker([calculateLatitudeofPolygon(layer._latlngs), calculateLongitudeofPolygon(layer._latlngs)], {icon: countyLabel}).addTo(map);
-
-                     }
-                 });
-                geojsonLayer.addTo(map)
-            }
-        }); 
 
          function calculateLatitudeofPolygon(layer) {
               var length = layer.length;
@@ -148,10 +115,10 @@ function getLeaflet(lat,lng,zoom) {
 
         var overlayMaps = {
             "Sapelo POIs" : sapelo_images,
-            "shoreline1857" : shoreline1857,
-            "shoreline1920" : shoreline1920,
-            "shoreline1971" : shoreline1971,
-            "shoreline1999" : shoreline1999
+            "Shoreline in 1857" : shoreline1857,
+            "Shoreline in 1920" : shoreline1920,
+            "Shoreline in 1971" : shoreline1971,
+            "Shoreline in 1999" : shoreline1999
         };
 
         L.control.layers(baseMaps, overlayMaps).addTo(map);
