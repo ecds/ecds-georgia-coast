@@ -2,6 +2,13 @@
 function getLeaflet(lat,lng,zoom) {
 
         var dataToShow = $("body").attr('data-to-show')
+        if ($("body").attr('island-data')) {
+            var islandToShow = $("body").attr('island-data')
+        }
+        else {
+            var islandToShow = "Not Specified"
+        }
+        console.log(islandToShow)
 
         var OpenStreetMap = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
             attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012',
@@ -156,7 +163,9 @@ function getLeaflet(lat,lng,zoom) {
                                 thisPopup += '<div class="embed-responsive embed-responsive-16by9 video"><iframe src="https://player.vimeo.com/video/'+feature.properties.video_id+'?title=0&byline=0&portrait=0" width="100%" height="100%" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>'
                             }
                             layer.bindPopup(thisPopup)
-                            layer.addTo(videos)
+                            if (islandToShow == feature.properties.Island.toLowerCase() || islandToShow == "Not Specified") {
+                                layer.addTo(videos)
+                            }
                         }
                         else if (feature.properties.Loc_type == "panorama") {
                             if (feature.properties.Description) {
@@ -249,14 +258,27 @@ function getLeaflet(lat,lng,zoom) {
             "Open Street Map Black and White": OpenStreetMap_BlackAndWhite
         };
 
-        var overlayMaps = {
-            "County Borders":counties,
-            "Videos": videos,
-            //"Images": images,
-            "Photo Galleries": galleries,
-            "Articles": articles,
-            "Panoramas":panoramas
-        };
+        if (islandToShow == "Not Specified") {
+            var overlayMaps = {
+                "County Borders":counties,   
+                "Videos": videos,
+                //"Images": images,
+                "Photo Galleries": galleries,
+                "Articles": articles,
+                "Panoramas":panoramas
+            }
+        }
+        else {
+            var overlayMaps = { 
+                "Videos": videos,
+                //"Images": images,
+                "Photo Galleries": galleries,
+                "Articles": articles,
+                "Panoramas":panoramas
+            };
+        }
+
+        
 
         L.control.layers(baseMaps, overlayMaps).addTo(map);
         map.removeLayer(images);
