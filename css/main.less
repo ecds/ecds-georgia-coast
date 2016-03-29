@@ -46,23 +46,6 @@
         &:hover {
             background-color: darken(@green, 10%)
         }
-        &.disabled {
-            background-color: #333;
-            opacity: 1;
-            &:before {
-                content: "COMING SOON";
-                position: absolute;
-                color: red;
-                font-weight: bold;
-                -ms-transform: rotate(7deg);
-                -webkit-transform: rotate(7deg);
-                transform: rotate(7deg);
-                left: 25%;
-            }
-            &:hover {
-                background-color: #333;
-            }
-        }
     }
 
 .btn-secondary {
@@ -112,7 +95,7 @@
     .carousel {
         width: 500px;
         a.carousel-control {
-            color: @slateBlue;
+            color: #FFF;
         }
     }
     img {
@@ -195,6 +178,7 @@ h1 {
                       text-align: center;
                         padding-top: 7px;
                     font-size: 14px;
+                        line-height: 1.7;
                     &.orange {
                         background-position: -36px 0;
                     }
@@ -540,6 +524,7 @@ h1 {
             overflow: hidden;
             img {
                 min-width: 100%;
+                width: 100%;
                 min-height: 100%;
             }
         }

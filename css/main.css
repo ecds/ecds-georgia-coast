@@ -102,6 +102,14 @@ video#bgvid {
 .all-islands .tile .base-tile h1 {
   margin-top: 0;
 }
+.all-islands .tile .base-tile .coming-soon {
+  color: #cf3c28;
+  font-weight: bold;
+}
+.all-islands .tile .base-tile .btn-primary.disabled {
+  background-color: #333;
+  opacity: 0.5;
+}
 .all-islands .tile.hover {
   background-color: rgba(0, 0, 0, 0.9);
 }
@@ -155,23 +163,6 @@ video#bgvid {
 .btn-primary:hover {
   background-color: #588835;
 }
-.btn-primary.disabled {
-  background-color: #333;
-  opacity: 1;
-}
-.btn-primary.disabled:before {
-  content: "COMING SOON";
-  position: absolute;
-  color: red;
-  font-weight: bold;
-  -ms-transform: rotate(7deg);
-  -webkit-transform: rotate(7deg);
-  transform: rotate(7deg);
-  left: 25%;
-}
-.btn-primary.disabled:hover {
-  background-color: #333;
-}
 .btn-secondary {
   background-color: #cf3c28;
 }
@@ -220,7 +211,7 @@ video#bgvid {
   width: 500px;
 }
 .leaflet-popup-pane .carousel a.carousel-control {
-  color: #455a64;
+  color: #FFF;
 }
 .leaflet-popup-pane img {
   width: 100%;
@@ -302,6 +293,7 @@ h1 {
   text-align: center;
   padding-top: 7px;
   font-size: 14px;
+  line-height: 1.7;
 }
 .general_menu ul li a i.marker.orange {
   background-position: -36px 0;
@@ -628,6 +620,7 @@ h1 {
 }
 .right-column .callout .thumbnail img {
   min-width: 100%;
+  width: 100%;
   min-height: 100%;
 }
 .right-column .callout .description {
