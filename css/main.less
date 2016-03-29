@@ -28,23 +28,21 @@
 .col-md-4.logo {
     padding: 0;
 }
+.btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 0;
+    font-size: 18px;
+    margin-top: 25px;
+    color: #FFF;
+    padding: 15px 25px;
+    &:hover {
+            color: #FFF;
+            text-decoration: none;
+        }
+}
 .btn-primary {
         background-color: @green;
-        text-transform: uppercase;
-        border: 0;
-        
-        font-size: 18px;
-        margin-top: 25px;
-        a {
-            text-decoration: none;
-            color: #FFF;
-            padding: 15px 25px;
-            display: block;
-            &:hover {
-                color: #FFF;
-                text-decoration: none;
-            }
-        }
         &:hover {
             background-color: darken(@green, 10%)
         }
@@ -61,9 +59,6 @@
                 transform: rotate(7deg);
                 left: 25%;
             }
-            a {
-                opacity: 0.25;
-            }
             &:hover {
                 background-color: #333;
             }
@@ -72,21 +67,6 @@
 
 .btn-secondary {
     background-color: @red;
-        text-transform: uppercase;
-        border: 0;
-       
-        font-size: 18px;
-        margin-top: 25px;
-        a {
-            text-decoration: none;
-            color: #FFF;
-             padding: 15px 25px;
-             display: block;
-            &:hover {
-                color: #FFF;
-                text-decoration: none;
-            }
-        }
         &:hover {
             background-color: darken(@red, 10%)
         }
