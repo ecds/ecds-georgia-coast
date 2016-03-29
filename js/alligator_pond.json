@@ -3,11 +3,11 @@
         "name": "Alligator Pond",
             "images": {
             "image": {
-                "url": "images/team.png",
+                "url": "images/team.jpg",
                 "caption": "Team"
             },
             "image": {
-                "url": "images/periwinkles.png",
+                "url": "images/periwinkles.jpg",
                 "caption": "Periwinkles"
             }
         }
