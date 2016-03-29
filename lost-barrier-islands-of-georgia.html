@@ -52,7 +52,7 @@
                     <div class="col-md-8">
                         <div id="tags">
                             <a class="tag">Cabretta Beach</a>
-                            <a class="tag island sapelo" href="sapelo.html">Sapelo Island</a>
+                            <a class="tag island sapelo" href="sapelo-island.html">Sapelo Island</a>
                         </div>
                     </div>
                 </div>
@@ -112,7 +112,7 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="images/xsection_burrow.jpg" alt="Cross section of ghost shrimp burrow">
+      <img src="images/xsection_burrow.png" alt="Cross section of ghost shrimp burrow">
       <div class="carousel-caption">
         <p>Cross-sectional diagram of a typical ghost shrimp burrow system, showing its knobby exterior walls, "wine-bottle" shape toward the top of the burrow system, and branching parts below. Key: A = aperture, S = shaft, T = tunnel, BJ = burrow junction, TC = turnaround chamber. Figure from Martin (2013), <i>Life Traces of the Georgia Coast</i>.</p>
       </div>
@@ -227,6 +227,14 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
         <script src="js/on-page-functions.js"></script>
     <script type="text/javascript" src="js/google_analytics.js"></script>
+     <script type="text/javascript">
+        // CALL FORMAT ISOTOPE FUNCTION FROM ON-PAGE-FUNCTIONS
+        $( document ).ready(function() {
+            $( "#sapelo-stories" ).load( "includes/sapelo-stories.html", function() {
+              formatIsotope();
+            });
+        });
+    </script>
 </body>
 
 </html>
