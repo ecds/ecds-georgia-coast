@@ -37,7 +37,7 @@ function formatIsotope() {
         if (thisContentType == 'photos') {
             $(this).find("i").addClass('fa fa-camera red')
         }
-        else if (thisContentType == 'videos') {
+        else if (thisContentType == 'video') {
             $(this).find("i").addClass('fa fa-video-camera green')
         }
         else if (thisContentType == 'gallery') {

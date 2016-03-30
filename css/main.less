@@ -396,13 +396,16 @@ h1 {
                 .tag-border(@red)
             }
             &:hover {
-                text-decoration: none;
-                background-color: darken(@red, 10%);
-                &:after {
-                    border-left:12px solid darken(@red, 10%);
-                }
-
+                cursor: default;
             }
+            // &:hover {
+            //     text-decoration: none;
+            //     background-color: darken(@red, 10%);
+            //     &:after {
+            //         border-left:12px solid darken(@red, 10%);
+            //     }
+
+            // }
         }
     }
 

@@ -94,6 +94,7 @@ function getLeaflet(lat,lng,zoom) {
                     style: function(feature) { return boundaryStyle },
                      onEachFeature: function (feature, layer) {
                         layer.addTo(boundaries);
+                        console.log(feature.properties.Name)
                         var thisDiv = feature.properties.Name.replace(/([~!@#$%^&*()_+=`{}\[\]\|\\:;'<>,.\/? ])+/g, '-').replace(/^(-)+|(-)+$/g,'').toLowerCase()
                         layer.on("mouseover", function (e) {
                           layer.setStyle(highlightStyle);
@@ -104,9 +105,12 @@ function getLeaflet(lat,lng,zoom) {
                           layer.setStyle(boundaryStyle); 
                           $("#"+thisDiv).toggleClass("hover");
                         });
-                        layer.on("click", function (e) {
-                          window.location.href = thisDiv+".html";
-                        });
+                        if (feature.properties.Name == "St. Catherines Island" || feature.properties.Name == "Sapelo Island") {
+                          layer.on("click", function (e) {
+                            window.location.href = thisDiv+".html";
+                          });
+                        }
+                        
                      }
                  })
             }

@@ -498,11 +498,7 @@ h1 {
   border-bottom: 12px solid transparent;
 }
 #tags .tag:hover {
-  text-decoration: none;
-  background-color: #a43020;
-}
-#tags .tag:hover:after {
-  border-left: 12px solid #a43020;
+  cursor: default;
 }
 .feature-photo {
   margin-bottom: 10px;
