@@ -1,82 +1,89 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-    <title>The Georgia Coast Atlas | All Images</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet" media="screen">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="dist/leaflet.awesome-markers.css">
-    <link href="css/main.css" rel="stylesheet" media="screen">
-    
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]> <script src="../../assets/js/html5shiv.js"></script> <script src="../../assets/js/respond.min.js"></script> <![endif]-->
-    <!--Google maps API linl-->
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCsbzuJDUEOoq-jS1HO-LUXW4qo0gW9FNs"></script>
-    <!--Your map settings script-->
-    <script type="text/javascript" src="js/all_photos.js"></script>
-    <!--jQuery-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
 
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+<head>
+  <title>The Georgia Coast Atlas | All Images</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet" media="screen">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="dist/leaflet.awesome-markers.css">
+  <link href="css/main.css" rel="stylesheet" media="screen">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]> <script src="../../assets/js/html5shiv.js"></script> <script src="../../assets/js/respond.min.js"></script> <![endif]-->
+  <!--Google maps API linl-->
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCsbzuJDUEOoq-jS1HO-LUXW4qo0gW9FNs"></script>
+  <!--Your map settings script-->
+  <script type="text/javascript" src="js/all_photos.js"></script>
+  <!--jQuery-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
+
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
 
 </head>
-<body onload="getLeaflet(31.5397154,-81.2604012,12)" data-to-show="galleries">
-   
 
-    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
-    <script src="http://leaflet.github.io/Leaflet.label/leaflet.label.js"></script>
-    <script src="dist/leaflet.awesome-markers.js"></script>
-    <script src="js/load_galleries.js"></script>
-    
-    <!--map-->
-    <div id="map_canvas" class="map">
-        <div id="map" style="width: 100%; height: 100%; position: absolute;"></div>
+<body data-to-show="galleries">
+
+
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+  <script src="http://leaflet.github.io/Leaflet.label/leaflet.label.js"></script>
+  <script src="dist/leaflet.awesome-markers.js"></script>
+  <script src="js/load_galleries.js"></script>
+
+  <!--map-->
+  <div id="map_canvas" class="map">
+    <div id="map" style="width: 100%; height: 100%; position: absolute;"></div>
+  </div>
+
+
+  <!--/map-->
+  <div class="row site">
+    <div class="col-md-1 general_menu" id="thisMenu">
+      <script type="text/javascript">
+        $('#thisMenu').load('includes/navigation.html');
+      </script>
     </div>
-        
 
-    <!--/map-->
-    <div class="row site">
-        <div class="col-md-1 general_menu" id="thisMenu">
-            <script type="text/javascript">
-                $('#thisMenu').load('includes/navigation.html');
-            </script>
-        </div>
+    <!--Content-->
 
-        <!--Content-->
-  
 
-<script type="text/javascript">
-var $boxs = $("#elements > .element");
-var $btns = $(".filter .tag").on("click", function() {
-  
-  var active = 
-    $btns.removeClass("active")
-      .filter(this)
-      .addClass("active")
-      .data("filter");
-  
-  $boxs
-    .hide()
-    .filter( "." + active )
-    .fadeIn(100);
+    <script type="text/javascript">
+      var $boxs = $("#elements > .element");
+      var $btns = $(".filter .tag").on("click", function() {
 
-});
-</script>
-               
-            </div>
-            
-        <!--/Content-->
-    </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <!--   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
-    <script src="js/on-page-functions.js"></script>
-<script type="text/javascript" src="js/google_analytics.js"></script>
- 
+        var active =
+          $btns.removeClass("active")
+          .filter(this)
+          .addClass("active")
+          .data("filter");
+
+        $boxs
+          .hide()
+          .filter("." + active)
+          .fadeIn(100);
+
+      });
+    </script>
+
+  </div>
+
+  <!--/Content-->
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <!--   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
+  <script src="js/on-page-functions.js"></script>
+  <script type="text/javascript" src="js/google_analytics.js"></script>
+  <script>
+  window.onload = function() {
+    mapbox = getLeaflet(31.5397154,-81.2604012,10);
+    mapbox.fitBounds([[32.19304652202036, -79.55474853515625], [30.619004797647808, -82.96737670898438]]);
+  };
+  </script>
 </body>
+
 </html>

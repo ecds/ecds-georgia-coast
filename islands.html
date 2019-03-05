@@ -10,7 +10,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="dist/leaflet.awesome-markers.css">
     <link href="css/main.css" rel="stylesheet" media="screen">
-    
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]> <script src="../../assets/js/html5shiv.js"></script> <script src="../../assets/js/respond.min.js"></script> <![endif]-->
     <!--Google maps API linl-->
@@ -24,18 +24,18 @@
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
 
 </head>
-<body onload="getLeaflet(31.5169108,-81.4239977,10)">
-   
+<body>
 
-    <script src="http://leaflet.github.io/Leaflet.draw/lib/leaflet/leaflet.js"></script>
+
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
     <script src="http://leaflet.github.io/Leaflet.label/leaflet.label.js"></script>
     <script src="dist/leaflet.awesome-markers.js"></script>
-    
+
     <!--map-->
     <div id="map_canvas" class="map">
         <div id="map" style="width: 100%; height: 100%; position: absolute;"></div>
     </div>
-        
+
 
     <!--/map-->
     <div class="row site">
@@ -125,7 +125,7 @@
             </div>
     </div>
             </div>
-            
+
         <!--/Content-->
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -136,11 +136,19 @@
     <script type="text/javascript" src="js/google_analytics.js"></script>
 
     <!--[if lt IE 9]>
-<script>
-    document.createElement('video');
-</script>
-<![endif]-->
+    <script>
+        document.createElement('video');
+    </script>
+    <![endif]-->
 
+    <script>
+
+    // load page specific map
+    window.onload = function() {
+      mapbox = getLeaflet(31.4097144,-81.2604012,10);
+      mapbox.fitBounds([[32.19304652202036, -79.55474853515625], [30.619004797647808, -82.96737670898438]]);
+    };
+    </script>
 
 </body>
 </html>

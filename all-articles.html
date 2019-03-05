@@ -10,7 +10,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="dist/leaflet.awesome-markers.css">
     <link href="css/main.css" rel="stylesheet" media="screen">
-    
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]> <script src="../../assets/js/html5shiv.js"></script> <script src="../../assets/js/respond.min.js"></script> <![endif]-->
     <!--Google maps API linl-->
@@ -24,18 +24,18 @@
     <link rel="stylesheet" href="dist/leaflet/leaflet.css" />
 
 </head>
-<body onload="getLeaflet(31.5397154,-81.2604012,12)" data-to-show="articles">
-   
+<body data-to-show="articles">
+
 
     <script src="dist/leaflet/leaflet.js"></script>
     <script src="http://leaflet.github.io/Leaflet.label/leaflet.label.js"></script>
     <script src="dist/leaflet.awesome-markers.js"></script>
-    
+
     <!--map-->
     <div id="map_canvas" class="map">
         <div id="map" style="width: 100%; height: 100%; position: absolute;"></div>
     </div>
-        
+
 
     <!--/map-->
     <div class="row site">
@@ -48,5 +48,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
     <script src="js/on-page-functions.js"></script>
     <script type="text/javascript" src="js/google_analytics.js"></script>
+    <script>
+    window.onload = function() {
+      mapbox = getLeaflet(31.4097144,-81.2604012,10);
+      mapbox.fitBounds([[32.19304652202036, -79.55474853515625], [30.619004797647808, -82.96737670898438]]);
+    };
+    </script>
 </body>
 </html>

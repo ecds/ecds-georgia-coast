@@ -2,128 +2,139 @@
 <html>
 
 <head>
-    <title>The Georgia Coast Atlas | Cabretta 360</title>
-   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-    <!-- Bootstrap -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet" media="screen">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
-    <link href="css/main.css" rel="stylesheet" media="screen">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]> <script src="../../assets/js/html5shiv.js"></script> <script src="../../assets/js/respond.min.js"></script> <![endif]-->
-    <!--Google maps API linl-->
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCsbzuJDUEOoq-jS1HO-LUXW4qo0gW9FNs"></script>
-    <!--Your map settings script-->
-    <script type="text/javascript" src="js/map.js"></script>
-    <!--jQuery-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
-    
+  <title>The Georgia Coast Atlas | Cabretta 360</title>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!-- Bootstrap -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet" media="screen">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+  <link href="css/main.css" rel="stylesheet" media="screen">
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]> <script src="../../assets/js/html5shiv.js"></script> <script src="../../assets/js/respond.min.js"></script> <![endif]-->
+  <!--Google maps API linl-->
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCsbzuJDUEOoq-jS1HO-LUXW4qo0gW9FNs"></script>
+  <!--Your map settings script-->
+  <script type="text/javascript" src="js/map.js"></script>
+  <!--jQuery-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+
 </head>
 
-<body onload="getLeaflet(31.436647, -81.235684 ,13)">
-    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
-    <!--map-->
-    <div id="map_canvas" class="map">
-        <div id="map"></div>
+<body>
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+  <!--map-->
+  <div id="map_canvas" class="map">
+    <div id="map"></div>
+  </div>
+  <!--/map-->
+  <div class="row site">
+    <div class="col-md-1 general_menu" id="thisMenu">
+      <script type="text/javascript">
+        $('#thisMenu').load('includes/navigation.html');
+      </script>
     </div>
-    <!--/map-->
-    <div class="row site">
-        <div class="col-md-1 general_menu" id="thisMenu">
-            <script type="text/javascript">
-            $('#thisMenu').load('includes/navigation.html');
-            </script>
-        </div>
-        <!-- Toggle Sidebar Button -->
-        <a id="hideMap" class="fa fa-caret-left"></a>
-        <!-- /Toggle Sidebar Button -->
-        <!--Content-->
-        <div class="col-md-11 general_content_styles index_content" id="cont">
-            <!--Header-->
-            <div class="row">
-                <div class="col-md-12 header">
-                    <div class="col-md-4 logo">
-                        <a href="index.html">
+    <!-- Toggle Sidebar Button -->
+    <a id="hideMap" class="fa fa-caret-left"></a>
+    <!-- /Toggle Sidebar Button -->
+    <!--Content-->
+    <div class="col-md-11 general_content_styles index_content" id="cont">
+      <!--Header-->
+      <div class="row">
+        <div class="col-md-12 header">
+          <div class="col-md-4 logo">
+            <a href="index.html">
                             <img src="images/logo.png" />
                         </a>
-                    </div>
-                    <div class="col-md-8">
-                        <div id="tags">
-                            <a class="tag">Cabretta Beach</a>
-                            <a class="tag island sapelo" href="sapelo.html">Sapelo Island</a>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="col-md-8">
+            <div id="tags">
+              <a class="tag">Cabretta Beach</a>
+              <a class="tag island sapelo" href="sapelo-island.html">Sapelo Island</a>
             </div>
-            <!--/Header-->
-                
-            <!--Long Form Content-->
-            <div class="row long-content">
-                    <h1>Cabretta Beach 360</h1>
-                <div id="panoDIV"></div>
-                    <script type="text/javascript" src="cabretta_360data/cabretta_360.js"></script>
-               <!--    <script type="text/javascript">
+          </div>
+        </div>
+      </div>
+      <!--/Header-->
+
+      <!--Long Form Content-->
+      <div class="row long-content">
+        <h1>Cabretta Beach 360</h1>
+        <div id="panoDIV"></div>
+        <script type="text/javascript" src="cabretta_360data/cabretta_360.js"></script>
+        <!--    <script type="text/javascript">
                       embedpano({
                         swf:"testdata/test.swf"
                         ,target:"panoDIV"
                         ,passQueryParameters:true,
                         height:600
-                        }); 
+                        });
                     </script>-->
-                        
-                    <script type="text/javascript">
-                    embedpano({
-                        id:"krpanoSWFObject"
-                        ,xml:"cabretta_360data/cabretta_360.xml"
-                        ,target:"panoDIV"
-                        ,passQueryParameters:true
-                        ,bgcolor:"#000000"
-                        ,html5:"only"
-                        ,vars:{skipintro:true,norotation:true}
-                    });
-                    </script>
 
-                    <p class="lead">This panorama shows the diverse and dynamic environments on and around Cabretta Island (a northeastern part of Sapelo Island) and Blackbeard Island. Cabretta Island is separated from the main body of Sapelo Island by a tidal creek meandering through a salt marsh, whereas a larger tidal channel (Blackbeard Creek) divides Cabretta and Blackbeard. Tides and waves have moved and deposited sand along the south end of Blackbeard Island, with curved lines marking the gradual southward migration of the island. Dark brown deposits along the shoreline of Cabretta Island denote the former presence of ancient (relict) salt marshes that were buried but are now being exposed by shoreline erosion. White sandy deposits on the edge of Cabretta Island, called storm-washover fans, overlap the salt marshes in places and represent lateral migration of the beach.</p>
+        <script type="text/javascript">
+          embedpano({
+            id: "krpanoSWFObject",
+            xml: "cabretta_360data/cabretta_360.xml",
+            target: "panoDIV",
+            passQueryParameters: true,
+            bgcolor: "#000000",
+            html5: "only",
+            vars: {
+              skipintro: true,
+              norotation: true
+            }
+          });
+        </script>
+
+        <p class="lead">This panorama shows the diverse and dynamic environments on and around Cabretta Island (a northeastern part of Sapelo Island) and Blackbeard Island. Cabretta Island is separated from the main body of Sapelo Island by a tidal creek meandering through
+          a salt marsh, whereas a larger tidal channel (Blackbeard Creek) divides Cabretta and Blackbeard. Tides and waves have moved and deposited sand along the south end of Blackbeard Island, with curved lines marking the gradual southward migration
+          of the island. Dark brown deposits along the shoreline of Cabretta Island denote the former presence of ancient (relict) salt marshes that were buried but are now being exposed by shoreline erosion. White sandy deposits on the edge of Cabretta
+          Island, called storm-washover fans, overlap the salt marshes in places and represent lateral migration of the beach.</p>
 
 
-                    <div class="filter tags">
-                <!-- <div class="filter-list">
+        <div class="filter tags">
+          <!-- <div class="filter-list">
                     <label>Filter By Content Type:</label>
                     <button class="tag content-type" data-filter="article"><span class="fa fa-file-text"></span></button>
                     <button class="tag content-type" data-filter="photos"><span class="fa fa-camera"></span></button>
                     <button class="tag content-type" data-filter="videos"><span class="fa fa-video-camera"></span></button>
                 </div> -->
-               <div id="isotope-tags" class="filter-list">
-                    <label>Filter By Tags:</label>
-                    <button class="tag active" data-filter="element">Show All</button>
-                </div>
-            </div>
-            <div class="spacer"></div>
-            <div id="sapelo-stories">
-                
-            </div>
-                </div>
-            
-            <!--/Long Form Content -->
-            <!--Features-->
-            
-            
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <!--   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
-    <script src="js/on-page-functions.js"></script>
-    <script type="text/javascript">
+          <div id="isotope-tags" class="filter-list">
+            <label>Filter By Tags:</label>
+            <button class="tag active" data-filter="element">Show All</button>
+          </div>
+        </div>
+        <div class="spacer"></div>
+        <div id="sapelo-stories">
+
+        </div>
+      </div>
+
+      <!--/Long Form Content -->
+      <!--Features-->
+
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <!--   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
+      <script src="js/on-page-functions.js"></script>
+      <script type="text/javascript">
         // CALL FORMAT ISOTOPE FUNCTION FROM ON-PAGE-FUNCTIONS
-        $( document ).ready(function() {
-            $( "#sapelo-stories" ).load( "includes/sapelo-stories.html", function() {
-              formatIsotope();
-            });
+        $(document).ready(function() {
+          $("#sapelo-stories").load("includes/sapelo-stories.html", function() {
+            formatIsotope();
+          });
         });
-    </script>
-    <script type="text/javascript" src="js/google_analytics.js"></script>
-   
+
+        window.onload = function() {
+          mapbox = getLeaflet(false, 31.436647, -81.235684, 13);
+          alignRelatedBoxes();
+        };
+      </script>
+      <script type="text/javascript" src="js/google_analytics.js"></script>
+
 </body>
 
 </html>

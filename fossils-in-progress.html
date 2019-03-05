@@ -2,193 +2,227 @@
 <html>
 
 <head>
-    <title>The Georgia Coast Atlas | Fossils in Progress</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet" media="screen">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="dist/leaflet.awesome-markers.css">
+  <title>The Georgia Coast Atlas | Fossils in Progress</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet" media="screen">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="dist/leaflet.awesome-markers.css">
 
-    <link href="css/main.css" rel="stylesheet" media="screen">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]> <script src="../../assets/js/html5shiv.js"></script> <script src="../../assets/js/respond.min.js"></script> <![endif]-->
-    <!--Google maps API linl-->
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCsbzuJDUEOoq-jS1HO-LUXW4qo0gW9FNs"></script>
-    <!--Your map settings script-->
-    <script type="text/javascript" src="js/plain-map.js"></script>
-    <!--jQuery-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+  <link href="css/main.css" rel="stylesheet" media="screen">
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]> <script src="../../assets/js/html5shiv.js"></script> <script src="../../assets/js/respond.min.js"></script> <![endif]-->
+  <!--Google maps API linl-->
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCsbzuJDUEOoq-jS1HO-LUXW4qo0gW9FNs"></script>
+  <!--Your map settings script-->
+  <script type="text/javascript" src="js/plain-map.js"></script>
+  <!--jQuery-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
 </head>
 
-<body onload="getLeaflet(31.43958,-81.237552,16)" data-type="article">
-    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
-        <script src="dist/leaflet.awesome-markers.js"></script>
+<body data-type="article">
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+  <script src="dist/leaflet.awesome-markers.js"></script>
 
-    <!--map-->
-    <div id="map_canvas" class="map">
-        <div id="map"></div>
+  <!--map-->
+  <div id="map_canvas" class="map">
+    <div id="map"></div>
+  </div>
+  <!--/map-->
+  <div class="row site">
+    <div class="col-md-1 general_menu" id="thisMenu">
+      <script type="text/javascript">
+        $('#thisMenu').load('includes/navigation.html');
+      </script>
     </div>
-    <!--/map-->
-    <div class="row site">
-        <div class="col-md-1 general_menu" id="thisMenu">
-            <script type="text/javascript">
-            $('#thisMenu').load('includes/navigation.html');
-            </script>
-        </div>
-        <!-- Toggle Sidebar Button -->
-        <a id="hideMap" class="fa fa-caret-left"></a>
-        <!-- /Toggle Sidebar Button -->
-        <!--Content-->
-        <div class="col-md-11 general_content_styles index_content" id="cont">
-            <!--Header-->
-            <div class="row">
-                <div class="col-md-12 header">
-                    <div class="col-md-4 logo">
-                        <a href="index.html">
+    <!-- Toggle Sidebar Button -->
+    <a id="hideMap" class="fa fa-caret-left"></a>
+    <!-- /Toggle Sidebar Button -->
+    <!--Content-->
+    <div class="col-md-11 general_content_styles index_content" id="cont">
+      <!--Header-->
+      <div class="row">
+        <div class="col-md-12 header">
+          <div class="col-md-4 logo">
+            <a href="index.html">
                             <img src="images/logo.png" />
                         </a>
-                    </div>
-                    <div class="col-md-8">
-                        <div id="tags">
-                            <a class="tag">Cabretta Beach</a>
-                            <a class="tag island sapelo" href="sapelo-island.html">Sapelo Island</a>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="col-md-8">
+            <div id="tags">
+              <a class="tag">Cabretta Beach</a>
+              <a class="tag island sapelo" href="sapelo-island.html">Sapelo Island</a>
             </div>
-            <!--/Header-->
-            <!--Long Form Content-->
-            <div class="row long-content">
-                <div class="col-md-12">
-                    <h1>Fossils in Progress</h1>
-                    <h3>Anthony (Tony) Martin</h3>
-                    <figure>
-                        <img class="img-responsive" src="images/Relict-Marsh-view.jpg">
-                        <figcaption>Overall view of relict marsh exposed on Cabretta Beach, Sapelo Island, Georgia, with me for scale, but from 2004. Hence the scale might now be slightly wider now. (Photograph taken by Ruth Schowalter.)</figcaption>
-                    </figure>
-                    <p>Despite whatever lamentations are made about the “incompleteness” of the fossil record, fossils are actually quite common. This truism is brought home even more so whenever trace fossils – tracks, burrows, and other evidence of organismal behavior – are included in a fossil while examining any sedimentary rocks formed in the past 550 million years or so.
-</p>
-                    <p>For example, I have often visited a rock outcrop described previously as “lacking fossils,” and instead found it filled with trace fossils; hence what people meant when they said “lacking fossils” was “no body fossils,” such as shells or bones. Normally such trace fossils are invertebrate burrows, which might be glibly identified as “worm burrows,” but tracks or other trace fossils may also reveal themselves whoever is looking for them. Indeed, this expectation of finding fossils is such that on occasions when geologists find a sedimentary rock layer devoid of either body or trace fossils, it is odd enough to cause them to ask why.
-</p>
-                    <p>But how do the former bodily remains of plants or animals, or traces of their behaviors, become preserved as fossils in the first place? This question other related ones are answered by the science of taphonomy. Coined by Russian paleontologist Ivan Yefremov, the etymology of this term stems from Greek, in which taphos ( = burial) and nomos (= law). By using such a term, he was alluding to an expectation that the natural processes resulting in the preservation of body fossils and trace fossils are orderly and predictable.
-</p>
-                    <p>An overview of taphonomy as a field of study would be far too lengthy to explore here, so instead I will use one example from the Georgia coast to show how it is supposed to work. This superb case in point is a relict marsh on Cabretta Beach of Sapelo Island. This relict marsh is what’s left of a salt marsh from about 500 years ago, and it has been revealing its nature to paleontologists, geologists, and students for the past few decades.
-</p>
+          </div>
+        </div>
+      </div>
+      <!--/Header-->
+      <!--Long Form Content-->
+      <div class="row long-content">
+        <div class="col-md-12">
+          <h1>Fossils in Progress</h1>
+          <h3>Anthony (Tony) Martin</h3>
+          <figure>
+            <img class="img-responsive" src="images/Relict-Marsh-view.jpg">
+            <figcaption>Overall view of relict marsh exposed on Cabretta Beach, Sapelo Island, Georgia, with me for scale, but from 2004. Hence the scale might now be slightly wider now. (Photograph taken by Ruth Schowalter.)</figcaption>
+          </figure>
+          <p>Despite whatever lamentations are made about the “incompleteness” of the fossil record, fossils are actually quite common. This truism is brought home even more so whenever trace fossils – tracks, burrows, and other evidence of organismal behavior
+            – are included in a fossil while examining any sedimentary rocks formed in the past 550 million years or so.
+          </p>
+          <p>For example, I have often visited a rock outcrop described previously as “lacking fossils,” and instead found it filled with trace fossils; hence what people meant when they said “lacking fossils” was “no body fossils,” such as shells or bones.
+            Normally such trace fossils are invertebrate burrows, which might be glibly identified as “worm burrows,” but tracks or other trace fossils may also reveal themselves whoever is looking for them. Indeed, this expectation of finding fossils
+            is such that on occasions when geologists find a sedimentary rock layer devoid of either body or trace fossils, it is odd enough to cause them to ask why.
+          </p>
+          <p>But how do the former bodily remains of plants or animals, or traces of their behaviors, become preserved as fossils in the first place? This question other related ones are answered by the science of taphonomy. Coined by Russian paleontologist Ivan
+            Yefremov, the etymology of this term stems from Greek, in which taphos ( = burial) and nomos (= law). By using such a term, he was alluding to an expectation that the natural processes resulting in the preservation of body fossils and trace
+            fossils are orderly and predictable.
+          </p>
+          <p>An overview of taphonomy as a field of study would be far too lengthy to explore here, so instead I will use one example from the Georgia coast to show how it is supposed to work. This superb case in point is a relict marsh on Cabretta Beach
+            of Sapelo Island. This relict marsh is what’s left of a salt marsh from about 500 years ago, and it has been revealing its nature to paleontologists, geologists, and students for the past few decades.
+          </p>
 
-                    <p>Once every two years, I take a group of students from Emory University to Sapelo Island for a weekend field trip. One of our goals on this trip is to take them to this relict marsh so that they could better appreciate how a sedimentary deposit makes a transition from a living ecosystem to inert rock, yet can still be filled with evidence of its formerly teeming life. Similar relict marshes are on St. Catherines Island and other Georgia-coast islands, but when it comes to teaching about taphonomy in the field, I prefer using the one on Sapelo.
-</p>
-                    <figure>
-                        <img class="img-responsive" src="images/cord_grass.jpg">
-                        <figcaption>Closer view of relict marsh on Sapelo Island, showing 500-year-old remains of smooth cordgrass (Spartina alterniflora), a cross section of its formerly muddy sediments, and quartz-rich sand deposited on top of it by tides, waves, and wind. (Photograph by Anthony Martin.)</figcaption>
-                    </figure>
-                    <p>Modern salt marshes on the Georgia coast have a few key components that make them among the most productive of all ecosystems: smooth cordgrass (Spartina alterniflora), marsh periwinkles (Littoraria irrorata), mud fiddler crabs (Uca pugnax), and ribbed mussels (Geukensia demissa). So if a Georgia salt marsh were to be buried quickly – say, by a storm that dumps a thick layer of sand on it – what would be preserved? The Cabretta relict marsh partially answers that question, showing us incipient trace and body fossils of these biota. These are not quite fossils, but on their way, providing a glimpse of the fossilization process well before it is completed.
-</p>
-                    <p>For example, the tall, green or golden stalks of smooth cordgrass that we see today, adorned by millions of marsh periwinkles (Littoraria irrorata), are absent from the relict marsh. Only the lowermost ochre-colored stubs and extensive root systems of these plants remain, as well as traces made by the roots below what used to be the marsh surface.
-</p>
+          <p>Once every two years, I take a group of students from Emory University to Sapelo Island for a weekend field trip. One of our goals on this trip is to take them to this relict marsh so that they could better appreciate how a sedimentary deposit
+            makes a transition from a living ecosystem to inert rock, yet can still be filled with evidence of its formerly teeming life. Similar relict marshes are on St. Catherines Island and other Georgia-coast islands, but when it comes to teaching
+            about taphonomy in the field, I prefer using the one on Sapelo.
+          </p>
+          <figure>
+            <img class="img-responsive" src="images/cord_grass.jpg">
+            <figcaption>Closer view of relict marsh on Sapelo Island, showing 500-year-old remains of smooth cordgrass (Spartina alterniflora), a cross section of its formerly muddy sediments, and quartz-rich sand deposited on top of it by tides, waves, and wind.
+              (Photograph by Anthony Martin.)</figcaption>
+          </figure>
+          <p>Modern salt marshes on the Georgia coast have a few key components that make them among the most productive of all ecosystems: smooth cordgrass (Spartina alterniflora), marsh periwinkles (Littoraria irrorata), mud fiddler crabs (Uca pugnax),
+            and ribbed mussels (Geukensia demissa). So if a Georgia salt marsh were to be buried quickly – say, by a storm that dumps a thick layer of sand on it – what would be preserved? The Cabretta relict marsh partially answers that question, showing
+            us incipient trace and body fossils of these biota. These are not quite fossils, but on their way, providing a glimpse of the fossilization process well before it is completed.
+          </p>
+          <p>For example, the tall, green or golden stalks of smooth cordgrass that we see today, adorned by millions of marsh periwinkles (Littoraria irrorata), are absent from the relict marsh. Only the lowermost ochre-colored stubs and extensive root
+            systems of these plants remain, as well as traces made by the roots below what used to be the marsh surface.
+          </p>
 
-                    <figure>
-                        <img class="img-responsive" src="images/periwinkles.jpg">
-                        <figcaption>Modern smooth cordgrass (Spartina alterniflora) and its constant companions, marsh periwinkles (Littoraria irrorata) on Sapelo Island, Georgia. (Photograph by Anthony Martin.)</figcaption>
-                    </figure>
+          <figure>
+            <img class="img-responsive" src="images/periwinkles.jpg">
+            <figcaption>Modern smooth cordgrass (Spartina alterniflora) and its constant companions, marsh periwinkles (Littoraria irrorata) on Sapelo Island, Georgia. (Photograph by Anthony Martin.)</figcaption>
+          </figure>
 
 
-                     <figure>
-                        <img class="img-responsive" src="images/xsection_relict_marsh.jpg">
-                        <figcaption>Cross-sectional view of relict marsh, showing what is left from the plant community of a formerly magnificent marsh: stubs, roots, root traces, and very few periwinkles. (Photographs by Anthony Martin.)</figcaption>
-                    </figure>
+          <figure>
+            <img class="img-responsive" src="images/xsection_relict_marsh.jpg">
+            <figcaption>Cross-sectional view of relict marsh, showing what is left from the plant community of a formerly magnificent marsh: stubs, roots, root traces, and very few periwinkles. (Photographs by Anthony Martin.)</figcaption>
+          </figure>
 
-                    <p>Once in a while I also find old marsh periwinkle shells scattered on the surface of the relict marsh. These are made of calcium carbonate and will dissolve in slightly acidic waters, so these might not last for long once exposed. The real reason for why these tend to disappear quickly, though, is modern hermit crabs. Hermit crabs encounter these periwinkle shells on the relict marsh surface, slip into them, and then happily trot away, not caring that their “new” homes are actually 500 years old.</p>
-                    <p>No mud-fiddler crab remains are apparent on the relict-marsh surface, either, nor have I seen them more than thrity visits to this relict marsh. This is not surprising, as their exoskeletons are made of chitin and dissolve more quickly than molluscan shells. Nonetheless, their burrows are always abundantly evident on the surface as perfectly round holes, which are sometimes accompanied by new burrows made by modern fiddler crabs, as well as some modern bivalves, which will bore into this now firm (formerly muddy) surface.</p>
-                        <div class="row">
-                        <div class="col-md-6">
-                       <figure>
-                        <img class="img-responsive" src="images/sand_fiddlers.jpg">
-                        <figcaption>Modern salt marsh surface on Sapelo Island with mud fiddler crabs (Uca pugnax) showing off a few of the behavioral traits they do best: eating, fighting, mating, and burrowing. Note that burrows, surface scrapings, and pellets are a few of the traces they make. Which of these traces get preserved? (Photograph by Anthony Martin.)</figcaption>
-                    </figure>
-                </div>
-                <div class="col-md-6">
-                         <figure>
-                        <img class="img-responsive" src="images/longitudinal_burrow.jpg">
-                        <figcaption>Longitudinal view of former fiddler-crab burrows associated with smooth-cordgrass root traces. If the deeper parts of these burrows are filled with sand, these burrows are more likely to be preserved as trace fossils. Scale to right is 15 cm (6 in) long. (Photograph by Anthony Martin.)</figcaption>
-                    </figure>
-                </div>
+          <p>Once in a while I also find old marsh periwinkle shells scattered on the surface of the relict marsh. These are made of calcium carbonate and will dissolve in slightly acidic waters, so these might not last for long once exposed. The real reason
+            for why these tend to disappear quickly, though, is modern hermit crabs. Hermit crabs encounter these periwinkle shells on the relict marsh surface, slip into them, and then happily trot away, not caring that their “new” homes are actually
+            500 years old.</p>
+          <p>No mud-fiddler crab remains are apparent on the relict-marsh surface, either, nor have I seen them more than thrity visits to this relict marsh. This is not surprising, as their exoskeletons are made of chitin and dissolve more quickly than
+            molluscan shells. Nonetheless, their burrows are always abundantly evident on the surface as perfectly round holes, which are sometimes accompanied by new burrows made by modern fiddler crabs, as well as some modern bivalves, which will bore
+            into this now firm (formerly muddy) surface.</p>
+          <div class="row">
+            <div class="col-md-6">
+              <figure>
+                <img class="img-responsive" src="images/sand_fiddlers.jpg">
+                <figcaption>Modern salt marsh surface on Sapelo Island with mud fiddler crabs (Uca pugnax) showing off a few of the behavioral traits they do best: eating, fighting, mating, and burrowing. Note that burrows, surface scrapings, and pellets are a few
+                  of the traces they make. Which of these traces get preserved? (Photograph by Anthony Martin.)</figcaption>
+              </figure>
             </div>
-                    <p>Live, modern ribbed mussels are harder for to see in the field because you would need to wade into soft, deep, sulfurous mud to get close to them. So when leading  students in the field, I ask them to take my word that those mussels are indeed in the marsh. I then point to the old ones clumped on the relict-marsh surface, still in life position and attached to the former surface of the marsh.</p>
-                      <figure>
-                        <img class="img-responsive" src="images/cluster_mussels.jpg">
-                        <figcaption>Cluster of ribbed mussels (Guekensia demissa) directly associated with stubs of smooth cordgrass and connected to the relict marsh surface. Now that they’re exposed, how long will these shells last on the surface? (Photograph by Anthony Martin.)</figcaption>
-                    </figure>
-                    <p>Oysters (Crassostrea virginica) are less common in the relict marsh, but given the right exposure, these can be observed on some visits too. Clumps of oyster shells mark the edges of tidal creeks that wound through the marsh.</p>
-                    <div class="row">
-                        <div class="col-md-6">
-                      <figure>
-                        <img class="img-responsive" src="images/modern_marsh.jpg">
-                        <figcaption>(Top) Modern salt marsh with tidal creek cutting through it and oyster bank exposed at low tide, Sapelo Island. (Photograph by Anthony Martin.)</figcaption>
-                    </figure>
-                </div>
-                <div class="col-md-6">
-                    <figure>
-                        <img class="img-responsive" src="images/former_bank.jpg">
-                        <figcaption>Former oyster bank peeking out of relict marsh, formerly buried for about 500 years, now revealed by erosion of the modern shoreline. (Photograph by Anthony Martin.)</figcaption>
-                    </figure>
-                </div>
+            <div class="col-md-6">
+              <figure>
+                <img class="img-responsive" src="images/longitudinal_burrow.jpg">
+                <figcaption>Longitudinal view of former fiddler-crab burrows associated with smooth-cordgrass root traces. If the deeper parts of these burrows are filled with sand, these burrows are more likely to be preserved as trace fossils. Scale to right is
+                  15 cm (6 in) long. (Photograph by Anthony Martin.)</figcaption>
+              </figure>
             </div>
-                    <p>Because it is all too easy to spot the similarities between this relict marsh and a modern one less than 100 meters (330 feet) from where we stood, I then ask students about other differences. For instance, take the fact that we were standing on the relict marsh while discussing its traits. Could we do the same in the modern marsh nearby? No, was the universal answer, and I affirmed that we would likely be up to our waists in mud.</p>
-                    <p>This led to a discussion of why the relict marsh could be so firm, which introduced them to the concept of diagenesis: how a sedimentary deposit can change over time as its sediments lose water, or exchange ions and compounds and undergo cementation (turning into rock). Diagenesis is thus an important consideration in taphonomy. Such alterations are especially apparent in muds, which lose considerable volume as these lose their water content, causing a “soft ground” to become a “firm ground,” then eventually a “hard ground.” In this instance, once the marsh was buried, the overlying sediments squeezed out much of the water filling spaces between clay minerals and compacted these grains closer together. This dehydration and compaction meant the deposit was likely two to three times thicker than now.</p>
-                        <figure>
-                        <img class="img-responsive" src="images/students_marsh.jpg">
-                        <figcaption>Would these students so blithely walk around on a modern salt marsh? Definitely not. Nevertheless, a relict marsh, thanks to dehydration of its muds and compaction, is just fine for exploring on foot. (Photograph by Anthony Martin.)</figcaption>
-                    </figure>
-                    <p>The last time I took a group to students to the Cabretta Beach marsh, we were there for only about an hour before regretfully walking back to our field vehicle, followed by a ferry ride to the mainland part of Georgia and a long drive home to Atlanta. Yet I felt assured that the lessons about taphonomy, ancient environments, body fossils, trace fossils, and diagenesis imparted by this relict marsh encompassed enough material to fill a week’s worth of classes in an indoor classroom. Moreover, if we had been all enclosed by four walls and a ceiling, and without a former marsh underfoot, there was no guarantee that these concepts would be understood or retained.</p>
-                    <p>This is why we geoscientist-educators take our students outside, enriching our collective awareness of how environments change through time and how we piece together the clues left behind from ancient environments. It’s memorable, it’s fun, and it works. But don’t take my word for it. Whether you’re an educator or student, try it yourself sometime, whether on the Georgia coast or elsewhere, and see what happens.</p>
-                    <p><strong>Anthony (Tony) Martin</strong> is a paleontologist and geologist who specializes in ichnology, the study of modern and ancient traces caused by animal behavior, such as tracks, trails, burrows, and nests. He is a Professor of Practice in the Department of Environmental Sciences at Emory University, where he has been for 25 years. At Emory, he teaches a variety of courses in paleontology, geology, and the environmental sciences on campus and in field courses, including study-abroad programs.</p>
-                    <h2>Further Reading</h2>
-                   <p>Basan, P.B., and Frey, R.W. 1977. Actual-palaeontology and neoichnology of salt marshes near Sapelo Island, Georgia. In Crimes, T.P., and Harper, J.C. (editors), <i>Trace Fossils 2</i>. Liverpool, Seel House Press: 41-70.</p>
-                   <p>Edwards, J.M. and Frey, R.W. 1977. Substrate characteristics within a Holocene salt marsh, Sapelo Island, Georgia. <i>Senckenbergiana Maritima</i>, 9: 215-259.</p>
-                   <p>Frey, R.W. and P.B. Basan. 1981. Taphonomy of relict Holocene salt marsh deposits, Cabretta Island, Georgia. <i>Senckenbergiana Maritima</i>, 13: 111-155.</p>
-                   <p>Frey, R.W., Basan, P.B. and Scott, R.M. 1973. Techniques for sampling salt marsh benthos and burrows. <i>American Midland Naturalist</i>, 89: 228-234./p>
-                   <p>Letzsch, W.S. and Frey, R.W. 1980. Deposition and erosion in a Holocene salt marsh, Sapelo Island, Georgia. <i>Journal of Sedimentary Research</i>, 50: 529-542.</p>
-                   <p>Morris, R. W. and H. B. Rollins. 1977. Observations on intertidal organism associations on St. Catherines Island, Georgia. I. General description and paleoecological implications. <i>Bulletin of the American Museum of Natural History</i>, 159: 87-128.</p>
-                   <p>Smith, J.M., and Frey, R.W. 1985. Biodeposition by the ribbed mussel Geukensia demissain a salt marsh, Sapelo Island, Georgia. <i>Journal of Sedimentary Research</i>, 55: 817-825.</p>
+          </div>
+          <p>Live, modern ribbed mussels are harder for to see in the field because you would need to wade into soft, deep, sulfurous mud to get close to them. So when leading students in the field, I ask them to take my word that those mussels are indeed
+            in the marsh. I then point to the old ones clumped on the relict-marsh surface, still in life position and attached to the former surface of the marsh.</p>
+          <figure>
+            <img class="img-responsive" src="images/cluster_mussels.jpg">
+            <figcaption>Cluster of ribbed mussels (Guekensia demissa) directly associated with stubs of smooth cordgrass and connected to the relict marsh surface. Now that they’re exposed, how long will these shells last on the surface? (Photograph by Anthony Martin.)</figcaption>
+          </figure>
+          <p>Oysters (Crassostrea virginica) are less common in the relict marsh, but given the right exposure, these can be observed on some visits too. Clumps of oyster shells mark the edges of tidal creeks that wound through the marsh.</p>
+          <div class="row">
+            <div class="col-md-6">
+              <figure>
+                <img class="img-responsive" src="images/modern_marsh.jpg">
+                <figcaption>(Top) Modern salt marsh with tidal creek cutting through it and oyster bank exposed at low tide, Sapelo Island. (Photograph by Anthony Martin.)</figcaption>
+              </figure>
+            </div>
+            <div class="col-md-6">
+              <figure>
+                <img class="img-responsive" src="images/former_bank.jpg">
+                <figcaption>Former oyster bank peeking out of relict marsh, formerly buried for about 500 years, now revealed by erosion of the modern shoreline. (Photograph by Anthony Martin.)</figcaption>
+              </figure>
+            </div>
+          </div>
+          <p>Because it is all too easy to spot the similarities between this relict marsh and a modern one less than 100 meters (330 feet) from where we stood, I then ask students about other differences. For instance, take the fact that we were standing
+            on the relict marsh while discussing its traits. Could we do the same in the modern marsh nearby? No, was the universal answer, and I affirmed that we would likely be up to our waists in mud.</p>
+          <p>This led to a discussion of why the relict marsh could be so firm, which introduced them to the concept of diagenesis: how a sedimentary deposit can change over time as its sediments lose water, or exchange ions and compounds and undergo cementation
+            (turning into rock). Diagenesis is thus an important consideration in taphonomy. Such alterations are especially apparent in muds, which lose considerable volume as these lose their water content, causing a “soft ground” to become a “firm
+            ground,” then eventually a “hard ground.” In this instance, once the marsh was buried, the overlying sediments squeezed out much of the water filling spaces between clay minerals and compacted these grains closer together. This dehydration
+            and compaction meant the deposit was likely two to three times thicker than now.</p>
+          <figure>
+            <img class="img-responsive" src="images/students_marsh.jpg">
+            <figcaption>Would these students so blithely walk around on a modern salt marsh? Definitely not. Nevertheless, a relict marsh, thanks to dehydration of its muds and compaction, is just fine for exploring on foot. (Photograph by Anthony Martin.)</figcaption>
+          </figure>
+          <p>The last time I took a group to students to the Cabretta Beach marsh, we were there for only about an hour before regretfully walking back to our field vehicle, followed by a ferry ride to the mainland part of Georgia and a long drive home to
+            Atlanta. Yet I felt assured that the lessons about taphonomy, ancient environments, body fossils, trace fossils, and diagenesis imparted by this relict marsh encompassed enough material to fill a week’s worth of classes in an indoor classroom.
+            Moreover, if we had been all enclosed by four walls and a ceiling, and without a former marsh underfoot, there was no guarantee that these concepts would be understood or retained.</p>
+          <p>This is why we geoscientist-educators take our students outside, enriching our collective awareness of how environments change through time and how we piece together the clues left behind from ancient environments. It’s memorable, it’s fun,
+            and it works. But don’t take my word for it. Whether you’re an educator or student, try it yourself sometime, whether on the Georgia coast or elsewhere, and see what happens.</p>
+          <p><strong>Anthony (Tony) Martin</strong> is a paleontologist and geologist who specializes in ichnology, the study of modern and ancient traces caused by animal behavior, such as tracks, trails, burrows, and nests. He is a Professor of Practice
+            in the Department of Environmental Sciences at Emory University, where he has been for 25 years. At Emory, he teaches a variety of courses in paleontology, geology, and the environmental sciences on campus and in field courses, including study-abroad
+            programs.</p>
+          <h2>Further Reading</h2>
+          <p>Basan, P.B., and Frey, R.W. 1977. Actual-palaeontology and neoichnology of salt marshes near Sapelo Island, Georgia. In Crimes, T.P., and Harper, J.C. (editors), <i>Trace Fossils 2</i>. Liverpool, Seel House Press: 41-70.</p>
+          <p>Edwards, J.M. and Frey, R.W. 1977. Substrate characteristics within a Holocene salt marsh, Sapelo Island, Georgia. <i>Senckenbergiana Maritima</i>, 9: 215-259.</p>
+          <p>Frey, R.W. and P.B. Basan. 1981. Taphonomy of relict Holocene salt marsh deposits, Cabretta Island, Georgia. <i>Senckenbergiana Maritima</i>, 13: 111-155.</p>
+          <p>Frey, R.W., Basan, P.B. and Scott, R.M. 1973. Techniques for sampling salt marsh benthos and burrows. <i>American Midland Naturalist</i>, 89: 228-234./p>
+            <p>Letzsch, W.S. and Frey, R.W. 1980. Deposition and erosion in a Holocene salt marsh, Sapelo Island, Georgia. <i>Journal of Sedimentary Research</i>, 50: 529-542.</p>
+            <p>Morris, R. W. and H. B. Rollins. 1977. Observations on intertidal organism associations on St. Catherines Island, Georgia. I. General description and paleoecological implications. <i>Bulletin of the American Museum of Natural History</i>,
+              159: 87-128.</p>
+            <p>Smith, J.M., and Frey, R.W. 1985. Biodeposition by the ribbed mussel Geukensia demissain a salt marsh, Sapelo Island, Georgia. <i>Journal of Sedimentary Research</i>, 55: 817-825.</p>
 
-                </div>
-            </div>
-            <!--/Long Form Content -->
-            <!--Features-->
-            <h3>Related Content</h3>
-            <div class="filter tags">
-                <!-- <div class="filter-list">
+        </div>
+      </div>
+      <!--/Long Form Content -->
+      <!--Features-->
+      <h3>Related Content</h3>
+      <div class="filter tags">
+        <!-- <div class="filter-list">
                     <label>Filter By Content Type:</label>
                     <button class="tag content-type" data-filter="article"><span class="fa fa-file-text"></span></button>
                     <button class="tag content-type" data-filter="photos"><span class="fa fa-camera"></span></button>
                     <button class="tag content-type" data-filter="videos"><span class="fa fa-video-camera"></span></button>
                 </div> -->
-               <div id="isotope-tags" class="filter-list">
-                    <label>Filter By Tags:</label>
-                    <button class="tag active" data-filter="element">Show All</button>
-                </div>
-            </div>
-            <div class="spacer"></div>
-            <div id="sapelo-stories">
-                
-            </div>
-            <!--/Content-->
+        <div id="isotope-tags" class="filter-list">
+          <label>Filter By Tags:</label>
+          <button class="tag active" data-filter="element">Show All</button>
         </div>
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <!--   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
-        <script src="js/on-page-functions.js"></script>
-            <script type="text/javascript">
-        // CALL FORMAT ISOTOPE FUNCTION FROM ON-PAGE-FUNCTIONS
-        $( document ).ready(function() {
-            $( "#sapelo-stories" ).load( "includes/sapelo-stories.html", function() {
-              formatIsotope();
-            });
+      </div>
+      <div class="spacer"></div>
+      <div id="sapelo-stories">
+
+      </div>
+      <!--/Content-->
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
+    <script src="js/on-page-functions.js"></script>
+    <script type="text/javascript">
+      window.onload = function() {
+        mapbox = getLeaflet(31.43958,-81.237552,16);
+        alignRelatedBoxes();
+      }
+      // CALL FORMAT ISOTOPE FUNCTION FROM ON-PAGE-FUNCTIONS
+      $(document).ready(function() {
+        $("#sapelo-stories").load("includes/sapelo-stories.html", function() {
+          formatIsotope();
         });
+      });
+
     </script>
     <script type="text/javascript" src="js/google_analytics.js"></script>
 </body>
