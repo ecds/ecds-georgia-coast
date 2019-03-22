@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The Georgia Coast Atlas | Wolf Island</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="css/main.css" rel="stylesheet" media="screen">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]> <script src="../../assets/js/html5shiv.js"></script> <script src="../../assets/js/respond.min.js"></script> <![endif]-->
+    <!--Google maps API linl-->
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCsbzuJDUEOoq-jS1HO-LUXW4qo0gW9FNs"></script>
+    <!--Your map settings script-->
+
+    <script type="text/javascript" src="js/wolf.js"></script>
+    <!--jQuery-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+</head>
+
+<body>
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+    <!--map-->
+    <div id="map_canvas" class="map">
+        <div id="map"></div>
+    </div>
+    <!--/map-->
+    <div class="row site">
+        <div class="col-md-1 general_menu" id="thisMenu">
+            <script type="text/javascript">
+            $('#thisMenu').load('includes/navigation.html');
+            </script>
+        </div>
+        <!-- Toggle Sidebar Button -->
+        <a id="hideMap" class="fa fa-caret-left"></a>
+        <!-- /Toggle Sidebar Button -->
+        <!--Content-->
+        <div class="col-md-11 general_content_styles index_content" id="cont">
+            <!--Header-->
+            <div class="row">
+                <div class="col-md-12 header">
+                    <div class="col-md-4 logo">
+                        <a href="index.html">
+                            <img src="images/logo.png" />
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <div id="tags">
+                            <a class="tag island sapelo">Wolf Island</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/Header-->
+            <!--Long Form Content-->
+            <div class="row long-content">
+                <div class="col-md-12">
+                    <h1>Wolf Island</h1>
+                    <div class="">
+                            <img style='height: 100%; width: 100%; object-fit: contain' src="/images/wolf/WolfIsland2009usda.jpg"/>
+                    </div>
+                    <p></p>
+                    <p>
+                    Wolf Island is a Holocene island located along the Georgia coast on the mouth of the Altamaha 
+                    River, between Sapelo and Little St. Simons Islands (31&deg; 21’00.47” N and 81&deg;18’05.14” W). 
+                    Wolf and two nearby smaller islands –Egg and Little Egg– were collectively established as a 
+                    U.S. National Wildlife Refuge on April 3, 1930. The Nature Conservancy originally owned 1,647 hectares of the island since 1969, until the rest was bought by the U.S. federal government on October 3, 1972. On January 3, 1975, the threeislands were designated as the Wolf Island National Wildlife Refuge, while also falling under the authority of McIntosh County, Georgia. The refuge is designated as a migratory bird sanctuary and a sea-turtle nesting site.
+                    </p>  
+                    <p>
+                    Of the environments on Wolf Island, 6.6% consist of upland areas, and its highest elevation is 3.2 m (above mean low water). The rest of the island is composed of salt marshes, hammocks, and tidal creeks.   Although Wolf Island National Wildlife Refuge is a three-island system, Little Egg Island Egg Island habitats differfrom Wolf Island. For instance, Egg Island has a relatively greater percentage of upland area (33.7%) and parts of the island are above 2.5 m; the rest of the island is dominated by salt marshes. Little Egg Island, however, lacks upland areas and the entire island a low salt marsh.  
+                    </p>
+                    <p>
+                    Humans interacted with Wolf Island during the 18th century, where it was used by American locals for hunting. Originally, 61 hectares of this island belonged to Christopher DeBrake, but this land was not granted to him by King George III of England until March 7, 1769. The island also served as a quarantine area for sailors infected by yellow fever in the late 18th century. In 1828, 218 hectares of Wolf Island were purchased by the U.S. government.
+                    </p>
+                    <p>
+                    Wolf Island was used actively during the American Civil War (1861-1865), which happened after construction of a second lighthouse on the island in 1822 to supplement the lighthouse on Sapelo Island, north of Wolf Island and across Doboy Sound. Despite this new construction, Confederate soldiers destroyed the lighthouse to prevent the Union from using it for their navigation. A third (and larger) lighthouse with better light was built after the Civil War. However, it and a clubhouse on the southern end of the island were destroyed by the 1898 Georgia hurricane, a disaster that also killed the lighthouse keepers. People then reused some of the remains of the Wolf Island lighthouse for the one on Sapelo. Since then, the island has been uninhabited and is closed to the public to protect endangered species living and breeding there, such as the piping plover (Charadrius melodus). 
+                    </p>
+                </div>
+            </div>
+            <!--/Long Form Content -->
+
+            <!--Features-->
+      <h3>Explore Wolf Island</h3>
+      <div class="filter tags">
+        <!-- <div class="filter-list">
+                    <label>Filter By Content Type:</label>
+                    <button class="tag content-type" data-filter="article"><span class="fa fa-file-text"></span></button>
+                    <button class="tag content-type" data-filter="photos"><span class="fa fa-camera"></span></button>
+                    <button class="tag content-type" data-filter="videos"><span class="fa fa-video-camera"></span></button>
+                </div> -->
+        <div id="isotope-tags" class="filter-list">
+          <label>Filter By Tags:</label>
+          <button class="tag active" data-filter="element">Show All</button>
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <div id="wolf-stories">
+
+      </div>
+
+    </div>
+    <!--/Content-->
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <!--   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
+  <script src="js/on-page-functions.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      // CALL FORMAT ISOTOPE FUNCTION FROM ON-PAGE-FUNCTIONS
+      $("#wolf-stories").load("includes/wolf-stories.html", function() {
+        formatIsotope();
+      });
+    });
+  </script>
+  <script>
+    window.onload = function() {
+      mapbox = getLeaflet(31.325303, -81.299780,13);
+      alignRelatedBoxes();
+    };
+  </script>
+  <script type="text/javascript" src="js/google_analytics.js"></script>
+</body>
+</html>
