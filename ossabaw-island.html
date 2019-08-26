@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The Georgia Coast Atlas | Ossabaw Island</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="dist/leaflet.awesome-markers.css">
+    <link href="css/main.css" rel="stylesheet" media="screen">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]> <script src="../../assets/js/html5shiv.js"></script> <script src="../../assets/js/respond.min.js"></script> <![endif]-->
+    <!--Google maps API linl-->
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCsbzuJDUEOoq-jS1HO-LUXW4qo0gW9FNs"></script>
+    <!--Your map settings script-->
+    <script type="text/javascript" src="js/all-content.js"></script>
+    <!--jQuery-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+</head>
+
+<body data-to-show="videos galleries panoramas articles" island-data="ossabaw">
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+    <script src="dist/leaflet.awesome-markers.js"></script>
+    <!--map-->
+    <div id="map_canvas" class="map">
+        <div id="map"></div>
+    </div>
+    <!--/map-->
+    <div class="row site">
+        <div class="col-md-1 general_menu" id="thisMenu">
+            <script type="text/javascript">
+            $('#thisMenu').load('includes/navigation.html');
+            </script>
+        </div>
+        <!-- Toggle Sidebar Button -->
+        <a id="hideMap" class="fa fa-caret-left"></a>
+        <!-- /Toggle Sidebar Button -->
+        <!--Content-->
+        <div class="col-md-11 general_content_styles index_content" id="cont">
+            <!--Header-->
+            <div class="row">
+                <div class="col-md-12 header">
+                    <div class="col-md-4 logo">
+                        <a href="index.html">
+                            <img src="images/logo.png" />
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <div id="tags">
+                            <a class="tag island sapelo">Ossabaw Island</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/Header-->
+            <!--Long Form Content-->
+            <div class="row long-content">
+                <div class="col-md-12">
+                    <h1>Ossabaw Island</h1>
+                    <div class="">
+                            <img style='height: 100%; width: 100%; object-fit: contain' src="/images/ossabaw/ossabaw.JPG"/>
+                    </div>
+                    <p></p>
+                    
+                </div>
+            </div>
+            <!--/Long Form Content -->
+
+            <!--Features-->
+      <h3>Explore Ossabaw Island</h3>
+      <div class="filter tags">
+        <!-- <div class="filter-list">
+                    <label>Filter By Content Type:</label>
+                    <button class="tag content-type" data-filter="article"><span class="fa fa-file-text"></span></button>
+                    <button class="tag content-type" data-filter="photos"><span class="fa fa-camera"></span></button>
+                    <button class="tag content-type" data-filter="videos"><span class="fa fa-video-camera"></span></button>
+                </div> -->
+        <div id="isotope-tags" class="filter-list">
+          <label>Filter By Tags:</label>
+          <button class="tag active" data-filter="element">Show All</button>
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <div id="ossabaw-stories">
+
+      </div>
+
+    </div>
+    <!--/Content-->
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <!--   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
+  <script src="js/on-page-functions.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      // CALL FORMAT ISOTOPE FUNCTION FROM ON-PAGE-FUNCTIONS
+      $("#ossabaw-stories").load("includes/ossabaw-stories.html", function() {
+        formatIsotope();
+      });
+    });
+  </script>
+  <script>
+    window.onload = function() {
+      mapbox = getLeaflet(31.80105, -81.1325,12);
+      alignRelatedBoxes();
+    };
+  </script>
+  <script type="text/javascript" src="js/google_analytics.js"></script>
+</body>
+</html>

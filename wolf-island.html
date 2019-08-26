@@ -8,13 +8,13 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="dist/leaflet.awesome-markers.css">
     <link href="css/main.css" rel="stylesheet" media="screen">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]> <script src="../../assets/js/html5shiv.js"></script> <script src="../../assets/js/respond.min.js"></script> <![endif]-->
     <!--Google maps API linl-->
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCsbzuJDUEOoq-jS1HO-LUXW4qo0gW9FNs"></script>
     <!--Your map settings script-->
-
     <script type="text/javascript" src="js/wolf.js"></script>
     <!--jQuery-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
@@ -22,8 +22,9 @@
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
 </head>
 
-<body>
+<body data-to-show="videos galleries panoramas articles" island-data="wolf">
     <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+    <script src="dist/leaflet.awesome-markers.js"></script>
     <!--map-->
     <div id="map_canvas" class="map">
         <div id="map"></div>

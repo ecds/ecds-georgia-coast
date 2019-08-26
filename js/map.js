@@ -84,7 +84,7 @@ function getLeaflet(showBoundary,lat, lng, zoom) {
   var boundaries = L.layerGroup([]);
   $.ajax({
     type: "GET",
-    url: "geo-json/IslandBounds.json",
+    url: "geo-json/IslandBounds04APR13.geojson",
     dataType: 'json',
     success: function(response) {
       //geojsonLayer = L.geoJson(response).addTo(map);
@@ -105,16 +105,9 @@ function getLeaflet(showBoundary,lat, lng, zoom) {
             layer.setStyle(boundaryStyle);
             $("#" + thisDiv).toggleClass("hover");
           });
-          if (feature.properties.Name == "St. Catherines Island" || feature.properties.Name == "Sapelo Island") {
             layer.on("click", function(e) {
               window.location.href = thisDiv + ".html";
             });
-          }
-          layer.on("click", function(e) {
-            // will turn on when these pages exist
-            alert("Content coming soon!")
-            // window.location.href = thisDiv + ".html";
-          });
           layer.addTo(boundaries);
 
 

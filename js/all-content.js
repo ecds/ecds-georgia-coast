@@ -124,7 +124,6 @@ function getLeaflet(lat, lng, zoom) {
   }
 
   var sapelo_images = L.layerGroup([]);
-
   $.ajax({
     type: "GET",
     url: "geo-json/Sapelo_POI.json",
@@ -298,7 +297,7 @@ function getLeaflet(lat, lng, zoom) {
     }
   } else {
     var overlayMaps = {
-      "Points of Interest": pointsOfInterest,
+      //"Points of Interest": pointsOfInterest,
       "Videos": videos,
       //"Images": images,
       "Photo Galleries": galleries,
