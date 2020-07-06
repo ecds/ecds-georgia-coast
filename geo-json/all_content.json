@@ -649,17 +649,18 @@
          },
          "images": [{
                 "url":"images/church/img_1.jpg",
-                "caption":"This is a caption",
+                "caption":"Images of the reconstruction of the First African Baptist Church by SCAD",
                 "credit":"Photo courtesy of SCAD"
             },
             {
                 "url":"images/church/img_2.jpg",
-                "caption":"This is a caption"
-                
+                "caption":"This is a caption",
+                "credit":"Photo courtesy of SCAD"
             },
             {
                 "url":"images/church/img_3.jpg",
-                "caption":"This is a caption"
+                "caption":"This is a caption",
+                "credit":"Photo courtesy of SCAD"
             },
             {
                 "url":"images/church/scad_1.jpg",
@@ -1195,7 +1196,7 @@
          },
          "properties":{  
             "Island":"LittleSimon",
-            "Location":"Armadillow Tracks",
+            "Location":"Armadillo Tracks",
             "video_id":"289344957",
             "Loc_type":"video",
             "Longitude":-81.283809,
