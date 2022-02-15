@@ -1,6 +1,6 @@
 /*
 	krpano 1.19-pr16 ScrollArea Plugin (build 2018-04-04)
-	http://krpano.com/plugins/scrollarea/
+	https://krpano.com/plugins/scrollarea/
 */
 var krpanoplugin=function(){function P(a){return"boolean"==typeof a?a:0<="yesontrue1".indexOf(String(a).toLowerCase())}function Z(a){if(a&&k&&aa){var d=k.timertick,f=0;0==Q&&(Q=d);var b=d-Q|0;Q=d;"wheel"==a.type?f=a.deltaY:"mousewheel"==a.type?f=-a.wheelDelta:"DOMMouseScroll"==a.type&&(f=a.detail);f=-f;500<b?R=1==a.deltaMode||0==f%20?0:1:66>b&&0==R&&0!=f%40&&6<Math.abs(f)&&(R=1);a.preventDefault();a.stopPropagation();0!=f&&(0==R?f=0>f?-5:5:(f/=20,-10>f?f=-10:10<f&&(f=10)),1==n?S(f*A,0):2==n?S(0,f*
 y):3==n&&S(0,f*y))}}function r(a,d,f,b,e){var c=null;e=(!0===e?"remove":"add")+"EventListener";var g=T.browser.events;if(g.touch&&("down"==d?c=g.touchstart:"move"==d?c=g.touchmove:"up"==d&&(c=g.touchend),T.ie&&0==g.mouse&&("over"==d?c=g.pointerover?g.pointerover:"MSPointerOver":"out"==d&&(c=g.pointerout?g.pointerout:"MSPointerOut")),c))a[e](c,f,b);if(g.mouse&&("down"==d?c="mousedown":"move"==d?c="mousemove":"up"==d?c="mouseup":"over"==d?c="mouseover":"out"==d&&(c="mouseout"),c))a[e](c,f,b)}function ba(){if(b){var a=

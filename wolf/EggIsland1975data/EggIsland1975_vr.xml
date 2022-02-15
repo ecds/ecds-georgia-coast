@@ -10,7 +10,7 @@
 
   <security cors="">
     <!--
-    <crossdomainxml url="http://RESSOURCES_URL/crossdomain.xml" />
+    <crossdomainxml url="https://RESSOURCES_URL/crossdomain.xml" />
     -->
     <allowdomain domain="*" />
   </security>
